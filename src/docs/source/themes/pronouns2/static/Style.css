@@ -1,0 +1,73 @@
+body {
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    background-color: #FFFFFF;
+    color: #400040;
+    margin: 0
+}
+
+a:link {
+    font-weight: bold;
+}
+
+a:visited {
+    font-weight: bold;
+}
+
+td, table.docutils td {
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #400040;
+}
+
+td.small {
+    text-align: right;
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #400040;
+}
+
+th, table.docutils th {
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #339933;
+    color: #FFFFFF;
+}
+
+table.docutils td, table.docutils th {
+    padding: 1px 8px 1px 8px;
+}
+
+th.small {
+    text-align: center;
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #339933;
+    color: #FFFFFF;
+}
+
+.red {
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    color: #FF0080;
+}
+
+.green {
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    color: #008000;
+}
+
+.blue {
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    color: #0000FF;
+}
+
+.white {
+    font-family: Verdana, Geneva, Arial, helvetica, sans-serif;
+    color: #FFFFFF;
+}
+

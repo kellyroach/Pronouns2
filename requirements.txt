@@ -1,0 +1,5 @@
+coverage==7.6.5
+matplotlib==3.8.4
+notebook==7.1.2
+numpy==1.26.4
+Sphinx==5.0.2

@@ -1,0 +1,552 @@
+################################################################
+#
+#     test_doc_debug_10p1.txt
+#
+################################################################
+
+################################################################
+#
+#     (10.1) John wants to give June a present, but he isn't sure she’ll like it.
+#
+################################################################
+
+_________________________NODES_________________________
+!     !                                               !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)       !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)       !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,    !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:3)                            !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)       !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,     !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:5)                            !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,    !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:6)                            !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0, !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:7)                            !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)       !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,      !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:0, ec:0,  !
+!     !  pr:0, su:0, nu:9)                            !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)    !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,    !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:0, ec:0, !
+!     !  pr:0, su:0, nu:11)                           !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,     !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:0, ec:0,  !
+!     !  pr:0, su:0, nu:12)                           !
+!_____!_______________________________________________!
+
+_____________________________FEATURES____________________________
+!         !     !     !     !     !     !     !     !     !     !
+!         ! PNF ! FPF ! SPF ! TPF ! PLF ! GNF ! ANF ! RPF ! GEN !
+!    John !  -  !  -  !  -  !  +  !  -  !  -  !  +  !  -  !  -  !
+!     PHI !  +  !  ?  !  ?  !  ?  !  ?  !  ?  !  ?  !  -  !  -  !
+!    June !  -  !  -  !  -  !  +  !  -  !  +  !  +  !  -  !  -  !
+! present !  -  !  -  !  -  !  +  !  -  !  ?  !  -  !  -  !  -  !
+!      he !  +  !  -  !  -  !  +  !  -  !  -  !  +  !  -  !  -  !
+!     she !  +  !  -  !  -  !  +  !  -  !  +  !  +  !  -  !  -  !
+!      it !  +  !  -  !  -  !  +  !  -  !  ?  !  -  !  -  !  -  !
+!_________!_____!_____!_____!_____!_____!_____!_____!_____!_____!
+
+_______________________CHAINING_______________________
+!       !      !       !          !     !      !     !
+! John  ! PHI  ! June  ! present  ! he  ! she  ! it  !
+! JohnA ! PHIA ! JuneA ! presentA ! heA ! sheA ! itA !
+!_______!______!_______!__________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3A,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:0)     !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5A,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:0)     !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6A,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:0)     !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7A,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:0)     !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+_________________________CHAINING_________________________
+!       !      !       !              !     !      !     !
+! John  ! PHI  ! June  ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA ! JuneA ! presentA     ! heA ! sheA ! itA !
+!       !      !       ! presentB^itA !     !      !     !
+!_______!______!_______!______________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3A,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:0)     !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5A,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:0)     !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6A,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:0)     !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+___________________________CHAINING___________________________
+!       !          !       !              !     !      !     !
+! John  ! PHI      ! June  ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA     ! JuneA ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA !       ! presentB^itA !     !      !     !
+!_______!__________!_______!______________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3A,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:0)     !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5B,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:0)   !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6A,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:0)     !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+______________________________CHAINING_____________________________
+!       !          !            !              !     !      !     !
+! John  ! PHI      ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA     ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA ! JuneB^sheA ! presentB^itA !     !      !     !
+!_______!__________!____________!______________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3A,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:0)     !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5B,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:0)   !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+______________________________CHAINING______________________________
+!       !           !            !              !     !      !     !
+! John  ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!       ! PHIC^sheA !            !              !     !      !     !
+!_______!___________!____________!______________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3A,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:0)     !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5C,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:5C)  !
+!  5C ! (E, sub:C, ftr:[+--+-++--], np:5, ch:11A, co:0)   !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+______________________________CHAINING______________________________
+!       !           !            !              !     !      !     !
+! John  ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!       ! PHIC^sheA !            !              !     !      !     !
+!       ! PHID^heA  !            !              !     !      !     !
+!_______!___________!____________!______________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3A,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:0)     !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5D,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:5C)  !
+!  5C ! (E, sub:C, ftr:[+--+-++--], np:5, ch:11A, co:5D)  !
+!  5D ! (E, sub:D, ftr:[+--+--+--], np:5, ch:9A, co:0)    !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+________________________________CHAINING________________________________
+!           !           !            !              !     !      !     !
+! John      ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA     ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!           ! PHIC^sheA !            !              !     !      !     !
+!           ! PHID^heA  !            !              !     !      !     !
+!___________!___________!____________!______________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3B,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:3B)    !
+!  3B ! (E, sub:B, ftr:[---+--+--], np:3, ch:9A, co:0)    !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5D,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:5C)  !
+!  5C ! (E, sub:C, ftr:[+--+-++--], np:5, ch:11A, co:5D)  !
+!  5D ! (E, sub:D, ftr:[+--+--+--], np:5, ch:9A, co:0)    !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+!            ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3C,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:3B)    !
+!  3B ! (E, sub:B, ftr:[---+--+--], np:3, ch:9A, co:3C)   !
+!  3C ! (E, sub:C, ftr:[---+--+--], np:3, ch:5A, co:0)    !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5D,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:5C)  !
+!  5C ! (E, sub:C, ftr:[+--+-++--], np:5, ch:11A, co:5D)  !
+!  5D ! (E, sub:D, ftr:[+--+--+--], np:5, ch:9A, co:0)    !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+! JohnD^PHID ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3D,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:3B)    !
+!  3B ! (E, sub:B, ftr:[---+--+--], np:3, ch:9A, co:3C)   !
+!  3C ! (E, sub:C, ftr:[---+--+--], np:3, ch:5A, co:3D)   !
+!  3D ! (E, sub:D, ftr:[---+--+--], np:3, ch:5D, co:0)    !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5D,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:5C)  !
+!  5C ! (E, sub:C, ftr:[+--+-++--], np:5, ch:11A, co:5D)  !
+!  5D ! (E, sub:D, ftr:[+--+--+--], np:5, ch:9A, co:0)    !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3D,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:3B)    !
+!  3B ! (E, sub:B, ftr:[---+--+--], np:3, ch:9A, co:3C)   !
+!  3C ! (E, sub:C, ftr:[---+--+--], np:3, ch:5A, co:3D)   !
+!  3D ! (E, sub:D, ftr:[---+--+--], np:3, ch:5D, co:0)    !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5D,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:5C)  !
+!  5C ! (E, sub:C, ftr:[+--+-++--], np:5, ch:11A, co:5D)  !
+!  5D ! (E, sub:D, ftr:[+--+--+--], np:5, ch:9A, co:0)    !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+! JohnD^PHID ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+________________INTERPRETATIONS_________________
+!                                              !
+! JohnD^PHID^heA    JuneB^sheA    presentB^itA !
+!______________________________________________!

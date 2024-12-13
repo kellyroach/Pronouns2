@@ -1,0 +1,3140 @@
+################################################################
+#
+#     test_new_chain_chaining_table.txt
+#
+################################################################
+
+################################################################
+#
+#     (1.1) The boy who was fooling her kissed the girl who loved him.
+#
+################################################################
+
+___________CHAINING___________
+!      !      !       !      !
+! boy  ! her  ! girl  ! him  !
+! boyA ! herA ! girlA ! himA !
+!______!______!_______!______!
+
+______________CHAINING_____________
+!           !      !       !      !
+! boy       ! her  ! girl  ! him  !
+! boyA      ! herA ! girlA ! himA !
+! boyB^himA !      !       !      !
+!___________!______!_______!______!
+
+________________CHAINING________________
+!           !      !            !      !
+! boy       ! her  ! girl       ! him  !
+! boyA      ! herA ! girlA      ! himA !
+! boyB^himA !      ! girlB^herA !      !
+!___________!______!____________!______!
+
+################################################################
+#
+#     (1.2) *John killed herself.
+#
+################################################################
+
+______CHAINING______
+!       !          !
+! John  ! herself  !
+! JohnA ! herselfA !
+!_______!__________!
+
+################################################################
+#
+#     (1.4) Some students think they are smarter than they are.
+#
+################################################################
+
+_______CHAINING______
+!           !       !
+! students  ! they  !
+! studentsA ! theyA !
+!___________!_______!
+
+################################################################
+#
+#     (1.6) My uncle has never ridden a camel but his brother has, although it was lame.
+#
+################################################################
+
+_____________________CHAINING____________________
+!     !        !        !      !          !     !
+! my  ! uncle  ! camel  ! his  ! brother  ! it  !
+! myA ! uncleA ! camelA ! hisA ! brotherA ! itA !
+!_____!________!________!______!__________!_____!
+
+_______________________CHAINING_______________________
+!     !        !             !      !          !     !
+! my  ! uncle  ! camel       ! his  ! brother  ! it  !
+! myA ! uncleA ! camelA      ! hisA ! brotherA ! itA !
+!     !        ! camelB^hisA !      !          !     !
+!_____!________!_____________!______!__________!_____!
+
+__________________________CHAINING_________________________
+!     !             !             !      !          !     !
+! my  ! uncle       ! camel       ! his  ! brother  ! it  !
+! myA ! uncleA      ! camelA      ! hisA ! brotherA ! itA !
+!     ! uncleB^hisA ! camelB^hisA !      !          !     !
+!_____!_____________!_____________!______!__________!_____!
+
+################################################################
+#
+#     (1.10) I like the fresh candy better than the stale PHI.
+#
+################################################################
+
+_______CHAINING_______
+!    !        !      !
+! I  ! candy  ! PHI  !
+! IA ! candyA ! PHIA !
+!____!________!______!
+
+################################################################
+#
+#     (1.11) If John can, he will do it.
+#
+################################################################
+
+____CHAINING___
+!       !     !
+! John  ! he  !
+! JohnA ! heA !
+!_______!_____!
+
+______CHAINING_____
+!           !     !
+! John      ! he  !
+! JohnA     ! heA !
+! JohnB^heA !     !
+!___________!_____!
+
+################################################################
+#
+#     (1.12) If he can, John will do it.
+#
+################################################################
+
+____CHAINING___
+!     !       !
+! he  ! John  !
+! heA ! JohnA !
+!_____!_______!
+
+################################################################
+#
+#     (1.13) John will do it if he can.
+#
+################################################################
+
+____CHAINING___
+!       !     !
+! John  ! he  !
+! JohnA ! heA !
+!_______!_____!
+
+______CHAINING_____
+!           !     !
+! John      ! he  !
+! JohnA     ! heA !
+! JohnB^heA !     !
+!___________!_____!
+
+################################################################
+#
+#     (1.14) He will do it if John can.
+#
+################################################################
+
+____CHAINING___
+!     !       !
+! he  ! John  !
+! heA ! JohnA !
+!_____!_______!
+
+################################################################
+#
+#     (1.24) I have a cat at home, but hate it.
+#
+################################################################
+
+_____________CHAINING_____________
+!    !      !       !      !     !
+! I  ! cat  ! home  ! PHI  ! it  !
+! IA ! catA ! homeA ! PHIA ! itA !
+!____!______!_______!______!_____!
+
+_______________CHAINING_______________
+!    !      !           !      !     !
+! I  ! cat  ! home      ! PHI  ! it  !
+! IA ! catA ! homeA     ! PHIA ! itA !
+!    !      ! homeB^itA !      !     !
+!____!______!___________!______!_____!
+
+________________CHAINING_______________
+!    !      !            !      !     !
+! I  ! cat  ! home       ! PHI  ! it  !
+! IA ! catA ! homeA      ! PHIA ! itA !
+!    !      ! homeB^itA  !      !     !
+!    !      ! homeC^PHIA !      !     !
+!____!______!____________!______!_____!
+
+__________________CHAINING__________________
+!    !           !            !      !     !
+! I  ! cat       ! home       ! PHI  ! it  !
+! IA ! catA      ! homeA      ! PHIA ! itA !
+!    ! catB^PHIA ! homeB^itA  !      !     !
+!    !           ! homeC^PHIA !      !     !
+!____!___________!____________!______!_____!
+
+_____________________CHAINING____________________
+!         !           !            !      !     !
+! I       ! cat       ! home       ! PHI  ! it  !
+! IA      ! catA      ! homeA      ! PHIA ! itA !
+! IB^PHIA ! catB^PHIA ! homeB^itA  !      !     !
+!         !           ! homeC^PHIA !      !     !
+!_________!___________!____________!______!_____!
+
+################################################################
+#
+#     (1.25) I want to get a cat for myself.
+#
+################################################################
+
+___________CHAINING___________
+!    !      !      !         !
+! I  ! PHI  ! cat  ! myself  !
+! IA ! PHIA ! catA ! myselfA !
+!____!______!______!_________!
+
+_______________CHAINING_______________
+!    !              !      !         !
+! I  ! PHI          ! cat  ! myself  !
+! IA ! PHIA         ! catA ! myselfA !
+!    ! PHIB^myselfA !      !         !
+!____!______________!______!_________!
+
+__________________CHAINING_________________
+!         !              !      !         !
+! I       ! PHI          ! cat  ! myself  !
+! IA      ! PHIA         ! catA ! myselfA !
+! IB^PHIA ! PHIB^myselfA !      !         !
+!_________!______________!______!_________!
+
+__________________CHAINING_________________
+!         !              !      !         !
+! I       ! PHI          ! cat  ! myself  !
+! IA      ! PHIA         ! catA ! myselfA !
+! IB^PHIA ! PHIB^myselfA !      !         !
+! IC^PHIB !              !      !         !
+!_________!______________!______!_________!
+
+################################################################
+#
+#     (1.27) The men took off their hats.
+#
+################################################################
+
+_________CHAINING________
+!      !        !       !
+! men  ! their  ! hats  !
+! menA ! theirA ! hatsA !
+!______!________!_______!
+
+____________CHAINING____________
+!             !        !       !
+! men         ! their  ! hats  !
+! menA        ! theirA ! hatsA !
+! menB^theirA !        !       !
+!_____________!________!_______!
+
+################################################################
+#
+#     (1.51) The man who lives next door said that he would mow my lawn.
+#
+################################################################
+
+__________CHAINING__________
+!      !     !     !       !
+! man  ! he  ! my  ! lawn  !
+! manA ! heA ! myA ! lawnA !
+!______!_____!_____!_______!
+
+____________CHAINING____________
+!          !     !     !       !
+! man      ! he  ! my  ! lawn  !
+! manA     ! heA ! myA ! lawnA !
+! manB^heA !     !     !       !
+!__________!_____!_____!_______!
+
+################################################################
+#
+#     (1.52) Somebody seduced Bill's sister, but no one will ever seduce Jack’s and she knows it.
+#
+################################################################
+
+_________________________CHAINING________________________
+!           !         !         !         !      !      !
+! somebody  ! Bill's  ! sister  ! Jack's  ! PHI  ! she  !
+! somebodyA ! Bill'sA ! sisterA ! Jack'sA ! PHIA ! sheA !
+!___________!_________!_________!_________!______!______!
+
+___________________________CHAINING___________________________
+!           !         !         !         !           !      !
+! somebody  ! Bill's  ! sister  ! Jack's  ! PHI       ! she  !
+! somebodyA ! Bill'sA ! sisterA ! Jack'sA ! PHIA      ! sheA !
+!           !         !         !         ! PHIB^sheA !      !
+!___________!_________!_________!_________!___________!______!
+
+______________________________CHAINING_____________________________
+!           !         !              !         !           !      !
+! somebody  ! Bill's  ! sister       ! Jack's  ! PHI       ! she  !
+! somebodyA ! Bill'sA ! sisterA      ! Jack'sA ! PHIA      ! sheA !
+!           !         ! sisterB^sheA !         ! PHIB^sheA !      !
+!___________!_________!______________!_________!___________!______!
+
+________________________________CHAINING________________________________
+!                !         !              !         !           !      !
+! somebody       ! Bill's  ! sister       ! Jack's  ! PHI       ! she  !
+! somebodyA      ! Bill'sA ! sisterA      ! Jack'sA ! PHIA      ! sheA !
+! somebodyB^sheA !         ! sisterB^sheA !         ! PHIB^sheA !      !
+!________________!_________!______________!_________!___________!______!
+
+________________________________CHAINING________________________________
+!                !         !              !         !           !      !
+! somebody       ! Bill's  ! sister       ! Jack's  ! PHI       ! she  !
+! somebodyA      ! Bill'sA ! sisterA      ! Jack'sA ! PHIA      ! sheA !
+! somebodyB^sheA !         ! sisterB^sheA !         ! PHIB^sheA !      !
+!                !         ! sisterC^PHIA !         !           !      !
+!________________!_________!______________!_________!___________!______!
+
+________________________________CHAINING________________________________
+!                !         !              !         !           !      !
+! somebody       ! Bill's  ! sister       ! Jack's  ! PHI       ! she  !
+! somebodyA      ! Bill'sA ! sisterA      ! Jack'sA ! PHIA      ! sheA !
+! somebodyB^sheA !         ! sisterB^sheA !         ! PHIB^sheA !      !
+!                !         ! sisterC^PHIA !         !           !      !
+!                !         ! sisterD^PHIB !         !           !      !
+!________________!_________!______________!_________!___________!______!
+
+________________________________CHAINING________________________________
+!                !         !              !         !           !      !
+! somebody       ! Bill's  ! sister       ! Jack's  ! PHI       ! she  !
+! somebodyA      ! Bill'sA ! sisterA      ! Jack'sA ! PHIA      ! sheA !
+! somebodyB^sheA !         ! sisterB^sheA !         ! PHIB^sheA !      !
+! somebodyC^PHIA !         ! sisterC^PHIA !         !           !      !
+!                !         ! sisterD^PHIB !         !           !      !
+!________________!_________!______________!_________!___________!______!
+
+________________________________CHAINING________________________________
+!                !         !              !         !           !      !
+! somebody       ! Bill's  ! sister       ! Jack's  ! PHI       ! she  !
+! somebodyA      ! Bill'sA ! sisterA      ! Jack'sA ! PHIA      ! sheA !
+! somebodyB^sheA !         ! sisterB^sheA !         ! PHIB^sheA !      !
+! somebodyC^PHIA !         ! sisterC^PHIA !         !           !      !
+! somebodyD^PHIB !         ! sisterD^PHIB !         !           !      !
+!________________!_________!______________!_________!___________!______!
+
+################################################################
+#
+#     (1.66) Realizing that he was unpopular didn't disturb Oscar.
+#
+################################################################
+
+________CHAINING_______
+!      !     !        !
+! PHI  ! he  ! Oscar  !
+! PHIA ! heA ! OscarA !
+!______!_____!________!
+
+__________CHAINING_________
+!      !     !            !
+! PHI  ! he  ! Oscar      !
+! PHIA ! heA ! OscarA     !
+!      !     ! OscarB^heA !
+!______!_____!____________!
+
+____________CHAINING___________
+!          !     !            !
+! PHI      ! he  ! Oscar      !
+! PHIA     ! heA ! OscarA     !
+! PHIB^heA !     ! OscarB^heA !
+!__________!_____!____________!
+
+____________CHAINING____________
+!          !     !             !
+! PHI      ! he  ! Oscar       !
+! PHIA     ! heA ! OscarA      !
+! PHIB^heA !     ! OscarB^heA  !
+!          !     ! OscarC^PHIA !
+!__________!_____!_____________!
+
+____________CHAINING____________
+!          !     !             !
+! PHI      ! he  ! Oscar       !
+! PHIA     ! heA ! OscarA      !
+! PHIB^heA !     ! OscarB^heA  !
+!          !     ! OscarC^PHIA !
+!          !     ! OscarD^PHIB !
+!__________!_____!_____________!
+
+################################################################
+#
+#     (1.70) My neighbor who is pregnant said that she was very happy.
+#
+################################################################
+
+_________CHAINING_________
+!     !           !      !
+! my  ! neighbor  ! she  !
+! myA ! neighborA ! sheA !
+!_____!___________!______!
+
+____________CHAINING___________
+!     !                !      !
+! my  ! neighbor       ! she  !
+! myA ! neighborA      ! sheA !
+!     ! neighborB^sheA !      !
+!_____!________________!______!
+
+################################################################
+#
+#     (1.74) The pilot who shot at it hit the Mig that chased him.
+#
+################################################################
+
+___________CHAINING___________
+!        !     !      !      !
+! pilot  ! it  ! Mig  ! him  !
+! pilotA ! itA ! MigA ! himA !
+!________!_____!______!______!
+
+______________CHAINING_____________
+!             !     !      !      !
+! pilot       ! it  ! Mig  ! him  !
+! pilotA      ! itA ! MigA ! himA !
+! pilotB^himA !     !      !      !
+!_____________!_____!______!______!
+
+________________CHAINING_______________
+!             !     !          !      !
+! pilot       ! it  ! Mig      ! him  !
+! pilotA      ! itA ! MigA     ! himA !
+! pilotB^himA !     ! MigB^itA !      !
+!_____________!_____!__________!______!
+
+################################################################
+#
+#     (1.86) The mosquito which bit Algernon was killed by him.
+#
+################################################################
+
+____________CHAINING____________
+!           !           !      !
+! mosquito  ! Algernon  ! him  !
+! mosquitoA ! AlgernonA ! himA !
+!___________!___________!______!
+
+_______________CHAINING______________
+!           !                !      !
+! mosquito  ! Algernon       ! him  !
+! mosquitoA ! AlgernonA      ! himA !
+!           ! AlgernonB^himA !      !
+!___________!________________!______!
+
+################################################################
+#
+#     (1.87) The mosquito which bit him was killed by Algernon.
+#
+################################################################
+
+____________CHAINING____________
+!           !      !           !
+! mosquito  ! him  ! Algernon  !
+! mosquitoA ! himA ! AlgernonA !
+!___________!______!___________!
+
+_______________CHAINING______________
+!           !      !                !
+! mosquito  ! him  ! Algernon       !
+! mosquitoA ! himA ! AlgernonA      !
+!           !      ! AlgernonB^himA !
+!___________!______!________________!
+
+_________________CHAINING_________________
+!                !      !                !
+! mosquito       ! him  ! Algernon       !
+! mosquitoA      ! himA ! AlgernonA      !
+! mosquitoB^himA !      ! AlgernonB^himA !
+!________________!______!________________!
+
+################################################################
+#
+#     (1.88) Algernon killed the mosquito which bit him.
+#
+################################################################
+
+____________CHAINING____________
+!           !           !      !
+! Algernon  ! mosquito  ! him  !
+! AlgernonA ! mosquitoA ! himA !
+!___________!___________!______!
+
+_______________CHAINING______________
+!           !                !      !
+! Algernon  ! mosquito       ! him  !
+! AlgernonA ! mosquitoA      ! himA !
+!           ! mosquitoB^himA !      !
+!___________!________________!______!
+
+_________________CHAINING_________________
+!                !                !      !
+! Algernon       ! mosquito       ! him  !
+! AlgernonA      ! mosquitoA      ! himA !
+! AlgernonB^himA ! mosquitoB^himA !      !
+!________________!________________!______!
+
+################################################################
+#
+#     (1.89) He killed the mosquito which bit Algernon.
+#
+################################################################
+
+____________CHAINING___________
+!     !           !           !
+! he  ! mosquito  ! Algernon  !
+! heA ! mosquitoA ! AlgernonA !
+!_____!___________!___________!
+
+################################################################
+#
+#     (1.91) After John Adams woke up, he was hungry.
+#
+################################################################
+
+____CHAINING___
+!       !     !
+! John  ! he  !
+! JohnA ! heA !
+!_______!_____!
+
+______CHAINING_____
+!           !     !
+! John      ! he  !
+! JohnA     ! heA !
+! JohnB^heA !     !
+!___________!_____!
+
+################################################################
+#
+#     (1.92) That Oscar was unpopular didn't disturb him.
+#
+################################################################
+
+_____CHAINING____
+!        !      !
+! Oscar  ! him  !
+! OscarA ! himA !
+!________!______!
+
+_______CHAINING_______
+!             !      !
+! Oscar       ! him  !
+! OscarA      ! himA !
+! OscarB^himA !      !
+!_____________!______!
+
+################################################################
+#
+#     (1.93) For your brother to refuse to pay taxes would get him into trouble.
+#
+################################################################
+
+___________________CHAINING__________________
+!       !          !      !      !          !
+! your  ! brother  ! PHI  ! him  ! trouble  !
+! yourA ! brotherA ! PHIA ! himA ! troubleA !
+!_______!__________!______!______!__________!
+
+_____________________CHAINING_____________________
+!       !          !           !      !          !
+! your  ! brother  ! PHI       ! him  ! trouble  !
+! yourA ! brotherA ! PHIA      ! himA ! troubleA !
+!       !          ! PHIB^himA !      !          !
+!_______!__________!___________!______!__________!
+
+________________________CHAINING_______________________
+!       !               !           !      !          !
+! your  ! brother       ! PHI       ! him  ! trouble  !
+! yourA ! brotherA      ! PHIA      ! himA ! troubleA !
+!       ! brotherB^himA ! PHIB^himA !      !          !
+!_______!_______________!___________!______!__________!
+
+________________________CHAINING_______________________
+!       !               !           !      !          !
+! your  ! brother       ! PHI       ! him  ! trouble  !
+! yourA ! brotherA      ! PHIA      ! himA ! troubleA !
+!       ! brotherB^himA ! PHIB^himA !      !          !
+!       ! brotherC^PHIA !           !      !          !
+!_______!_______________!___________!______!__________!
+
+________________________CHAINING_______________________
+!       !               !           !      !          !
+! your  ! brother       ! PHI       ! him  ! trouble  !
+! yourA ! brotherA      ! PHIA      ! himA ! troubleA !
+!       ! brotherB^himA ! PHIB^himA !      !          !
+!       ! brotherC^PHIA !           !      !          !
+!       ! brotherD^PHIB !           !      !          !
+!_______!_______________!___________!______!__________!
+
+################################################################
+#
+#     (1.94) Anna's complaining about Peter infuriated him.
+#
+################################################################
+
+_________________CHAINING_________________
+!         !              !        !      !
+! Anna's  ! complaining  ! Peter  ! him  !
+! Anna'sA ! complainingA ! PeterA ! himA !
+!_________!______________!________!______!
+
+____________________CHAINING___________________
+!         !              !             !      !
+! Anna's  ! complaining  ! Peter       ! him  !
+! Anna'sA ! complainingA ! PeterA      ! himA !
+!         !              ! PeterB^himA !      !
+!_________!______________!_____________!______!
+
+################################################################
+#
+#     (1.95) The possibility that Fred will be unpopular doesn’t bother him.
+#
+################################################################
+
+____________CHAINING___________
+!              !       !      !
+! possibility  ! Fred  ! him  !
+! possibilityA ! FredA ! himA !
+!______________!_______!______!
+
+______________CHAINING______________
+!              !            !      !
+! possibility  ! Fred       ! him  !
+! possibilityA ! FredA      ! himA !
+!              ! FredB^himA !      !
+!______________!____________!______!
+
+################################################################
+#
+#     (1.96) After he woke up, John Adams was hungry.
+#
+################################################################
+
+____CHAINING___
+!     !       !
+! he  ! John  !
+! heA ! JohnA !
+!_____!_______!
+
+################################################################
+#
+#     (1.97) That he was unpopular didn't disturb Oscar.
+#
+################################################################
+
+____CHAINING____
+!     !        !
+! he  ! Oscar  !
+! heA ! OscarA !
+!_____!________!
+
+______CHAINING______
+!     !            !
+! he  ! Oscar      !
+! heA ! OscarA     !
+!     ! OscarB^heA !
+!_____!____________!
+
+################################################################
+#
+#     (1.98) For him to refuse to pay taxes would get your brother into trouble.
+#
+################################################################
+
+_______________________CHAINING_______________________
+!      !      !        !       !          !          !
+! him  ! PHI  ! taxes  ! your  ! brother  ! trouble  !
+! himA ! PHIA ! taxesA ! yourA ! brotherA ! troubleA !
+!______!______!________!_______!__________!__________!
+
+__________________________CHAINING__________________________
+!      !            !        !       !          !          !
+! him  ! PHI        ! taxes  ! your  ! brother  ! trouble  !
+! himA ! PHIA       ! taxesA ! yourA ! brotherA ! troubleA !
+!      ! PHIB^yourA !        !       !          !          !
+!______!____________!________!_______!__________!__________!
+
+_____________________________CHAINING____________________________
+!           !            !        !       !          !          !
+! him       ! PHI        ! taxes  ! your  ! brother  ! trouble  !
+! himA      ! PHIA       ! taxesA ! yourA ! brotherA ! troubleA !
+! himB^PHIA ! PHIB^yourA !        !       !          !          !
+!___________!____________!________!_______!__________!__________!
+
+################################################################
+#
+#     (1.99) Anna's complaining about him infuriated Peter.
+#
+################################################################
+
+_________________CHAINING_________________
+!         !              !      !        !
+! Anna's  ! complaining  ! him  ! Peter  !
+! Anna'sA ! complainingA ! himA ! PeterA !
+!_________!______________!______!________!
+
+____________________CHAINING___________________
+!         !              !      !             !
+! Anna's  ! complaining  ! him  ! Peter       !
+! Anna'sA ! complainingA ! himA ! PeterA      !
+!         !              !      ! PeterB^himA !
+!_________!______________!______!_____________!
+
+################################################################
+#
+#     (1.100) The possibility that he will be unpopular doesn’t bother Fred.
+#
+################################################################
+
+___________CHAINING___________
+!              !     !       !
+! possibility  ! he  ! Fred  !
+! possibilityA ! heA ! FredA !
+!______________!_____!_______!
+
+_____________CHAINING_____________
+!              !     !           !
+! possibility  ! he  ! Fred      !
+! possibilityA ! heA ! FredA     !
+!              !     ! FredB^heA !
+!______________!_____!___________!
+
+################################################################
+#
+#     (1.101) John Adams was hungry after he woke up.
+#
+################################################################
+
+____CHAINING___
+!       !     !
+! John  ! he  !
+! JohnA ! heA !
+!_______!_____!
+
+______CHAINING_____
+!           !     !
+! John      ! he  !
+! JohnA     ! heA !
+! JohnB^heA !     !
+!___________!_____!
+
+################################################################
+#
+#     (1.102) Oscar wasn't disturbed that he was unpopular.
+#
+################################################################
+
+____CHAINING____
+!        !     !
+! Oscar  ! he  !
+! OscarA ! heA !
+!________!_____!
+
+______CHAINING______
+!            !     !
+! Oscar      ! he  !
+! OscarA     ! heA !
+! OscarB^heA !     !
+!____________!_____!
+
+################################################################
+#
+#     (1.103) It would get your brother into trouble for him to refuse to pay taxes.
+#
+################################################################
+
+_______________________CHAINING_______________________
+!       !          !          !      !      !        !
+! your  ! brother  ! trouble  ! him  ! PHI  ! taxes  !
+! yourA ! brotherA ! troubleA ! himA ! PHIA ! taxesA !
+!_______!__________!__________!______!______!________!
+
+__________________________CHAINING_________________________
+!       !          !          !           !      !        !
+! your  ! brother  ! trouble  ! him       ! PHI  ! taxes  !
+! yourA ! brotherA ! troubleA ! himA      ! PHIA ! taxesA !
+!       !          !          ! himB^PHIA !      !        !
+!_______!__________!__________!___________!______!________!
+
+____________________________CHAINING____________________________
+!       !          !               !           !      !        !
+! your  ! brother  ! trouble       ! him       ! PHI  ! taxes  !
+! yourA ! brotherA ! troubleA      ! himA      ! PHIA ! taxesA !
+!       !          ! troubleB^PHIA ! himB^PHIA !      !        !
+!_______!__________!_______________!___________!______!________!
+
+_______________________________CHAINING______________________________
+!       !               !               !           !      !        !
+! your  ! brother       ! trouble       ! him       ! PHI  ! taxes  !
+! yourA ! brotherA      ! troubleA      ! himA      ! PHIA ! taxesA !
+!       ! brotherB^PHIA ! troubleB^PHIA ! himB^PHIA !      !        !
+!_______!_______________!_______________!___________!______!________!
+
+_______________________________CHAINING______________________________
+!       !               !               !           !      !        !
+! your  ! brother       ! trouble       ! him       ! PHI  ! taxes  !
+! yourA ! brotherA      ! troubleA      ! himA      ! PHIA ! taxesA !
+!       ! brotherB^PHIA ! troubleB^PHIA ! himB^PHIA !      !        !
+!       ! brotherC^himA !               !           !      !        !
+!_______!_______________!_______________!___________!______!________!
+
+_______________________________CHAINING______________________________
+!       !               !               !           !      !        !
+! your  ! brother       ! trouble       ! him       ! PHI  ! taxes  !
+! yourA ! brotherA      ! troubleA      ! himA      ! PHIA ! taxesA !
+!       ! brotherB^PHIA ! troubleB^PHIA ! himB^PHIA !      !        !
+!       ! brotherC^himA !               !           !      !        !
+!       ! brotherD^himB !               !           !      !        !
+!_______!_______________!_______________!___________!______!________!
+
+__________________________________CHAINING_________________________________
+!       !               !               !           !            !        !
+! your  ! brother       ! trouble       ! him       ! PHI        ! taxes  !
+! yourA ! brotherA      ! troubleA      ! himA      ! PHIA       ! taxesA !
+!       ! brotherB^PHIA ! troubleB^PHIA ! himB^PHIA ! PHIB^yourA !        !
+!       ! brotherC^himA !               !           !            !        !
+!       ! brotherD^himB !               !           !            !        !
+!_______!_______________!_______________!___________!____________!________!
+
+################################################################
+#
+#     (1.104) Peter was infuriated at Anna's complaining about him.
+#
+################################################################
+
+_________________CHAINING_________________
+!        !         !              !      !
+! Peter  ! Anna's  ! complaining  ! him  !
+! PeterA ! Anna'sA ! complainingA ! himA !
+!________!_________!______________!______!
+
+____________________CHAINING___________________
+!             !         !              !      !
+! Peter       ! Anna's  ! complaining  ! him  !
+! PeterA      ! Anna'sA ! complainingA ! himA !
+! PeterB^himA !         !              !      !
+!_____________!_________!______________!______!
+
+################################################################
+#
+#     (1.105) Fred isn't bothered by the possibility that he will be unpopular.
+#
+################################################################
+
+___________CHAINING___________
+!       !              !     !
+! Fred  ! possibility  ! he  !
+! FredA ! possibilityA ! heA !
+!_______!______________!_____!
+
+_____________CHAINING_____________
+!           !              !     !
+! Fred      ! possibility  ! he  !
+! FredA     ! possibilityA ! heA !
+! FredB^heA !              !     !
+!___________!______________!_____!
+
+################################################################
+#
+#     (1.106) *He was hungry after John Adams woke up.
+#
+################################################################
+
+____CHAINING___
+!     !       !
+! he  ! John  !
+! heA ! JohnA !
+!_____!_______!
+
+################################################################
+#
+#     (1.107) *He wasn't disturbed that Oscar was unpopular.
+#
+################################################################
+
+____CHAINING____
+!     !        !
+! he  ! Oscar  !
+! heA ! OscarA !
+!_____!________!
+
+################################################################
+#
+#     (1.108) *It would get him into trouble for your brother to refuse to pay taxes.
+#
+################################################################
+
+_______________________CHAINING_______________________
+!      !          !       !          !      !        !
+! him  ! trouble  ! your  ! brother  ! PHI  ! taxes  !
+! himA ! troubleA ! yourA ! brotherA ! PHIA ! taxesA !
+!______!__________!_______!__________!______!________!
+
+__________________________CHAINING_________________________
+!      !          !       !               !      !        !
+! him  ! trouble  ! your  ! brother       ! PHI  ! taxes  !
+! himA ! troubleA ! yourA ! brotherA      ! PHIA ! taxesA !
+!      !          !       ! brotherB^PHIA !      !        !
+!______!__________!_______!_______________!______!________!
+
+____________________________CHAINING____________________________
+!      !               !       !               !      !        !
+! him  ! trouble       ! your  ! brother       ! PHI  ! taxes  !
+! himA ! troubleA      ! yourA ! brotherA      ! PHIA ! taxesA !
+!      ! troubleB^PHIA !       ! brotherB^PHIA !      !        !
+!______!_______________!_______!_______________!______!________!
+
+_______________________________CHAINING______________________________
+!           !               !       !               !      !        !
+! him       ! trouble       ! your  ! brother       ! PHI  ! taxes  !
+! himA      ! troubleA      ! yourA ! brotherA      ! PHIA ! taxesA !
+! himB^PHIA ! troubleB^PHIA !       ! brotherB^PHIA !      !        !
+!___________!_______________!_______!_______________!______!________!
+
+################################################################
+#
+#     (1.109) *He was infuriated at Anna's complaining about Peter.
+#
+################################################################
+
+_________________CHAINING________________
+!     !         !              !        !
+! he  ! Anna's  ! complaining  ! Peter  !
+! heA ! Anna'sA ! complainingA ! PeterA !
+!_____!_________!______________!________!
+
+################################################################
+#
+#     (1.110) *He isn't bothered by the possibility that Fred will be unpopular.
+#
+################################################################
+
+___________CHAINING___________
+!     !              !       !
+! he  ! possibility  ! Fred  !
+! heA ! possibilityA ! FredA !
+!_____!______________!_______!
+
+################################################################
+#
+#     (1.111) Penelope cursed Peter and slandered him.
+#
+################################################################
+
+______________CHAINING______________
+!           !        !      !      !
+! Penelope  ! Peter  ! PHI  ! him  !
+! PenelopeA ! PeterA ! PHIA ! himA !
+!___________!________!______!______!
+
+_________________CHAINING________________
+!           !             !      !      !
+! Penelope  ! Peter       ! PHI  ! him  !
+! PenelopeA ! PeterA      ! PHIA ! himA !
+!           ! PeterB^himA !      !      !
+!___________!_____________!______!______!
+
+_________________CHAINING________________
+!           !             !      !      !
+! Penelope  ! Peter       ! PHI  ! him  !
+! PenelopeA ! PeterA      ! PHIA ! himA !
+!           ! PeterB^himA !      !      !
+!           ! PeterC^PHIA !      !      !
+!___________!_____________!______!______!
+
+___________________CHAINING___________________
+!                !             !      !      !
+! Penelope       ! Peter       ! PHI  ! him  !
+! PenelopeA      ! PeterA      ! PHIA ! himA !
+! PenelopeB^PHIA ! PeterB^himA !      !      !
+!                ! PeterC^PHIA !      !      !
+!________________!_____________!______!______!
+
+################################################################
+#
+#     (1.112) *Penelope cursed him and slandered Peter.
+#
+################################################################
+
+______________CHAINING______________
+!           !      !      !        !
+! Penelope  ! him  ! PHI  ! Peter  !
+! PenelopeA ! himA ! PHIA ! PeterA !
+!___________!______!______!________!
+
+_________________CHAINING________________
+!           !           !      !        !
+! Penelope  ! him       ! PHI  ! Peter  !
+! PenelopeA ! himA      ! PHIA ! PeterA !
+!           ! himB^PHIA !      !        !
+!___________!___________!______!________!
+
+___________________CHAINING___________________
+!                !           !      !        !
+! Penelope       ! him       ! PHI  ! Peter  !
+! PenelopeA      ! himA      ! PHIA ! PeterA !
+! PenelopeB^PHIA ! himB^PHIA !      !        !
+!________________!___________!______!________!
+
+################################################################
+#
+#     (1.113) The interest in visiting Las Vegas that Mary displayed is typical of gamblers.
+#
+################################################################
+
+___________________________CHAINING___________________________
+!           !       !            !       !       !           !
+! interest  ! PHI1  ! Las Vegas  ! Mary  ! PHI2  ! gamblers  !
+! interestA ! PHI1A ! Las VegasA ! MaryA ! PHI2A ! gamblersA !
+!___________!_______!____________!_______!_______!___________!
+
+______________________________CHAINING______________________________
+!           !       !            !       !       !                 !
+! interest  ! PHI1  ! Las Vegas  ! Mary  ! PHI2  ! gamblers        !
+! interestA ! PHI1A ! Las VegasA ! MaryA ! PHI2A ! gamblersA       !
+!           !       !            !       !       ! gamblersB^PHI2A !
+!___________!_______!____________!_______!_______!_________________!
+
+_________________________________CHAINING_________________________________
+!           !       !                  !       !       !                 !
+! interest  ! PHI1  ! Las Vegas        ! Mary  ! PHI2  ! gamblers        !
+! interestA ! PHI1A ! Las VegasA       ! MaryA ! PHI2A ! gamblersA       !
+!           !       ! Las VegasB^PHI2A !       !       ! gamblersB^PHI2A !
+!___________!_______!__________________!_______!_______!_________________!
+
+____________________________________CHAINING____________________________________
+!           !             !                  !       !       !                 !
+! interest  ! PHI1        ! Las Vegas        ! Mary  ! PHI2  ! gamblers        !
+! interestA ! PHI1A       ! Las VegasA       ! MaryA ! PHI2A ! gamblersA       !
+!           ! PHI1B^PHI2A ! Las VegasB^PHI2A !       !       ! gamblersB^PHI2A !
+!___________!_____________!__________________!_______!_______!_________________!
+
+_______________________________________CHAINING_______________________________________
+!                 !             !                  !       !       !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary  ! PHI2  ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA ! PHI2A ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A !       !       ! gamblersB^PHI2A !
+!_________________!_____________!__________________!_______!_______!_________________!
+
+_______________________________________CHAINING_______________________________________
+!                 !             !                  !       !       !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary  ! PHI2  ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA ! PHI2A ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A !       !       ! gamblersB^PHI2A !
+!                 !             !                  !       !       ! gamblersC^PHI1A !
+!_________________!_____________!__________________!_______!_______!_________________!
+
+_______________________________________CHAINING_______________________________________
+!                 !             !                  !       !       !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary  ! PHI2  ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA ! PHI2A ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A !       !       ! gamblersB^PHI2A !
+!                 !             !                  !       !       ! gamblersC^PHI1A !
+!                 !             !                  !       !       ! gamblersD^PHI1B !
+!_________________!_____________!__________________!_______!_______!_________________!
+
+__________________________________________CHAINING__________________________________________
+!                 !             !                  !       !             !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary  ! PHI2        ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA ! PHI2A       ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A !       ! PHI2B^PHI1A ! gamblersB^PHI2A !
+!                 !             !                  !       !             ! gamblersC^PHI1A !
+!                 !             !                  !       !             ! gamblersD^PHI1B !
+!_________________!_____________!__________________!_______!_____________!_________________!
+
+__________________________________________CHAINING__________________________________________
+!                 !             !                  !       !             !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary  ! PHI2        ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA ! PHI2A       ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A !       ! PHI2B^PHI1A ! gamblersB^PHI2A !
+!                 !             !                  !       ! PHI2C^PHI1B ! gamblersC^PHI1A !
+!                 !             !                  !       !             ! gamblersD^PHI1B !
+!_________________!_____________!__________________!_______!_____________!_________________!
+
+_____________________________________________CHAINING_____________________________________________
+!                 !             !                  !             !             !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary        ! PHI2        ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA       ! PHI2A       ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A ! MaryB^PHI1A ! PHI2B^PHI1A ! gamblersB^PHI2A !
+!                 !             !                  !             ! PHI2C^PHI1B ! gamblersC^PHI1A !
+!                 !             !                  !             !             ! gamblersD^PHI1B !
+!_________________!_____________!__________________!_____________!_____________!_________________!
+
+_____________________________________________CHAINING_____________________________________________
+!                 !             !                  !             !             !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary        ! PHI2        ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA       ! PHI2A       ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A ! MaryB^PHI1A ! PHI2B^PHI1A ! gamblersB^PHI2A !
+!                 !             !                  ! MaryC^PHI1B ! PHI2C^PHI1B ! gamblersC^PHI1A !
+!                 !             !                  !             !             ! gamblersD^PHI1B !
+!_________________!_____________!__________________!_____________!_____________!_________________!
+
+_____________________________________________CHAINING_____________________________________________
+!                 !             !                  !             !             !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary        ! PHI2        ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA       ! PHI2A       ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A ! MaryB^PHI1A ! PHI2B^PHI1A ! gamblersB^PHI2A !
+! interestC^PHI1A !             !                  ! MaryC^PHI1B ! PHI2C^PHI1B ! gamblersC^PHI1A !
+!                 !             !                  !             !             ! gamblersD^PHI1B !
+!_________________!_____________!__________________!_____________!_____________!_________________!
+
+_____________________________________________CHAINING_____________________________________________
+!                 !             !                  !             !             !                 !
+! interest        ! PHI1        ! Las Vegas        ! Mary        ! PHI2        ! gamblers        !
+! interestA       ! PHI1A       ! Las VegasA       ! MaryA       ! PHI2A       ! gamblersA       !
+! interestB^PHI2A ! PHI1B^PHI2A ! Las VegasB^PHI2A ! MaryB^PHI1A ! PHI2B^PHI1A ! gamblersB^PHI2A !
+! interestC^PHI1A !             !                  ! MaryC^PHI1B ! PHI2C^PHI1B ! gamblersC^PHI1A !
+! interestD^PHI1B !             !                  !             !             ! gamblersD^PHI1B !
+!_________________!_____________!__________________!_____________!_____________!_________________!
+
+################################################################
+#
+#     (5.2) June hates flowers, but she waters them anyway.
+#
+################################################################
+
+______________CHAINING_____________
+!       !          !      !       !
+! June  ! flowers  ! she  ! them  !
+! JuneA ! flowersA ! sheA ! themA !
+!_______!__________!______!_______!
+
+_________________CHAINING________________
+!       !                !      !       !
+! June  ! flowers        ! she  ! them  !
+! JuneA ! flowersA       ! sheA ! themA !
+!       ! flowersB^themA !      !       !
+!_______!________________!______!_______!
+
+___________________CHAINING___________________
+!            !                !      !       !
+! June       ! flowers        ! she  ! them  !
+! JuneA      ! flowersA       ! sheA ! themA !
+! JuneB^sheA ! flowersB^themA !      !       !
+!____________!________________!______!_______!
+
+################################################################
+#
+#     (8.1) John wants to give June a present, but he isn't sure she’ll like it.
+#
+################################################################
+
+_______________________CHAINING_______________________
+!       !      !       !          !     !      !     !
+! John  ! PHI  ! June  ! present  ! he  ! she  ! it  !
+! JohnA ! PHIA ! JuneA ! presentA ! heA ! sheA ! itA !
+!_______!______!_______!__________!_____!______!_____!
+
+_________________________CHAINING_________________________
+!       !      !       !              !     !      !     !
+! John  ! PHI  ! June  ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA ! JuneA ! presentA     ! heA ! sheA ! itA !
+!       !      !       ! presentB^itA !     !      !     !
+!_______!______!_______!______________!_____!______!_____!
+
+___________________________CHAINING___________________________
+!       !          !       !              !     !      !     !
+! John  ! PHI      ! June  ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA     ! JuneA ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA !       ! presentB^itA !     !      !     !
+!_______!__________!_______!______________!_____!______!_____!
+
+______________________________CHAINING_____________________________
+!       !          !            !              !     !      !     !
+! John  ! PHI      ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA     ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA ! JuneB^sheA ! presentB^itA !     !      !     !
+!_______!__________!____________!______________!_____!______!_____!
+
+______________________________CHAINING______________________________
+!       !           !            !              !     !      !     !
+! John  ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!       ! PHIC^sheA !            !              !     !      !     !
+!_______!___________!____________!______________!_____!______!_____!
+
+______________________________CHAINING______________________________
+!       !           !            !              !     !      !     !
+! John  ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!       ! PHIC^sheA !            !              !     !      !     !
+!       ! PHID^heA  !            !              !     !      !     !
+!_______!___________!____________!______________!_____!______!_____!
+
+________________________________CHAINING________________________________
+!           !           !            !              !     !      !     !
+! John      ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA     ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!           ! PHIC^sheA !            !              !     !      !     !
+!           ! PHID^heA  !            !              !     !      !     !
+!___________!___________!____________!______________!_____!______!_____!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+!            ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+! JohnD^PHID ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+################################################################
+#
+#     (10.1) John wants to give June a present, but he isn't sure she’ll like it.
+#
+################################################################
+
+_______________________CHAINING_______________________
+!       !      !       !          !     !      !     !
+! John  ! PHI  ! June  ! present  ! he  ! she  ! it  !
+! JohnA ! PHIA ! JuneA ! presentA ! heA ! sheA ! itA !
+!_______!______!_______!__________!_____!______!_____!
+
+_________________________CHAINING_________________________
+!       !      !       !              !     !      !     !
+! John  ! PHI  ! June  ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA ! JuneA ! presentA     ! heA ! sheA ! itA !
+!       !      !       ! presentB^itA !     !      !     !
+!_______!______!_______!______________!_____!______!_____!
+
+___________________________CHAINING___________________________
+!       !          !       !              !     !      !     !
+! John  ! PHI      ! June  ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA     ! JuneA ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA !       ! presentB^itA !     !      !     !
+!_______!__________!_______!______________!_____!______!_____!
+
+______________________________CHAINING_____________________________
+!       !          !            !              !     !      !     !
+! John  ! PHI      ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA     ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA ! JuneB^sheA ! presentB^itA !     !      !     !
+!_______!__________!____________!______________!_____!______!_____!
+
+______________________________CHAINING______________________________
+!       !           !            !              !     !      !     !
+! John  ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!       ! PHIC^sheA !            !              !     !      !     !
+!_______!___________!____________!______________!_____!______!_____!
+
+______________________________CHAINING______________________________
+!       !           !            !              !     !      !     !
+! John  ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!       ! PHIC^sheA !            !              !     !      !     !
+!       ! PHID^heA  !            !              !     !      !     !
+!_______!___________!____________!______________!_____!______!_____!
+
+________________________________CHAINING________________________________
+!           !           !            !              !     !      !     !
+! John      ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA     ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!           ! PHIC^sheA !            !              !     !      !     !
+!           ! PHID^heA  !            !              !     !      !     !
+!___________!___________!____________!______________!_____!______!_____!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+!            ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+! JohnD^PHID ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+################################################################
+#
+#     (10.2) Janet saw herself.
+#
+################################################################
+
+_______CHAINING______
+!        !          !
+! Janet  ! herself  !
+! JanetA ! herselfA !
+!________!__________!
+
+___________CHAINING___________
+!                 !          !
+! Janet           ! herself  !
+! JanetA          ! herselfA !
+! JanetB^herselfA !          !
+!_________________!__________!
+
+################################################################
+#
+#     (10.3) Janet saw her.
+#
+################################################################
+
+_____CHAINING____
+!        !      !
+! Janet  ! her  !
+! JanetA ! herA !
+!________!______!
+
+_______CHAINING_______
+!             !      !
+! Janet       ! her  !
+! JanetA      ! herA !
+! JanetB^herA !      !
+!_____________!______!
+
+################################################################
+#
+#     (10.4) *Janet saw himself.
+#
+################################################################
+
+_______CHAINING______
+!        !          !
+! Janet  ! himself  !
+! JanetA ! himselfA !
+!________!__________!
+
+################################################################
+#
+#     (10.5) The men threw a smokescreen around themselves.
+#
+################################################################
+
+_______________CHAINING______________
+!      !              !             !
+! men  ! smokescreen  ! themselves  !
+! menA ! smokescreenA ! themselvesA !
+!______!______________!_____________!
+
+_____________________CHAINING____________________
+!                  !              !             !
+! men              ! smokescreen  ! themselves  !
+! menA             ! smokescreenA ! themselvesA !
+! menB^themselvesA !              !             !
+!__________________!______________!_____________!
+
+################################################################
+#
+#     (10.6) The men found a smokescreen around them.
+#
+################################################################
+
+____________CHAINING___________
+!      !              !       !
+! men  ! smokescreen  ! them  !
+! menA ! smokescreenA ! themA !
+!______!______________!_______!
+
+################################################################
+#
+#     (10.7) The men found a smokescreen to be around them.
+#
+################################################################
+
+____________CHAINING___________
+!      !              !       !
+! men  ! smokescreen  ! them  !
+! menA ! smokescreenA ! themA !
+!______!______________!_______!
+
+_______________CHAINING______________
+!            !              !       !
+! men        ! smokescreen  ! them  !
+! menA       ! smokescreenA ! themA !
+! menB^themA !              !       !
+!____________!______________!_______!
+
+################################################################
+#
+#     (10.8) The men found a smokescreen and it was around them.
+#
+################################################################
+
+_______________CHAINING______________
+!      !              !     !       !
+! men  ! smokescreen  ! it  ! them  !
+! menA ! smokescreenA ! itA ! themA !
+!______!______________!_____!_______!
+
+__________________CHAINING_________________
+!            !              !     !       !
+! men        ! smokescreen  ! it  ! them  !
+! menA       ! smokescreenA ! itA ! themA !
+! menB^themA !              !     !       !
+!____________!______________!_____!_______!
+
+____________________CHAINING___________________
+!            !                  !     !       !
+! men        ! smokescreen      ! it  ! them  !
+! menA       ! smokescreenA     ! itA ! themA !
+! menB^themA ! smokescreenB^itA !     !       !
+!____________!__________________!_____!_______!
+
+################################################################
+#
+#     (10.9) I told John to protect himself.
+#
+################################################################
+
+____________CHAINING____________
+!    !       !      !          !
+! I  ! John  ! PHI  ! himself  !
+! IA ! JohnA ! PHIA ! himselfA !
+!____!_______!______!__________!
+
+_________________CHAINING________________
+!    !       !               !          !
+! I  ! John  ! PHI           ! himself  !
+! IA ! JohnA ! PHIA          ! himselfA !
+!    !       ! PHIB^himselfA !          !
+!____!_______!_______________!__________!
+
+___________________CHAINING___________________
+!    !            !               !          !
+! I  ! John       ! PHI           ! himself  !
+! IA ! JohnA      ! PHIA          ! himselfA !
+!    ! JohnB^PHIA ! PHIB^himselfA !          !
+!____!____________!_______________!__________!
+
+___________________CHAINING___________________
+!    !            !               !          !
+! I  ! John       ! PHI           ! himself  !
+! IA ! JohnA      ! PHIA          ! himselfA !
+!    ! JohnB^PHIA ! PHIB^himselfA !          !
+!    ! JohnC^PHIB !               !          !
+!____!____________!_______________!__________!
+
+______________________CHAINING_____________________
+!         !            !               !          !
+! I       ! John       ! PHI           ! himself  !
+! IA      ! JohnA      ! PHIA          ! himselfA !
+! IB^PHIA ! JohnB^PHIA ! PHIB^himselfA !          !
+!         ! JohnC^PHIB !               !          !
+!_________!____________!_______________!__________!
+
+################################################################
+#
+#     (10.10) I told John to protect me.
+#
+################################################################
+
+__________CHAINING_________
+!    !       !      !     !
+! I  ! John  ! PHI  ! me  !
+! IA ! JohnA ! PHIA ! meA !
+!____!_______!______!_____!
+
+____________CHAINING___________
+!        !       !      !     !
+! I      ! John  ! PHI  ! me  !
+! IA     ! JohnA ! PHIA ! meA !
+! IB^meA !       !      !     !
+!________!_______!______!_____!
+
+______________CHAINING______________
+!        !            !      !     !
+! I      ! John       ! PHI  ! me  !
+! IA     ! JohnA      ! PHIA ! meA !
+! IB^meA ! JohnB^PHIA !      !     !
+!________!____________!______!_____!
+
+_______________CHAINING______________
+!         !            !      !     !
+! I       ! John       ! PHI  ! me  !
+! IA      ! JohnA      ! PHIA ! meA !
+! IB^meA  ! JohnB^PHIA !      !     !
+! IC^PHIA !            !      !     !
+!_________!____________!______!_____!
+
+################################################################
+#
+#     (10.11) I told John to protect myself.
+#
+################################################################
+
+____________CHAINING___________
+!    !       !      !         !
+! I  ! John  ! PHI  ! myself  !
+! IA ! JohnA ! PHIA ! myselfA !
+!____!_______!______!_________!
+
+________________CHAINING_______________
+!    !       !              !         !
+! I  ! John  ! PHI          ! myself  !
+! IA ! JohnA ! PHIA         ! myselfA !
+!    !       ! PHIB^myselfA !         !
+!____!_______!______________!_________!
+
+__________________CHAINING__________________
+!    !            !              !         !
+! I  ! John       ! PHI          ! myself  !
+! IA ! JohnA      ! PHIA         ! myselfA !
+!    ! JohnB^PHIA ! PHIB^myselfA !         !
+!____!____________!______________!_________!
+
+_____________________CHAINING____________________
+!         !            !              !         !
+! I       ! John       ! PHI          ! myself  !
+! IA      ! JohnA      ! PHIA         ! myselfA !
+! IB^PHIA ! JohnB^PHIA ! PHIB^myselfA !         !
+!_________!____________!______________!_________!
+
+_____________________CHAINING____________________
+!         !            !              !         !
+! I       ! John       ! PHI          ! myself  !
+! IA      ! JohnA      ! PHIA         ! myselfA !
+! IB^PHIA ! JohnB^PHIA ! PHIB^myselfA !         !
+! IC^PHIB !            !              !         !
+!_________!____________!______________!_________!
+
+################################################################
+#
+#     (11.12) Jack's house burned down, but he rebuilt it.
+#
+################################################################
+
+____________CHAINING____________
+!         !        !     !     !
+! Jack's  ! house  ! he  ! it  !
+! Jack'sA ! houseA ! heA ! itA !
+!_________!________!_____!_____!
+
+______________CHAINING______________
+!         !            !     !     !
+! Jack's  ! house      ! he  ! it  !
+! Jack'sA ! houseA     ! heA ! itA !
+!         ! houseB^itA !     !     !
+!_________!____________!_____!_____!
+
+################################################################
+#
+#     (11.26) John owns some sheep and Harry vaccinates them.
+#
+################################################################
+
+______________CHAINING_____________
+!       !        !        !       !
+! John  ! sheep  ! Harry  ! them  !
+! JohnA ! sheepA ! HarryA ! themA !
+!_______!________!________!_______!
+
+_________________CHAINING________________
+!       !              !        !       !
+! John  ! sheep        ! Harry  ! them  !
+! JohnA ! sheepA       ! HarryA ! themA !
+!       ! sheepB^themA !        !       !
+!_______!______________!________!_______!
+
+################################################################
+#
+#     (11.27) Mary danced with many boys and they found her interesting.
+#
+################################################################
+
+____________CHAINING____________
+!       !       !       !      !
+! Mary  ! boys  ! they  ! her  !
+! MaryA ! boysA ! theyA ! herA !
+!_______!_______!_______!______!
+
+_______________CHAINING______________
+!            !       !       !      !
+! Mary       ! boys  ! they  ! her  !
+! MaryA      ! boysA ! theyA ! herA !
+! MaryB^herA !       !       !      !
+!____________!_______!_______!______!
+
+__________________CHAINING_________________
+!            !             !       !      !
+! Mary       ! boys        ! they  ! her  !
+! MaryA      ! boysA       ! theyA ! herA !
+! MaryB^herA ! boysB^theyA !       !      !
+!____________!_____________!_______!______!
+
+################################################################
+#
+#     (11.28) John lost a pen yesterday and Bill found one today.
+#
+################################################################
+
+____________CHAINING___________
+!       !      !       !      !
+! John  ! pen  ! Bill  ! one  !
+! JohnA ! penA ! BillA ! oneA !
+!_______!______!_______!______!
+
+______________CHAINING______________
+!       !           !       !      !
+! John  ! pen       ! Bill  ! one  !
+! JohnA ! penA      ! BillA ! oneA !
+!       ! penB^oneA !       !      !
+!_______!___________!_______!______!
+
+_________________CHAINING________________
+!            !           !       !      !
+! John       ! pen       ! Bill  ! one  !
+! JohnA      ! penA      ! BillA ! oneA !
+! JohnB^oneA ! penB^oneA !       !      !
+!____________!___________!_______!______!
+
+################################################################
+#
+#     (11.29) John claimed to have found the solution to the problem, but Bill was sure he had found it.
+#
+################################################################
+
+__________________________CHAINING_________________________
+!       !      !           !          !       !     !     !
+! John  ! PHI  ! solution  ! problem  ! Bill  ! he  ! it  !
+! JohnA ! PHIA ! solutionA ! problemA ! BillA ! heA ! itA !
+!_______!______!___________!__________!_______!_____!_____!
+
+____________________________CHAINING___________________________
+!       !      !           !              !       !     !     !
+! John  ! PHI  ! solution  ! problem      ! Bill  ! he  ! it  !
+! JohnA ! PHIA ! solutionA ! problemA     ! BillA ! heA ! itA !
+!       !      !           ! problemB^itA !       !     !     !
+!_______!______!___________!______________!_______!_____!_____!
+
+______________________________CHAINING_____________________________
+!       !      !               !              !       !     !     !
+! John  ! PHI  ! solution      ! problem      ! Bill  ! he  ! it  !
+! JohnA ! PHIA ! solutionA     ! problemA     ! BillA ! heA ! itA !
+!       !      ! solutionB^itA ! problemB^itA !       !     !     !
+!_______!______!_______________!______________!_______!_____!_____!
+
+________________________________CHAINING_______________________________
+!       !          !               !              !       !     !     !
+! John  ! PHI      ! solution      ! problem      ! Bill  ! he  ! it  !
+! JohnA ! PHIA     ! solutionA     ! problemA     ! BillA ! heA ! itA !
+!       ! PHIB^itA ! solutionB^itA ! problemB^itA !       !     !     !
+!_______!__________!_______________!______________!_______!_____!_____!
+
+__________________________________CHAINING_________________________________
+!       !          !               !              !           !     !     !
+! John  ! PHI      ! solution      ! problem      ! Bill      ! he  ! it  !
+! JohnA ! PHIA     ! solutionA     ! problemA     ! BillA     ! heA ! itA !
+!       ! PHIB^itA ! solutionB^itA ! problemB^itA ! BillB^heA !     !     !
+!_______!__________!_______________!______________!___________!_____!_____!
+
+__________________________________CHAINING_________________________________
+!       !          !               !              !           !     !     !
+! John  ! PHI      ! solution      ! problem      ! Bill      ! he  ! it  !
+! JohnA ! PHIA     ! solutionA     ! problemA     ! BillA     ! heA ! itA !
+!       ! PHIB^itA ! solutionB^itA ! problemB^itA ! BillB^heA !     !     !
+!       ! PHIC^heA !               !              !           !     !     !
+!_______!__________!_______________!______________!___________!_____!_____!
+
+____________________________________CHAINING___________________________________
+!           !          !               !              !           !     !     !
+! John      ! PHI      ! solution      ! problem      ! Bill      ! he  ! it  !
+! JohnA     ! PHIA     ! solutionA     ! problemA     ! BillA     ! heA ! itA !
+! JohnB^heA ! PHIB^itA ! solutionB^itA ! problemB^itA ! BillB^heA !     !     !
+!           ! PHIC^heA !               !              !           !     !     !
+!___________!__________!_______________!______________!___________!_____!_____!
+
+____________________________________CHAINING____________________________________
+!            !          !               !              !           !     !     !
+! John       ! PHI      ! solution      ! problem      ! Bill      ! he  ! it  !
+! JohnA      ! PHIA     ! solutionA     ! problemA     ! BillA     ! heA ! itA !
+! JohnB^heA  ! PHIB^itA ! solutionB^itA ! problemB^itA ! BillB^heA !     !     !
+! JohnC^PHIA ! PHIC^heA !               !              !           !     !     !
+!____________!__________!_______________!______________!___________!_____!_____!
+
+____________________________________CHAINING____________________________________
+!            !          !               !              !           !     !     !
+! John       ! PHI      ! solution      ! problem      ! Bill      ! he  ! it  !
+! JohnA      ! PHIA     ! solutionA     ! problemA     ! BillA     ! heA ! itA !
+! JohnB^heA  ! PHIB^itA ! solutionB^itA ! problemB^itA ! BillB^heA !     !     !
+! JohnC^PHIA ! PHIC^heA !               !              !           !     !     !
+! JohnD^PHIC !          !               !              !           !     !     !
+!____________!__________!_______________!______________!___________!_____!_____!
+
+################################################################
+#
+#     (11.30) John wants to catch a fish and eat it for supper.
+#
+################################################################
+
+_____________________CHAINING____________________
+!       !       !       !       !     !         !
+! John  ! PHI1  ! fish  ! PHI2  ! it  ! supper  !
+! JohnA ! PHI1A ! fishA ! PHI2A ! itA ! supperA !
+!_______!_______!_______!_______!_____!_________!
+
+_______________________CHAINING______________________
+!       !           !       !       !     !         !
+! John  ! PHI1      ! fish  ! PHI2  ! it  ! supper  !
+! JohnA ! PHI1A     ! fishA ! PHI2A ! itA ! supperA !
+!       ! PHI1B^itA !       !       !     !         !
+!_______!___________!_______!_______!_____!_________!
+
+__________________________CHAINING_________________________
+!       !           !             !       !     !         !
+! John  ! PHI1      ! fish        ! PHI2  ! it  ! supper  !
+! JohnA ! PHI1A     ! fishA       ! PHI2A ! itA ! supperA !
+!       ! PHI1B^itA ! fishB^PHI2A !       !     !         !
+!_______!___________!_____________!_______!_____!_________!
+
+___________________________CHAINING__________________________
+!       !             !             !       !     !         !
+! John  ! PHI1        ! fish        ! PHI2  ! it  ! supper  !
+! JohnA ! PHI1A       ! fishA       ! PHI2A ! itA ! supperA !
+!       ! PHI1B^itA   ! fishB^PHI2A !       !     !         !
+!       ! PHI1C^PHI2A !             !       !     !         !
+!_______!_____________!_____________!_______!_____!_________!
+
+______________________________CHAINING_____________________________
+!             !             !             !       !     !         !
+! John        ! PHI1        ! fish        ! PHI2  ! it  ! supper  !
+! JohnA       ! PHI1A       ! fishA       ! PHI2A ! itA ! supperA !
+! JohnB^PHI2A ! PHI1B^itA   ! fishB^PHI2A !       !     !         !
+!             ! PHI1C^PHI2A !             !       !     !         !
+!_____________!_____________!_____________!_______!_____!_________!
+
+______________________________CHAINING_____________________________
+!             !             !             !       !     !         !
+! John        ! PHI1        ! fish        ! PHI2  ! it  ! supper  !
+! JohnA       ! PHI1A       ! fishA       ! PHI2A ! itA ! supperA !
+! JohnB^PHI2A ! PHI1B^itA   ! fishB^PHI2A !       !     !         !
+! JohnC^PHI1A ! PHI1C^PHI2A !             !       !     !         !
+!_____________!_____________!_____________!_______!_____!_________!
+
+______________________________CHAINING_____________________________
+!             !             !             !       !     !         !
+! John        ! PHI1        ! fish        ! PHI2  ! it  ! supper  !
+! JohnA       ! PHI1A       ! fishA       ! PHI2A ! itA ! supperA !
+! JohnB^PHI2A ! PHI1B^itA   ! fishB^PHI2A !       !     !         !
+! JohnC^PHI1A ! PHI1C^PHI2A !             !       !     !         !
+! JohnD^PHI1C !             !             !       !     !         !
+!_____________!_____________!_____________!_______!_____!_________!
+
+################################################################
+#
+#     (11.31) No one would put the blame on himself.
+#
+################################################################
+
+______________CHAINING_____________
+!      !      !        !          !
+! one  ! PHI  ! blame  ! himself  !
+! oneA ! PHIA ! blameA ! himselfA !
+!______!______!________!__________!
+
+__________________CHAINING__________________
+!      !      !                 !          !
+! one  ! PHI  ! blame           ! himself  !
+! oneA ! PHIA ! blameA          ! himselfA !
+!      !      ! blameB^himselfA !          !
+!______!______!_________________!__________!
+
+_______________________CHAINING______________________
+!      !               !                 !          !
+! one  ! PHI           ! blame           ! himself  !
+! oneA ! PHIA          ! blameA          ! himselfA !
+!      ! PHIB^himselfA ! blameB^himselfA !          !
+!______!_______________!_________________!__________!
+
+_________________________CHAINING_________________________
+!           !               !                 !          !
+! one       ! PHI           ! blame           ! himself  !
+! oneA      ! PHIA          ! blameA          ! himselfA !
+! oneB^PHIA ! PHIB^himselfA ! blameB^himselfA !          !
+!___________!_______________!_________________!__________!
+
+_________________________CHAINING_________________________
+!           !               !                 !          !
+! one       ! PHI           ! blame           ! himself  !
+! oneA      ! PHIA          ! blameA          ! himselfA !
+! oneB^PHIA ! PHIB^himselfA ! blameB^himselfA !          !
+! oneC^PHIB !               !                 !          !
+!___________!_______________!_________________!__________!
+
+################################################################
+#
+#     (11.32) Sue told Sandy about herself.
+#
+################################################################
+
+__________CHAINING__________
+!      !        !          !
+! Sue  ! Sandy  ! herself  !
+! SueA ! SandyA ! herselfA !
+!______!________!__________!
+
+_______________CHAINING______________
+!      !                 !          !
+! Sue  ! Sandy           ! herself  !
+! SueA ! SandyA          ! herselfA !
+!      ! SandyB^herselfA !          !
+!______!_________________!__________!
+
+___________________CHAINING___________________
+!               !                 !          !
+! Sue           ! Sandy           ! herself  !
+! SueA          ! SandyA          ! herselfA !
+! SueB^herselfA ! SandyB^herselfA !          !
+!_______________!_________________!__________!
+
+################################################################
+#
+#     (11.33) *Jill kept talking about himself.
+#
+################################################################
+
+______CHAINING______
+!       !          !
+! Jill  ! himself  !
+! JillA ! himselfA !
+!_______!__________!
+
+################################################################
+#
+#     (11.34) Does Jack's making a pig of himself bother Bill?
+#
+################################################################
+
+_______________CHAINING______________
+!         !      !          !       !
+! Jack's  ! pig  ! himself  ! Bill  !
+! Jack'sA ! pigA ! himselfA ! BillA !
+!_________!______!__________!_______!
+
+___________________CHAINING___________________
+!         !               !          !       !
+! Jack's  ! pig           ! himself  ! Bill  !
+! Jack'sA ! pigA          ! himselfA ! BillA !
+!         ! pigB^himselfA !          !       !
+!_________!_______________!__________!_______!
+
+################################################################
+#
+#     (11.35) John wants to give June a present, but he is afraid she won’t like it.
+#
+################################################################
+
+_______________________CHAINING_______________________
+!       !      !       !          !     !      !     !
+! John  ! PHI  ! June  ! present  ! he  ! she  ! it  !
+! JohnA ! PHIA ! JuneA ! presentA ! heA ! sheA ! itA !
+!_______!______!_______!__________!_____!______!_____!
+
+_________________________CHAINING_________________________
+!       !      !       !              !     !      !     !
+! John  ! PHI  ! June  ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA ! JuneA ! presentA     ! heA ! sheA ! itA !
+!       !      !       ! presentB^itA !     !      !     !
+!_______!______!_______!______________!_____!______!_____!
+
+___________________________CHAINING___________________________
+!       !          !       !              !     !      !     !
+! John  ! PHI      ! June  ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA     ! JuneA ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA !       ! presentB^itA !     !      !     !
+!_______!__________!_______!______________!_____!______!_____!
+
+______________________________CHAINING_____________________________
+!       !          !            !              !     !      !     !
+! John  ! PHI      ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA     ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA ! JuneB^sheA ! presentB^itA !     !      !     !
+!_______!__________!____________!______________!_____!______!_____!
+
+______________________________CHAINING______________________________
+!       !           !            !              !     !      !     !
+! John  ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!       ! PHIC^sheA !            !              !     !      !     !
+!_______!___________!____________!______________!_____!______!_____!
+
+______________________________CHAINING______________________________
+!       !           !            !              !     !      !     !
+! John  ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+!       ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!       ! PHIC^sheA !            !              !     !      !     !
+!       ! PHID^heA  !            !              !     !      !     !
+!_______!___________!____________!______________!_____!______!_____!
+
+________________________________CHAINING________________________________
+!           !           !            !              !     !      !     !
+! John      ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA     ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+!           ! PHIC^sheA !            !              !     !      !     !
+!           ! PHID^heA  !            !              !     !      !     !
+!___________!___________!____________!______________!_____!______!_____!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+!            ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+! JohnD^PHID ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+################################################################
+#
+#     (11.36) Ernie doesn't like Bernie, because he is such an asshole.
+#
+################################################################
+
+_______________CHAINING______________
+!        !         !     !          !
+! Ernie  ! Bernie  ! he  ! asshole  !
+! ErnieA ! BernieA ! heA ! assholeA !
+!________!_________!_____!__________!
+
+_________________CHAINING________________
+!        !             !     !          !
+! Ernie  ! Bernie      ! he  ! asshole  !
+! ErnieA ! BernieA     ! heA ! assholeA !
+!        ! BernieB^heA !     !          !
+!________!_____________!_____!__________!
+
+___________________CHAINING__________________
+!            !             !     !          !
+! Ernie      ! Bernie      ! he  ! asshole  !
+! ErnieA     ! BernieA     ! heA ! assholeA !
+! ErnieB^heA ! BernieB^heA !     !          !
+!____________!_____________!_____!__________!
+
+################################################################
+#
+#     (12.2) Mary's father killed himself.
+#
+################################################################
+
+____________CHAINING____________
+!         !         !          !
+! Mary's  ! father  ! himself  !
+! Mary'sA ! fatherA ! himselfA !
+!_________!_________!__________!
+
+_________________CHAINING________________
+!         !                  !          !
+! Mary's  ! father           ! himself  !
+! Mary'sA ! fatherA          ! himselfA !
+!         ! fatherB^himselfA !          !
+!_________!__________________!__________!
+
+################################################################
+#
+#     (12.3) *Mary's father killed him.
+#
+################################################################
+
+__________CHAINING__________
+!         !         !      !
+! Mary's  ! father  ! him  !
+! Mary'sA ! fatherA ! himA !
+!_________!_________!______!
+
+################################################################
+#
+#     (12.4) *Mary's father killed herself.
+#
+################################################################
+
+____________CHAINING____________
+!         !         !          !
+! Mary's  ! father  ! herself  !
+! Mary'sA ! fatherA ! herselfA !
+!_________!_________!__________!
+
+################################################################
+#
+#     (12.5) Mary's father killed her.
+#
+################################################################
+
+__________CHAINING__________
+!         !         !      !
+! Mary's  ! father  ! her  !
+! Mary'sA ! fatherA ! herA !
+!_________!_________!______!
+
+################################################################
+#
+#     (12.6) The father of Mary killed himself.
+#
+################################################################
+
+___________CHAINING___________
+!         !       !          !
+! father  ! Mary  ! himself  !
+! fatherA ! MaryA ! himselfA !
+!_________!_______!__________!
+
+________________CHAINING_______________
+!                  !       !          !
+! father           ! Mary  ! himself  !
+! fatherA          ! MaryA ! himselfA !
+! fatherB^himselfA !       !          !
+!__________________!_______!__________!
+
+################################################################
+#
+#     (12.7) *The father of Mary killed him.
+#
+################################################################
+
+_________CHAINING_________
+!         !       !      !
+! father  ! Mary  ! him  !
+! fatherA ! MaryA ! himA !
+!_________!_______!______!
+
+################################################################
+#
+#     (12.8) *The father of Mary killed herself.
+#
+################################################################
+
+___________CHAINING___________
+!         !       !          !
+! father  ! Mary  ! herself  !
+! fatherA ! MaryA ! herselfA !
+!_________!_______!__________!
+
+________________CHAINING_______________
+!         !                !          !
+! father  ! Mary           ! herself  !
+! fatherA ! MaryA          ! herselfA !
+!         ! MaryB^herselfA !          !
+!_________!________________!__________!
+
+################################################################
+#
+#     (12.9) The father of Mary killed her.
+#
+################################################################
+
+_________CHAINING_________
+!         !       !      !
+! father  ! Mary  ! her  !
+! fatherA ! MaryA ! herA !
+!_________!_______!______!
+
+____________CHAINING___________
+!         !            !      !
+! father  ! Mary       ! her  !
+! fatherA ! MaryA      ! herA !
+!         ! MaryB^herA !      !
+!_________!____________!______!
+
+################################################################
+#
+#     (12.11) Mary's mother cooks only for herself.
+#
+################################################################
+
+____________CHAINING____________
+!         !         !          !
+! Mary's  ! mother  ! herself  !
+! Mary'sA ! motherA ! herselfA !
+!_________!_________!__________!
+
+_________________CHAINING________________
+!         !                  !          !
+! Mary's  ! mother           ! herself  !
+! Mary'sA ! motherA          ! herselfA !
+!         ! motherB^herselfA !          !
+!_________!__________________!__________!
+
+################################################################
+#
+#     (12.12) Mary's mother cooks only for her.
+#
+################################################################
+
+__________CHAINING__________
+!         !         !      !
+! Mary's  ! mother  ! her  !
+! Mary'sA ! motherA ! herA !
+!_________!_________!______!
+
+_____________CHAINING____________
+!         !              !      !
+! Mary's  ! mother       ! her  !
+! Mary'sA ! motherA      ! herA !
+!         ! motherB^herA !      !
+!_________!______________!______!
+
+################################################################
+#
+#     (12.13) Mary's mother cooks only for her mother.
+#
+################################################################
+
+________________CHAINING________________
+!         !          !      !          !
+! Mary's  ! mother1  ! her  ! mother2  !
+! Mary'sA ! mother1A ! herA ! mother2A !
+!_________!__________!______!__________!
+
+___________________CHAINING__________________
+!         !               !      !          !
+! Mary's  ! mother1       ! her  ! mother2  !
+! Mary'sA ! mother1A      ! herA ! mother2A !
+!         ! mother1B^herA !      !          !
+!_________!_______________!______!__________!
+
+################################################################
+#
+#     (13.2) It was difficult to sketch myself.
+#
+################################################################
+
+____________CHAINING____________
+!     !       !      !         !
+! I0  ! you0  ! PHI  ! myself  !
+! I0A ! you0A ! PHIA ! myselfA !
+!_____!_______!______!_________!
+
+________________CHAINING________________
+!     !       !              !         !
+! I0  ! you0  ! PHI          ! myself  !
+! I0A ! you0A ! PHIA         ! myselfA !
+!     !       ! PHIB^myselfA !         !
+!_____!_______!______________!_________!
+
+___________________CHAINING__________________
+!     !            !              !         !
+! I0  ! you0       ! PHI          ! myself  !
+! I0A ! you0A      ! PHIA         ! myselfA !
+!     ! you0B^PHIA ! PHIB^myselfA !         !
+!_____!____________!______________!_________!
+
+_____________________CHAINING_____________________
+!          !            !              !         !
+! I0       ! you0       ! PHI          ! myself  !
+! I0A      ! you0A      ! PHIA         ! myselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^myselfA !         !
+!__________!____________!______________!_________!
+
+_____________________CHAINING_____________________
+!          !            !              !         !
+! I0       ! you0       ! PHI          ! myself  !
+! I0A      ! you0A      ! PHIA         ! myselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^myselfA !         !
+! I0C^PHIB !            !              !         !
+!__________!____________!______________!_________!
+
+################################################################
+#
+#     (13.5a) It was difficult for me to sketch myself.
+#
+################################################################
+
+____________CHAINING___________
+!     !       !     !         !
+! I0  ! you0  ! me  ! myself  !
+! I0A ! you0A ! meA ! myselfA !
+!_____!_______!_____!_________!
+
+________________CHAINING_______________
+!     !       !             !         !
+! I0  ! you0  ! me          ! myself  !
+! I0A ! you0A ! meA         ! myselfA !
+!     !       ! meB^myselfA !         !
+!_____!_______!_____________!_________!
+
+__________________CHAINING_________________
+!         !       !             !         !
+! I0      ! you0  ! me          ! myself  !
+! I0A     ! you0A ! meA         ! myselfA !
+! I0B^meA !       ! meB^myselfA !         !
+!_________!_______!_____________!_________!
+
+__________________CHAINING_________________
+!         !       !             !         !
+! I0      ! you0  ! me          ! myself  !
+! I0A     ! you0A ! meA         ! myselfA !
+! I0B^meA !       ! meB^myselfA !         !
+! I0C^meB !       !             !         !
+!_________!_______!_____________!_________!
+
+################################################################
+#
+#     (13.6a) It was difficult for you to sketch yourself.
+#
+################################################################
+
+_____________CHAINING_____________
+!     !       !      !           !
+! I0  ! you0  ! you  ! yourself  !
+! I0A ! you0A ! youA ! yourselfA !
+!_____!_______!______!___________!
+
+__________________CHAINING__________________
+!     !       !                !           !
+! I0  ! you0  ! you            ! yourself  !
+! I0A ! you0A ! youA           ! yourselfA !
+!     !       ! youB^yourselfA !           !
+!_____!_______!________________!___________!
+
+_____________________CHAINING____________________
+!     !            !                !           !
+! I0  ! you0       ! you            ! yourself  !
+! I0A ! you0A      ! youA           ! yourselfA !
+!     ! you0B^youA ! youB^yourselfA !           !
+!_____!____________!________________!___________!
+
+_____________________CHAINING____________________
+!     !            !                !           !
+! I0  ! you0       ! you            ! yourself  !
+! I0A ! you0A      ! youA           ! yourselfA !
+!     ! you0B^youA ! youB^yourselfA !           !
+!     ! you0C^youB !                !           !
+!_____!____________!________________!___________!
+
+################################################################
+#
+#     (13.7a) It was difficult for him to sketch himself.
+#
+################################################################
+
+_____________CHAINING____________
+!     !       !      !          !
+! I0  ! you0  ! him  ! himself  !
+! I0A ! you0A ! himA ! himselfA !
+!_____!_______!______!__________!
+
+_________________CHAINING_________________
+!     !       !               !          !
+! I0  ! you0  ! him           ! himself  !
+! I0A ! you0A ! himA          ! himselfA !
+!     !       ! himB^himselfA !          !
+!_____!_______!_______________!__________!
+
+################################################################
+#
+#     (13.8a) It was difficult for her to sketch herself.
+#
+################################################################
+
+_____________CHAINING____________
+!     !       !      !          !
+! I0  ! you0  ! her  ! herself  !
+! I0A ! you0A ! herA ! herselfA !
+!_____!_______!______!__________!
+
+_________________CHAINING_________________
+!     !       !               !          !
+! I0  ! you0  ! her           ! herself  !
+! I0A ! you0A ! herA          ! herselfA !
+!     !       ! herB^herselfA !          !
+!_____!_______!_______________!__________!
+
+################################################################
+#
+#     (13.9a) It was difficult for us to sketch ourselves.
+#
+################################################################
+
+_____________CHAINING_____________
+!     !       !     !            !
+! I0  ! you0  ! us  ! ourselves  !
+! I0A ! you0A ! usA ! ourselvesA !
+!_____!_______!_____!____________!
+
+___________________CHAINING__________________
+!     !       !                !            !
+! I0  ! you0  ! us             ! ourselves  !
+! I0A ! you0A ! usA            ! ourselvesA !
+!     !       ! usB^ourselvesA !            !
+!_____!_______!________________!____________!
+
+################################################################
+#
+#     (13.10a) It was difficult for you to sketch yourselves.
+#
+################################################################
+
+______________CHAINING______________
+!     !       !      !             !
+! I0  ! you0  ! you  ! yourselves  !
+! I0A ! you0A ! youA ! yourselvesA !
+!_____!_______!______!_____________!
+
+____________________CHAINING____________________
+!     !       !                  !             !
+! I0  ! you0  ! you              ! yourselves  !
+! I0A ! you0A ! youA             ! yourselvesA !
+!     !       ! youB^yourselvesA !             !
+!_____!_______!__________________!_____________!
+
+_______________________CHAINING______________________
+!     !            !                  !             !
+! I0  ! you0       ! you              ! yourselves  !
+! I0A ! you0A      ! youA             ! yourselvesA !
+!     ! you0B^youA ! youB^yourselvesA !             !
+!_____!____________!__________________!_____________!
+
+_______________________CHAINING______________________
+!     !            !                  !             !
+! I0  ! you0       ! you              ! yourselves  !
+! I0A ! you0A      ! youA             ! yourselvesA !
+!     ! you0B^youA ! youB^yourselvesA !             !
+!     ! you0C^youB !                  !             !
+!_____!____________!__________________!_____________!
+
+################################################################
+#
+#     (13.11a) It was difficult for them to sketch themselves.
+#
+################################################################
+
+_______________CHAINING______________
+!     !       !       !             !
+! I0  ! you0  ! them  ! themselves  !
+! I0A ! you0A ! themA ! themselvesA !
+!_____!_______!_______!_____________!
+
+_____________________CHAINING____________________
+!     !       !                   !             !
+! I0  ! you0  ! them              ! themselves  !
+! I0A ! you0A ! themA             ! themselvesA !
+!     !       ! themB^themselvesA !             !
+!_____!_______!___________________!_____________!
+
+################################################################
+#
+#     (13.5b) It was difficult to sketch myself.
+#
+################################################################
+
+____________CHAINING____________
+!     !       !      !         !
+! I0  ! you0  ! PHI  ! myself  !
+! I0A ! you0A ! PHIA ! myselfA !
+!_____!_______!______!_________!
+
+________________CHAINING________________
+!     !       !              !         !
+! I0  ! you0  ! PHI          ! myself  !
+! I0A ! you0A ! PHIA         ! myselfA !
+!     !       ! PHIB^myselfA !         !
+!_____!_______!______________!_________!
+
+___________________CHAINING__________________
+!     !            !              !         !
+! I0  ! you0       ! PHI          ! myself  !
+! I0A ! you0A      ! PHIA         ! myselfA !
+!     ! you0B^PHIA ! PHIB^myselfA !         !
+!_____!____________!______________!_________!
+
+_____________________CHAINING_____________________
+!          !            !              !         !
+! I0       ! you0       ! PHI          ! myself  !
+! I0A      ! you0A      ! PHIA         ! myselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^myselfA !         !
+!__________!____________!______________!_________!
+
+_____________________CHAINING_____________________
+!          !            !              !         !
+! I0       ! you0       ! PHI          ! myself  !
+! I0A      ! you0A      ! PHIA         ! myselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^myselfA !         !
+! I0C^PHIB !            !              !         !
+!__________!____________!______________!_________!
+
+################################################################
+#
+#     (13.6b) It was difficult to sketch yourself.
+#
+################################################################
+
+_____________CHAINING_____________
+!     !       !      !           !
+! I0  ! you0  ! PHI  ! yourself  !
+! I0A ! you0A ! PHIA ! yourselfA !
+!_____!_______!______!___________!
+
+__________________CHAINING__________________
+!     !       !                !           !
+! I0  ! you0  ! PHI            ! yourself  !
+! I0A ! you0A ! PHIA           ! yourselfA !
+!     !       ! PHIB^yourselfA !           !
+!_____!_______!________________!___________!
+
+_____________________CHAINING____________________
+!     !            !                !           !
+! I0  ! you0       ! PHI            ! yourself  !
+! I0A ! you0A      ! PHIA           ! yourselfA !
+!     ! you0B^PHIA ! PHIB^yourselfA !           !
+!_____!____________!________________!___________!
+
+_____________________CHAINING____________________
+!     !            !                !           !
+! I0  ! you0       ! PHI            ! yourself  !
+! I0A ! you0A      ! PHIA           ! yourselfA !
+!     ! you0B^PHIA ! PHIB^yourselfA !           !
+!     ! you0C^PHIB !                !           !
+!_____!____________!________________!___________!
+
+_______________________CHAINING_______________________
+!          !            !                !           !
+! I0       ! you0       ! PHI            ! yourself  !
+! I0A      ! you0A      ! PHIA           ! yourselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^yourselfA !           !
+!          ! you0C^PHIB !                !           !
+!__________!____________!________________!___________!
+
+################################################################
+#
+#     (13.7b) *It was difficult to sketch himself.
+#
+################################################################
+
+_____________CHAINING____________
+!     !       !      !          !
+! I0  ! you0  ! PHI  ! himself  !
+! I0A ! you0A ! PHIA ! himselfA !
+!_____!_______!______!__________!
+
+_________________CHAINING_________________
+!     !       !               !          !
+! I0  ! you0  ! PHI           ! himself  !
+! I0A ! you0A ! PHIA          ! himselfA !
+!     !       ! PHIB^himselfA !          !
+!_____!_______!_______________!__________!
+
+____________________CHAINING___________________
+!     !            !               !          !
+! I0  ! you0       ! PHI           ! himself  !
+! I0A ! you0A      ! PHIA          ! himselfA !
+!     ! you0B^PHIA ! PHIB^himselfA !          !
+!_____!____________!_______________!__________!
+
+______________________CHAINING______________________
+!          !            !               !          !
+! I0       ! you0       ! PHI           ! himself  !
+! I0A      ! you0A      ! PHIA          ! himselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^himselfA !          !
+!__________!____________!_______________!__________!
+
+################################################################
+#
+#     (13.8b) *It was difficult to sketch herself.
+#
+################################################################
+
+_____________CHAINING____________
+!     !       !      !          !
+! I0  ! you0  ! PHI  ! herself  !
+! I0A ! you0A ! PHIA ! herselfA !
+!_____!_______!______!__________!
+
+_________________CHAINING_________________
+!     !       !               !          !
+! I0  ! you0  ! PHI           ! herself  !
+! I0A ! you0A ! PHIA          ! herselfA !
+!     !       ! PHIB^herselfA !          !
+!_____!_______!_______________!__________!
+
+____________________CHAINING___________________
+!     !            !               !          !
+! I0  ! you0       ! PHI           ! herself  !
+! I0A ! you0A      ! PHIA          ! herselfA !
+!     ! you0B^PHIA ! PHIB^herselfA !          !
+!_____!____________!_______________!__________!
+
+______________________CHAINING______________________
+!          !            !               !          !
+! I0       ! you0       ! PHI           ! herself  !
+! I0A      ! you0A      ! PHIA          ! herselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^herselfA !          !
+!__________!____________!_______________!__________!
+
+################################################################
+#
+#     (13.9b) It was difficult to sketch ourselves.
+#
+################################################################
+
+______________CHAINING_____________
+!     !       !      !            !
+! I0  ! you0  ! PHI  ! ourselves  !
+! I0A ! you0A ! PHIA ! ourselvesA !
+!_____!_______!______!____________!
+
+___________________CHAINING___________________
+!     !       !                 !            !
+! I0  ! you0  ! PHI             ! ourselves  !
+! I0A ! you0A ! PHIA            ! ourselvesA !
+!     !       ! PHIB^ourselvesA !            !
+!_____!_______!_________________!____________!
+
+______________________CHAINING_____________________
+!     !            !                 !            !
+! I0  ! you0       ! PHI             ! ourselves  !
+! I0A ! you0A      ! PHIA            ! ourselvesA !
+!     ! you0B^PHIA ! PHIB^ourselvesA !            !
+!_____!____________!_________________!____________!
+
+________________________CHAINING________________________
+!          !            !                 !            !
+! I0       ! you0       ! PHI             ! ourselves  !
+! I0A      ! you0A      ! PHIA            ! ourselvesA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^ourselvesA !            !
+!__________!____________!_________________!____________!
+
+################################################################
+#
+#     (13.10b) It was difficult to sketch yourselves.
+#
+################################################################
+
+______________CHAINING______________
+!     !       !      !             !
+! I0  ! you0  ! PHI  ! yourselves  !
+! I0A ! you0A ! PHIA ! yourselvesA !
+!_____!_______!______!_____________!
+
+____________________CHAINING____________________
+!     !       !                  !             !
+! I0  ! you0  ! PHI              ! yourselves  !
+! I0A ! you0A ! PHIA             ! yourselvesA !
+!     !       ! PHIB^yourselvesA !             !
+!_____!_______!__________________!_____________!
+
+_______________________CHAINING______________________
+!     !            !                  !             !
+! I0  ! you0       ! PHI              ! yourselves  !
+! I0A ! you0A      ! PHIA             ! yourselvesA !
+!     ! you0B^PHIA ! PHIB^yourselvesA !             !
+!_____!____________!__________________!_____________!
+
+_______________________CHAINING______________________
+!     !            !                  !             !
+! I0  ! you0       ! PHI              ! yourselves  !
+! I0A ! you0A      ! PHIA             ! yourselvesA !
+!     ! you0B^PHIA ! PHIB^yourselvesA !             !
+!     ! you0C^PHIB !                  !             !
+!_____!____________!__________________!_____________!
+
+_________________________CHAINING_________________________
+!          !            !                  !             !
+! I0       ! you0       ! PHI              ! yourselves  !
+! I0A      ! you0A      ! PHIA             ! yourselvesA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^yourselvesA !             !
+!          ! you0C^PHIB !                  !             !
+!__________!____________!__________________!_____________!
+
+################################################################
+#
+#     (13.11b) *It was difficult to sketch themselves.
+#
+################################################################
+
+______________CHAINING______________
+!     !       !      !             !
+! I0  ! you0  ! PHI  ! themselves  !
+! I0A ! you0A ! PHIA ! themselvesA !
+!_____!_______!______!_____________!
+
+____________________CHAINING____________________
+!     !       !                  !             !
+! I0  ! you0  ! PHI              ! themselves  !
+! I0A ! you0A ! PHIA             ! themselvesA !
+!     !       ! PHIB^themselvesA !             !
+!_____!_______!__________________!_____________!
+
+_______________________CHAINING______________________
+!     !            !                  !             !
+! I0  ! you0       ! PHI              ! themselves  !
+! I0A ! you0A      ! PHIA             ! themselvesA !
+!     ! you0B^PHIA ! PHIB^themselvesA !             !
+!_____!____________!__________________!_____________!
+
+_________________________CHAINING_________________________
+!          !            !                  !             !
+! I0       ! you0       ! PHI              ! themselves  !
+! I0A      ! you0A      ! PHIA             ! themselvesA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^themselvesA !             !
+!__________!____________!__________________!_____________!
+
+################################################################
+#
+#     (13.12a) Nurse Bob Breezy gave up drawing.
+#
+################################################################
+
+_______CHAINING_______
+!     !       !      !
+! I0  ! you0  ! Bob  !
+! I0A ! you0A ! BobA !
+!_____!_______!______!
+
+################################################################
+#
+#     (13.12b) [Bob] It was difficult to sketch himself.
+#
+################################################################
+
+________________CHAINING________________
+!     !       !      !      !          !
+! I0  ! you0  ! Bob  ! PHI  ! himself  !
+! I0A ! you0A ! BobA ! PHIA ! himselfA !
+!_____!_______!______!______!__________!
+
+_____________________CHAINING____________________
+!     !       !      !               !          !
+! I0  ! you0  ! Bob  ! PHI           ! himself  !
+! I0A ! you0A ! BobA ! PHIA          ! himselfA !
+!     !       !      ! PHIB^himselfA !          !
+!_____!_______!______!_______________!__________!
+
+_______________________CHAINING_______________________
+!     !       !           !               !          !
+! I0  ! you0  ! Bob       ! PHI           ! himself  !
+! I0A ! you0A ! BobA      ! PHIA          ! himselfA !
+!     !       ! BobB^PHIA ! PHIB^himselfA !          !
+!_____!_______!___________!_______________!__________!
+
+_______________________CHAINING_______________________
+!     !       !           !               !          !
+! I0  ! you0  ! Bob       ! PHI           ! himself  !
+! I0A ! you0A ! BobA      ! PHIA          ! himselfA !
+!     !       ! BobB^PHIA ! PHIB^himselfA !          !
+!     !       ! BobC^PHIB !               !          !
+!_____!_______!___________!_______________!__________!
+
+__________________________CHAINING_________________________
+!     !            !           !               !          !
+! I0  ! you0       ! Bob       ! PHI           ! himself  !
+! I0A ! you0A      ! BobA      ! PHIA          ! himselfA !
+!     ! you0B^PHIA ! BobB^PHIA ! PHIB^himselfA !          !
+!     !            ! BobC^PHIB !               !          !
+!_____!____________!___________!_______________!__________!
+
+____________________________CHAINING____________________________
+!          !            !           !               !          !
+! I0       ! you0       ! Bob       ! PHI           ! himself  !
+! I0A      ! you0A      ! BobA      ! PHIA          ! himselfA !
+! I0B^PHIA ! you0B^PHIA ! BobB^PHIA ! PHIB^himselfA !          !
+!          !            ! BobC^PHIB !               !          !
+!__________!____________!___________!_______________!__________!
+
+################################################################
+#
+#     (13.13a) Astronaut Linda Smith gave up drawing.
+#
+################################################################
+
+________CHAINING________
+!     !       !        !
+! I0  ! you0  ! Linda  !
+! I0A ! you0A ! LindaA !
+!_____!_______!________!
+
+################################################################
+#
+#     (13.13b) [Linda] It was difficult to sketch herself.
+#
+################################################################
+
+_________________CHAINING_________________
+!     !       !        !      !          !
+! I0  ! you0  ! Linda  ! PHI  ! herself  !
+! I0A ! you0A ! LindaA ! PHIA ! herselfA !
+!_____!_______!________!______!__________!
+
+______________________CHAINING_____________________
+!     !       !        !               !          !
+! I0  ! you0  ! Linda  ! PHI           ! herself  !
+! I0A ! you0A ! LindaA ! PHIA          ! herselfA !
+!     !       !        ! PHIB^herselfA !          !
+!_____!_______!________!_______________!__________!
+
+________________________CHAINING________________________
+!     !       !             !               !          !
+! I0  ! you0  ! Linda       ! PHI           ! herself  !
+! I0A ! you0A ! LindaA      ! PHIA          ! herselfA !
+!     !       ! LindaB^PHIA ! PHIB^herselfA !          !
+!_____!_______!_____________!_______________!__________!
+
+________________________CHAINING________________________
+!     !       !             !               !          !
+! I0  ! you0  ! Linda       ! PHI           ! herself  !
+! I0A ! you0A ! LindaA      ! PHIA          ! herselfA !
+!     !       ! LindaB^PHIA ! PHIB^herselfA !          !
+!     !       ! LindaC^PHIB !               !          !
+!_____!_______!_____________!_______________!__________!
+
+___________________________CHAINING__________________________
+!     !            !             !               !          !
+! I0  ! you0       ! Linda       ! PHI           ! herself  !
+! I0A ! you0A      ! LindaA      ! PHIA          ! herselfA !
+!     ! you0B^PHIA ! LindaB^PHIA ! PHIB^herselfA !          !
+!     !            ! LindaC^PHIB !               !          !
+!_____!____________!_____________!_______________!__________!
+
+_____________________________CHAINING_____________________________
+!          !            !             !               !          !
+! I0       ! you0       ! Linda       ! PHI           ! herself  !
+! I0A      ! you0A      ! LindaA      ! PHIA          ! herselfA !
+! I0B^PHIA ! you0B^PHIA ! LindaB^PHIA ! PHIB^herselfA !          !
+!          !            ! LindaC^PHIB !               !          !
+!__________!____________!_____________!_______________!__________!
+
+################################################################
+#
+#     (13.14a) The bank embezzlers gave up drawing.
+#
+################################################################
+
+___________CHAINING__________
+!     !       !             !
+! I0  ! you0  ! embezzlers  !
+! I0A ! you0A ! embezzlersA !
+!_____!_______!_____________!
+
+################################################################
+#
+#     (13.14b) [the bank embezzlers] It was difficult to sketch themselves.
+#
+################################################################
+
+_____________________CHAINING_____________________
+!     !       !             !      !             !
+! I0  ! you0  ! embezzlers  ! PHI  ! themselves  !
+! I0A ! you0A ! embezzlersA ! PHIA ! themselvesA !
+!_____!_______!_____________!______!_____________!
+
+___________________________CHAINING___________________________
+!     !       !             !                  !             !
+! I0  ! you0  ! embezzlers  ! PHI              ! themselves  !
+! I0A ! you0A ! embezzlersA ! PHIA             ! themselvesA !
+!     !       !             ! PHIB^themselvesA !             !
+!_____!_______!_____________!__________________!_____________!
+
+______________________________CHAINING_____________________________
+!     !       !                  !                  !             !
+! I0  ! you0  ! embezzlers       ! PHI              ! themselves  !
+! I0A ! you0A ! embezzlersA      ! PHIA             ! themselvesA !
+!     !       ! embezzlersB^PHIA ! PHIB^themselvesA !             !
+!_____!_______!__________________!__________________!_____________!
+
+______________________________CHAINING_____________________________
+!     !       !                  !                  !             !
+! I0  ! you0  ! embezzlers       ! PHI              ! themselves  !
+! I0A ! you0A ! embezzlersA      ! PHIA             ! themselvesA !
+!     !       ! embezzlersB^PHIA ! PHIB^themselvesA !             !
+!     !       ! embezzlersC^PHIB !                  !             !
+!_____!_______!__________________!__________________!_____________!
+
+________________________________CHAINING________________________________
+!     !            !                  !                  !             !
+! I0  ! you0       ! embezzlers       ! PHI              ! themselves  !
+! I0A ! you0A      ! embezzlersA      ! PHIA             ! themselvesA !
+!     ! you0B^PHIA ! embezzlersB^PHIA ! PHIB^themselvesA !             !
+!     !            ! embezzlersC^PHIB !                  !             !
+!_____!____________!__________________!__________________!_____________!
+
+___________________________________CHAINING__________________________________
+!          !            !                  !                  !             !
+! I0       ! you0       ! embezzlers       ! PHI              ! themselves  !
+! I0A      ! you0A      ! embezzlersA      ! PHIA             ! themselvesA !
+! I0B^PHIA ! you0B^PHIA ! embezzlersB^PHIA ! PHIB^themselvesA !             !
+!          !            ! embezzlersC^PHIB !                  !             !
+!__________!____________!__________________!__________________!_____________!
+
+################################################################
+#
+#     (13.15) *It was difficult to sketch himself.
+#
+################################################################
+
+_____________CHAINING____________
+!     !       !      !          !
+! I0  ! you0  ! PHI  ! himself  !
+! I0A ! you0A ! PHIA ! himselfA !
+!_____!_______!______!__________!
+
+_________________CHAINING_________________
+!     !       !               !          !
+! I0  ! you0  ! PHI           ! himself  !
+! I0A ! you0A ! PHIA          ! himselfA !
+!     !       ! PHIB^himselfA !          !
+!_____!_______!_______________!__________!
+
+____________________CHAINING___________________
+!     !            !               !          !
+! I0  ! you0       ! PHI           ! himself  !
+! I0A ! you0A      ! PHIA          ! himselfA !
+!     ! you0B^PHIA ! PHIB^himselfA !          !
+!_____!____________!_______________!__________!
+
+______________________CHAINING______________________
+!          !            !               !          !
+! I0       ! you0       ! PHI           ! himself  !
+! I0A      ! you0A      ! PHIA          ! himselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^himselfA !          !
+!__________!____________!_______________!__________!
+
+################################################################
+#
+#     (13.16) *It was difficult to sketch herself.
+#
+################################################################
+
+_____________CHAINING____________
+!     !       !      !          !
+! I0  ! you0  ! PHI  ! herself  !
+! I0A ! you0A ! PHIA ! herselfA !
+!_____!_______!______!__________!
+
+_________________CHAINING_________________
+!     !       !               !          !
+! I0  ! you0  ! PHI           ! herself  !
+! I0A ! you0A ! PHIA          ! herselfA !
+!     !       ! PHIB^herselfA !          !
+!_____!_______!_______________!__________!
+
+____________________CHAINING___________________
+!     !            !               !          !
+! I0  ! you0       ! PHI           ! herself  !
+! I0A ! you0A      ! PHIA          ! herselfA !
+!     ! you0B^PHIA ! PHIB^herselfA !          !
+!_____!____________!_______________!__________!
+
+______________________CHAINING______________________
+!          !            !               !          !
+! I0       ! you0       ! PHI           ! herself  !
+! I0A      ! you0A      ! PHIA          ! herselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^herselfA !          !
+!__________!____________!_______________!__________!
+
+################################################################
+#
+#     (13.17) *It was difficult to sketch themselves.
+#
+################################################################
+
+______________CHAINING______________
+!     !       !      !             !
+! I0  ! you0  ! PHI  ! themselves  !
+! I0A ! you0A ! PHIA ! themselvesA !
+!_____!_______!______!_____________!
+
+____________________CHAINING____________________
+!     !       !                  !             !
+! I0  ! you0  ! PHI              ! themselves  !
+! I0A ! you0A ! PHIA             ! themselvesA !
+!     !       ! PHIB^themselvesA !             !
+!_____!_______!__________________!_____________!
+
+_______________________CHAINING______________________
+!     !            !                  !             !
+! I0  ! you0       ! PHI              ! themselves  !
+! I0A ! you0A      ! PHIA             ! themselvesA !
+!     ! you0B^PHIA ! PHIB^themselvesA !             !
+!_____!____________!__________________!_____________!
+
+_________________________CHAINING_________________________
+!          !            !                  !             !
+! I0       ! you0       ! PHI              ! themselves  !
+! I0A      ! you0A      ! PHIA             ! themselvesA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^themselvesA !             !
+!__________!____________!__________________!_____________!
+
+################################################################
+#
+#     (13.18) [Bob] It was difficult to sketch himself.
+#
+################################################################
+
+________________CHAINING________________
+!     !       !      !      !          !
+! I0  ! you0  ! Bob  ! PHI  ! himself  !
+! I0A ! you0A ! BobA ! PHIA ! himselfA !
+!_____!_______!______!______!__________!
+
+_____________________CHAINING____________________
+!     !       !      !               !          !
+! I0  ! you0  ! Bob  ! PHI           ! himself  !
+! I0A ! you0A ! BobA ! PHIA          ! himselfA !
+!     !       !      ! PHIB^himselfA !          !
+!_____!_______!______!_______________!__________!
+
+_______________________CHAINING_______________________
+!     !       !           !               !          !
+! I0  ! you0  ! Bob       ! PHI           ! himself  !
+! I0A ! you0A ! BobA      ! PHIA          ! himselfA !
+!     !       ! BobB^PHIA ! PHIB^himselfA !          !
+!_____!_______!___________!_______________!__________!
+
+_______________________CHAINING_______________________
+!     !       !           !               !          !
+! I0  ! you0  ! Bob       ! PHI           ! himself  !
+! I0A ! you0A ! BobA      ! PHIA          ! himselfA !
+!     !       ! BobB^PHIA ! PHIB^himselfA !          !
+!     !       ! BobC^PHIB !               !          !
+!_____!_______!___________!_______________!__________!
+
+__________________________CHAINING_________________________
+!     !            !           !               !          !
+! I0  ! you0       ! Bob       ! PHI           ! himself  !
+! I0A ! you0A      ! BobA      ! PHIA          ! himselfA !
+!     ! you0B^PHIA ! BobB^PHIA ! PHIB^himselfA !          !
+!     !            ! BobC^PHIB !               !          !
+!_____!____________!___________!_______________!__________!
+
+____________________________CHAINING____________________________
+!          !            !           !               !          !
+! I0       ! you0       ! Bob       ! PHI           ! himself  !
+! I0A      ! you0A      ! BobA      ! PHIA          ! himselfA !
+! I0B^PHIA ! you0B^PHIA ! BobB^PHIA ! PHIB^himselfA !          !
+!          !            ! BobC^PHIB !               !          !
+!__________!____________!___________!_______________!__________!
+
+################################################################
+#
+#     (13.19) [Linda] It was difficult to sketch herself.
+#
+################################################################
+
+_________________CHAINING_________________
+!     !       !        !      !          !
+! I0  ! you0  ! Linda  ! PHI  ! herself  !
+! I0A ! you0A ! LindaA ! PHIA ! herselfA !
+!_____!_______!________!______!__________!
+
+______________________CHAINING_____________________
+!     !       !        !               !          !
+! I0  ! you0  ! Linda  ! PHI           ! herself  !
+! I0A ! you0A ! LindaA ! PHIA          ! herselfA !
+!     !       !        ! PHIB^herselfA !          !
+!_____!_______!________!_______________!__________!
+
+________________________CHAINING________________________
+!     !       !             !               !          !
+! I0  ! you0  ! Linda       ! PHI           ! herself  !
+! I0A ! you0A ! LindaA      ! PHIA          ! herselfA !
+!     !       ! LindaB^PHIA ! PHIB^herselfA !          !
+!_____!_______!_____________!_______________!__________!
+
+________________________CHAINING________________________
+!     !       !             !               !          !
+! I0  ! you0  ! Linda       ! PHI           ! herself  !
+! I0A ! you0A ! LindaA      ! PHIA          ! herselfA !
+!     !       ! LindaB^PHIA ! PHIB^herselfA !          !
+!     !       ! LindaC^PHIB !               !          !
+!_____!_______!_____________!_______________!__________!
+
+___________________________CHAINING__________________________
+!     !            !             !               !          !
+! I0  ! you0       ! Linda       ! PHI           ! herself  !
+! I0A ! you0A      ! LindaA      ! PHIA          ! herselfA !
+!     ! you0B^PHIA ! LindaB^PHIA ! PHIB^herselfA !          !
+!     !            ! LindaC^PHIB !               !          !
+!_____!____________!_____________!_______________!__________!
+
+_____________________________CHAINING_____________________________
+!          !            !             !               !          !
+! I0       ! you0       ! Linda       ! PHI           ! herself  !
+! I0A      ! you0A      ! LindaA      ! PHIA          ! herselfA !
+! I0B^PHIA ! you0B^PHIA ! LindaB^PHIA ! PHIB^herselfA !          !
+!          !            ! LindaC^PHIB !               !          !
+!__________!____________!_____________!_______________!__________!
+
+################################################################
+#
+#     (13.20) [the bank embezzlers] It was difficult to sketch themselves.
+#
+################################################################
+
+_____________________CHAINING_____________________
+!     !       !             !      !             !
+! I0  ! you0  ! embezzlers  ! PHI  ! themselves  !
+! I0A ! you0A ! embezzlersA ! PHIA ! themselvesA !
+!_____!_______!_____________!______!_____________!
+
+___________________________CHAINING___________________________
+!     !       !             !                  !             !
+! I0  ! you0  ! embezzlers  ! PHI              ! themselves  !
+! I0A ! you0A ! embezzlersA ! PHIA             ! themselvesA !
+!     !       !             ! PHIB^themselvesA !             !
+!_____!_______!_____________!__________________!_____________!
+
+______________________________CHAINING_____________________________
+!     !       !                  !                  !             !
+! I0  ! you0  ! embezzlers       ! PHI              ! themselves  !
+! I0A ! you0A ! embezzlersA      ! PHIA             ! themselvesA !
+!     !       ! embezzlersB^PHIA ! PHIB^themselvesA !             !
+!_____!_______!__________________!__________________!_____________!
+
+______________________________CHAINING_____________________________
+!     !       !                  !                  !             !
+! I0  ! you0  ! embezzlers       ! PHI              ! themselves  !
+! I0A ! you0A ! embezzlersA      ! PHIA             ! themselvesA !
+!     !       ! embezzlersB^PHIA ! PHIB^themselvesA !             !
+!     !       ! embezzlersC^PHIB !                  !             !
+!_____!_______!__________________!__________________!_____________!
+
+________________________________CHAINING________________________________
+!     !            !                  !                  !             !
+! I0  ! you0       ! embezzlers       ! PHI              ! themselves  !
+! I0A ! you0A      ! embezzlersA      ! PHIA             ! themselvesA !
+!     ! you0B^PHIA ! embezzlersB^PHIA ! PHIB^themselvesA !             !
+!     !            ! embezzlersC^PHIB !                  !             !
+!_____!____________!__________________!__________________!_____________!
+
+___________________________________CHAINING__________________________________
+!          !            !                  !                  !             !
+! I0       ! you0       ! embezzlers       ! PHI              ! themselves  !
+! I0A      ! you0A      ! embezzlersA      ! PHIA             ! themselvesA !
+! I0B^PHIA ! you0B^PHIA ! embezzlersB^PHIA ! PHIB^themselvesA !             !
+!          !            ! embezzlersC^PHIB !                  !             !
+!__________!____________!__________________!__________________!_____________!
+
+################################################################
+#
+#     (13.21) It was difficult to sketch myself.
+#
+################################################################
+
+____________CHAINING____________
+!     !       !      !         !
+! I0  ! you0  ! PHI  ! myself  !
+! I0A ! you0A ! PHIA ! myselfA !
+!_____!_______!______!_________!
+
+________________CHAINING________________
+!     !       !              !         !
+! I0  ! you0  ! PHI          ! myself  !
+! I0A ! you0A ! PHIA         ! myselfA !
+!     !       ! PHIB^myselfA !         !
+!_____!_______!______________!_________!
+
+___________________CHAINING__________________
+!     !            !              !         !
+! I0  ! you0       ! PHI          ! myself  !
+! I0A ! you0A      ! PHIA         ! myselfA !
+!     ! you0B^PHIA ! PHIB^myselfA !         !
+!_____!____________!______________!_________!
+
+_____________________CHAINING_____________________
+!          !            !              !         !
+! I0       ! you0       ! PHI          ! myself  !
+! I0A      ! you0A      ! PHIA         ! myselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^myselfA !         !
+!__________!____________!______________!_________!
+
+_____________________CHAINING_____________________
+!          !            !              !         !
+! I0       ! you0       ! PHI          ! myself  !
+! I0A      ! you0A      ! PHIA         ! myselfA !
+! I0B^PHIA ! you0B^PHIA ! PHIB^myselfA !         !
+! I0C^PHIB !            !              !         !
+!__________!____________!______________!_________!
+
+################################################################
+#
+#     (13.22) [toy] Give me that!
+#
+################################################################
+
+__________________CHAINING_________________
+!     !       !      !      !     !       !
+! I0  ! you0  ! toy  ! PHI  ! me  ! that  !
+! I0A ! you0A ! toyA ! PHIA ! meA ! thatA !
+!_____!_______!______!______!_____!_______!
+
+_____________________CHAINING____________________
+!     !       !            !      !     !       !
+! I0  ! you0  ! toy        ! PHI  ! me  ! that  !
+! I0A ! you0A ! toyA       ! PHIA ! meA ! thatA !
+!     !       ! toyB^thatA !      !     !       !
+!_____!_______!____________!______!_____!_______!
+
+_______________________CHAINING______________________
+!         !       !            !      !     !       !
+! I0      ! you0  ! toy        ! PHI  ! me  ! that  !
+! I0A     ! you0A ! toyA       ! PHIA ! meA ! thatA !
+! I0B^meA !       ! toyB^thatA !      !     !       !
+!_________!_______!____________!______!_____!_______!
+
+_______________________CHAINING______________________
+!         !       !            !      !     !       !
+! I0      ! you0  ! toy        ! PHI  ! me  ! that  !
+! I0A     ! you0A ! toyA       ! PHIA ! meA ! thatA !
+! I0B^meA !       ! toyB^thatA !      !     !       !
+!         !       ! toyC^PHIA  !      !     !       !
+!_________!_______!____________!______!_____!_______!
+
+_________________________CHAINING_________________________
+!         !            !            !      !     !       !
+! I0      ! you0       ! toy        ! PHI  ! me  ! that  !
+! I0A     ! you0A      ! toyA       ! PHIA ! meA ! thatA !
+! I0B^meA ! you0B^PHIA ! toyB^thatA !      !     !       !
+!         !            ! toyC^PHIA  !      !     !       !
+!_________!____________!____________!______!_____!_______!
+
+__________________________CHAINING_________________________
+!          !            !            !      !     !       !
+! I0       ! you0       ! toy        ! PHI  ! me  ! that  !
+! I0A      ! you0A      ! toyA       ! PHIA ! meA ! thatA !
+! I0B^meA  ! you0B^PHIA ! toyB^thatA !      !     !       !
+! I0C^PHIA !            ! toyC^PHIA  !      !     !       !
+!__________!____________!____________!______!_____!_______!

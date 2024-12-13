@@ -1,3 +1,5 @@
+# Adapted from https://github.com/github/gitignore/blob/master/Python.gitignore
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -65,18 +67,90 @@ db.sqlite3-journal
 instance/
 .webassets-cache
 
+# LaTeX/MiKTeX intermediate files
+## Core latex/pdflatex auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.ptc
+*.xdv
+
+# LaTeX outputs we WANT to include
+!*.pdf                      # Allow PDF files
+
+## Intermediate documents
+*.dvi
+*.ps
+*.eps
+
+## Bibliography auxiliary files (bibtex/biblatex/biber)
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+*.brf
+
+## Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## makeindex
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# Quantum extensions
+*.q
+
 # Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
+# Sphinx documentation additional files
 docs/_build/
+docs/build/
+_build/
+docs/api/
+*.doctree
+*.pickle
+docs/_autosummary/
+.sphinx-cache/
+
+# Documentation outputs we WANT to include
+!docs/_build/html/          # Allow Sphinx-generated HTML docs
+!docs/_build/html/**        # Allow all files under html/
+!docs/_build/html/**/*.html # Extra explicit about HTML files
+!docs/_build/html/**/*.js   # JavaScript for interactive docs
+!docs/_build/html/**/*.css  # Styling for docs
+!docs/_build/html/**/*.png  # Images in docs
+!docs/_build/html/**/*.svg  # Vector graphics in docs
+!docs/_build/html/_static/  # Static assets directory
+!docs/_build/html/_images/  # Images directory
 
 # PyBuilder
 .pybuilder/
 target/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# Jupyter additional files
+.jupyter/
+*.nbconvert.ipynb
+.nb_checkpoints/
+.ipynb_checkpoints/
+.virtual_documents/
 
 # IPython
 profile_default/
@@ -159,4 +233,4 @@ cython_debug/
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+.idea/

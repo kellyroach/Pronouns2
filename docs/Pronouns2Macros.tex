@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Pronouns2Macros.tex -- LaTeX Macros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Access bold symbols in maths mode (e.g. $\bm{\mu}$)
+% https://ctan.org/pkg/bm?lang=en
+\usepackage{bm}
+
+% Claude: "If you're using the makeidx package to create your 
+% index, make sure it's loaded before hyperref"
+% A package for producing multiple indexes
+% https://ctan.org/pkg/imakeidx?lang=en
+\usepackage{imakeidx}
+
+% A new bookmark (outline) organization for hyperref
+% https://ctan.org/pkg/bookmark?lang=en
+% Placing ``\tableofcontents`` after ``\maketitle`` will create
+% table of ``Contents`` hyperlinks to sections and subsections.
+% Replicates \tableofcontents into Adobe Reader Bookmarks.
+\usepackage{bookmark}
+
+% Adobe Type 1 “free” copies of Courier
+% Courier allows \textbf{\texttt{John}} and \texttt{\textbf{John}} to work.
+% https://ctan.org/pkg/courier?lang=en
+\usepackage{courier}
+
+% Indent first paragraph after section header
+% https://ctan.org/pkg/indentfirst?lang=en
+\usepackage{indentfirst}
+
+% Accept different input encodings
+% https://ctan.org/pkg/inputenc?lang=en
+% We tried adding ``inputenc'' package but didn't see any difference.
+\usepackage[utf8]{inputenc}
+
+% Create commutative diagrams with TikZ
+% https://ctan.org/pkg/tikz-cd?lang=en
+% PGF/TikZ Manual
+% https://tikz.dev
+% https://tikz.dev/tikz-arrows
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows, arrows.meta, bending, positioning, shapes.geometric, trees}
+
+% setspace – Set space between lines
+% https://ctan.org/pkg/setspace?lang=en
+% EXAMPLE:
+%    \clearpage
+%    \begin{spacing}{0.98} % or a smaller number for tighter spacing
+%    \printbibliography
+%    \end{spacing}
+%    \addcontentsline{toc}{section}{References}  % Add to Table of Contents
+% to get one straggling reference packed into the previous 2 pages
+% of References in my Pronouns2.tex doc.
+\usepackage{setspace}
+
+\emergencystretch=1 in
+\overfullrule=0pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Title
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{Kelly Roach\\
+\href{mailto:kellybrianroach@outlook.com}{kellybrianroach@outlook.com}\\
+\url{https://www.kellyroach.com}}
+
+\def\monthname{
+  \ifcase\month
+    \or January\or February\or March\or April
+    \or May\or June\or July\or August
+    \or September\or October\or November\or December
+  \fi
+}
+\date{(\the\day \monthname\ \the\year)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     enumerate* and itemize*
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{enumerate*}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\newenvironment{itemize*}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
