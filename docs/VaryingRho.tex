@@ -1,0 +1,970 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     VaryingRho.tex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\input Pronouns2Macros.tex
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Title
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\textbf{Varying Spreading Algorithm's \bm{${\rho}$}}}
+\maketitle
+
+Our \textbf{Spreading Algorithm} takes a list of angles on
+the unit circle and a spreading factor ${\rho\in[0,1]}$, and
+outputs a new list of angles that are more evenly distributed
+while preserving their relative order. For ${\rho<1}$, the algorithm:
+
+\begin{enumerate*}
+\item[1.] Unrolls the unit circle onto the real line, mapping the
+   angles to positions in ${[0,2\pi]}$
+\item[2.] Computes ${\delta=2\pi\rho/((1-\rho)n)}$ where $n$ is the number of
+   angles
+\item[3.] For each mapped position:
+   \begin{enumerate*}
+   \item Inserts ${(1-\alpha)\delta}$ padding before the position
+   \item Inserts ${\alpha\delta}$ padding after the position
+   \end{enumerate*}
+   where ${\alpha}$ is determined by the ``average angle's'' relative
+   position between its two nearest neighbors
+\item[4.] Scales this expanded line (now length ${2\pi+n\delta}$) back to
+   length ${2\pi}$
+\item[5.] Rolls the line back into a circle, yielding the spread-out angles
+\end{enumerate*}
+
+The Spreading Algorithm ensures the "average angle" (angle of the average
+of the points on the unit circle) remains fixed. When ${\rho=0}$,
+angles remain unchanged; as ${\rho}$ approaches $1$, angles approach
+even spacing; and ${\rho=1}$ corresponds to the limit, where angles
+reaching even spacing.
+
+The Spreading Algorithm helps position arrows around nodes in
+chaining.py's Tikz diagrams, preventing arrows from
+overlapping while maintaining their general directional
+relationships.
+
+The remainder of this document illustrates how varying
+the input ${\rho}$ passed to the Spreading Algorithm varies
+the position arrows around nodes in chaining.py's Tikz diagrams
+applied to example sentence (10.1).  Ultimately, we settled
+on using ${\rho=0.5}$ which is a nice compromise between direct
+flight arrows and completely spread out arrows.
+
+%This documents's chaining diagrams can be recreated using
+%varying_rho_doc() which creates file docs/varying_rho.tex.
+
+This documents's chaining diagrams can be recreated using
+\texttt{varying\symbol{95}rho\symbol{95}doc()} which creates
+file \texttt{docs/varying\symbol{95}rho.tex}.
+
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.0
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.0}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-121.41] (heA.south west);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=-157.74] (heA.west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-151.38] (itA.south west);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=-161.87] (itA.west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-140.69] (sheA.south west);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=-151.38] (sheA.south west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.1
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.1}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-114.23] (heA.south west);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=-164.92] (heA.west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-142.90] (itA.south west);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=-170.34] (itA.west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-132.23] (sheA.south west);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=-159.84] (sheA.west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.2
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.2}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-107.05] (heA.south);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=-172.11] (heA.west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-134.42] (itA.south west);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=-178.82] (itA.west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-123.76] (sheA.south west);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=-168.31] (sheA.west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.3
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.3}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-99.86] (heA.south);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=-179.29] (heA.west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-125.95] (itA.south west);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=172.71] (itA.west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-115.30] (sheA.south west);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=-176.77] (sheA.west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.4
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.4}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-92.68] (heA.south);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=173.53] (heA.west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-117.47] (itA.south west);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=164.23] (itA.west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-106.83] (sheA.south);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=174.76] (sheA.west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.5
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.5}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-85.50] (heA.south);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=166.34] (heA.west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-109.00] (itA.south);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=155.75] (itA.north west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-98.36] (sheA.south);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=166.29] (sheA.west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.6
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.6}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-78.31] (heA.south);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=159.16] (heA.west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-100.52] (itA.south);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=147.28] (itA.north west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-89.90] (sheA.south);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=157.83] (sheA.west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.7
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.7}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-71.13] (heA.south);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=151.97] (heA.north west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-92.05] (itA.south);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=138.80] (itA.north west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-81.43] (sheA.south);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=149.36] (sheA.north west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.8
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.8}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-63.94] (heA.south east);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=144.79] (heA.north west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-83.57] (itA.south);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=130.33] (itA.north west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-72.97] (sheA.south);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=140.90] (sheA.north west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=0.9
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=0.9}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-56.76] (heA.south east);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=137.61] (heA.north west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-75.10] (itA.south);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=121.85] (itA.north west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-64.50] (sheA.south east);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=132.43] (sheA.north west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Case rho=1.0
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Case \bm{${\rho=1.0}$}}
+\addcontentsline{toc}{section}{(10.1) John wants to give June a present, but he isn't sure she’ll like it.}
+
+\bigbreak
+\begin{enumerate*}
+\item[(10.1)] John wants to give June a present, but he isn't sure she’ll like it.
+\end{enumerate*}
+\bigbreak
+
+\bigbreak
+\begin{minipage}{\textwidth}
+\makebox[\textwidth][c]{
+\begin{tikzpicture}[
+    every node/.style={align=center},
+    dotted line/.style={draw, dotted, thick},
+    curved arrow/.style={draw, thick, -{Latex[bend]}},
+    ]
+\node (S) at (5.478383,0.000000) {S};
+\node (John) at (0.505225,-1.171530) {John};
+\node (PHI) at (2.259759,-1.171530) {$\phi$};
+\node (June) at (4.004530,-1.171530) {June};
+\node (present) at (5.992394,-1.171530) {present};
+\node (he) at (7.792325,-1.171530) {he};
+\node (she) at (9.279357,-1.171530) {she};
+\node (it) at (10.707813,-1.171530) {it};
+\draw[dotted line] (S) -- (John);
+\draw[dotted line] (S) -- (it);
+\draw[dotted line] (John) -- (PHI);
+\draw[dotted line] (PHI) -- (June);
+\draw[dotted line] (June) -- (present);
+\draw[dotted line] (present) -- (he);
+\draw[dotted line] (he) -- (she);
+\draw[dotted line] (she) -- (it);
+\node (JohnA) at (0.505225,-2.343060) {${\textrm{John}_{\textrm{a}}}$};
+\node (PHIA) at (2.259759,-2.343060) {${\phi_{\textrm{a}}}$};
+\node (JuneA) at (4.004530,-2.343060) {${\textrm{June}_{\textrm{a}}}$};
+\node (presentA) at (5.992394,-2.343060) {${\textrm{present}_{\textrm{a}}}$};
+\node (heA) at (7.792325,-2.343060) {${\textrm{he}_{\textrm{a}}}$};
+\node (sheA) at (9.279357,-2.343060) {${\textrm{she}_{\textrm{a}}}$};
+\node (itA) at (10.707813,-2.343060) {${\textrm{it}_{\textrm{a}}}$};
+\draw[dotted line] (John) -- (JohnA);
+\draw[dotted line] (PHI) -- (PHIA);
+\draw[dotted line] (June) -- (JuneA);
+\draw[dotted line] (present) -- (presentA);
+\draw[dotted line] (he) -- (heA);
+\draw[dotted line] (she) -- (sheA);
+\draw[dotted line] (it) -- (itA);
+\node (JohnB) at (0.505225,-3.514590) {${\textrm{John}_{\textrm{b}}}$};
+\node (PHIB) at (2.259759,-3.514590) {${\phi_{\textrm{b}}}$};
+\node (JuneB) at (4.004530,-3.514590) {${\textrm{June}_{\textrm{b}}}$};
+\node (presentB) at (5.992394,-3.514590) {${\textrm{present}_{\textrm{b}}}$};
+\draw[dotted line] (JohnA) -- (JohnB);
+\draw[dotted line] (PHIA) -- (PHIB);
+\draw[dotted line] (JuneA) -- (JuneB);
+\draw[dotted line] (presentA) -- (presentB);
+\node (JohnC) at (0.505225,-4.686120) {${\textrm{John}_{\textrm{c}}}$};
+\node (PHIC) at (2.259759,-4.686120) {${\phi_{\textrm{c}}}$};
+\draw[dotted line] (JohnB) -- (JohnC);
+\draw[dotted line] (PHIB) -- (PHIC);
+\node (JohnD) at (0.505225,-5.857650) {${\textrm{John}_{\textrm{d}}}$};
+\node (PHID) at (2.259759,-5.857650) {${\phi_{\textrm{d}}}$};
+\draw[dotted line] (JohnC) -- (JohnD);
+\draw[dotted line] (PHIC) -- (PHID);
+\draw[curved arrow] (PHID.north east) to [out=58.59,in=-49.58] (heA.south east);
+\draw[curved arrow] (JohnB.east) to [out=22.26,in=130.43] (heA.north west);
+\draw[curved arrow] (presentB.north east) to [out=28.62,in=-66.63] (itA.south east);
+\draw[curved arrow] (PHIB.east) to [out=18.13,in=113.39] (itA.north west);
+\draw[curved arrow] (PHIC.north east) to [out=39.31,in=-56.04] (sheA.south east);
+\draw[curved arrow] (JuneB.north east) to [out=28.62,in=123.97] (sheA.north west);
+\draw[curved arrow] (JohnC.north) to [out=73.02,in=-106.98] (PHIA.south);
+\draw[curved arrow] (JohnD.east) to [out=0.00,in=-180.00] (PHID.west);
+\end{tikzpicture}
+}
+\end{minipage}
+\bigbreak
+
+\end{document}
