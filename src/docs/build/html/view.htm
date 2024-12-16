@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>view module &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="Chatbot Assistance" href="chatbots.htm" />
+    <link rel="prev" title="varying_rho module" href="varying_rho.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="modules.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="varying_rho.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" accesskey="U">src</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="chatbots.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-view">
+<span id="view-module"></span><h1>view module<a class="headerlink" href="#module-view" title="Permalink to this heading">¶</a></h1>
+<p>Functions mapping Node and Feature structures to simpler Python lists of strings.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_chain">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_chain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chain</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts single chain into string representation with ‘^’ between nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>chain</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – Chain to convert</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String representation of chain using ‘^’ separator</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_chaining">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_chaining</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_chaining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates rows showing E-nodes and their chains under each N-node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – N-nodes to show chains for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Rows showing N-nodes and their E-node chains</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_chaining_column">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_chaining_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_chaining_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a column of strings corresponding to N-Node nnode</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnode</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_chaining_columns">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_chaining_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_chaining_columns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a columns of strings corresponding to N-Node nnodes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnodes</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_chaining_label">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_chaining_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_chaining_label" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_chains">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_chains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chains</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_chains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts list of chains into list of string representations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>chains</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em><em>]</em>) – Chains to convert</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String representations of chains</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_dict">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts dictionary mapping node numbers to chains into string representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dict</strong> (<em>dict</em><em>[</em><em>int</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em><em>]</em><em>]</em>) – Dictionary to convert</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String representation of node-to-chains mapping</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict[int, list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_features">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates feature matrix rows with +/-/? indicators for each feature type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – N-nodes to display features for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Header row plus feature rows for each node</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_features_row">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_features_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_features_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a single N-node into a row of strings for the Features table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – An N-node whose features are to be converted</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>node’s lit value followed by feature symbols</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List of strings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_interpretations">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_interpretations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_interpretations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates rows showing valid binding interpretations found for the sentence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>interps</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em><em>]</em><em>]</em>) – Valid interpretations to display</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Rows showing each valid interpretation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_interpretations_row">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_interpretations_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_interpretations_row" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>interp</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_interps">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_interps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_interps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts list of interpretations into string representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>interps</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em><em>]</em><em>]</em>) – Interpretations to convert</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String representation of interpretations</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[list[list[str]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_label">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates string label for a node, combining np_link’s lit value with sub if present.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Node to create label for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Node’s label (e.g. “JohnB”)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_lexicon">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_lexicon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view.view_lexicon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates feature matrix rows with +/-/? indicators for each feature type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Header row plus feature rows for each
+entry in the lexicon_dict</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_node_str">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_node_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_node_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a formatted string representation of the given node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_nodes">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates rows representing node properties and links in tabular format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – Nodes to display</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of rows where each row is [node_number, properties_str]</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_nodes_row">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_nodes_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_nodes_row" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a list of lists of strings for a given Node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_short_label">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_short_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_short_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates string short label for a node, combining np_link’s number value with sub if present.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Node to create label for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Node’s short label (e.g. “3B”)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_summary">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#view.view_summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates rows representing demo_all Summary in tabular format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of rows where each row is [node_number, properties_str]</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_transpose">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_transpose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">columns</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_transpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transposes columns to rows, filling empty spaces with empty strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>columns</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Columns to transpose</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Transposed rows with empty string padding</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[list[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="view.view_transpose_any">
+<span class="sig-prename descclassname"><span class="pre">view.</span></span><span class="sig-name descname"><span class="pre">view_transpose_any</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">columns</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#view.view_transpose_any" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic transpose that works with any type, using specified fill value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>columns</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>Any</em><em>]</em><em>]</em>) – Columns to transpose</p></li>
+<li><p><strong>fill_value</strong> (<em>Any</em><em>, </em><em>optional</em>) – Value to use for padding. Defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Transposed rows with fill_value padding</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[list[Any]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="varying_rho.htm"
+                          title="previous chapter">varying_rho module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="chatbots.htm"
+                          title="next chapter">Chatbot Assistance</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

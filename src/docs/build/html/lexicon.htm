@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>lexicon module &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="modern module" href="modern.htm" />
+    <link rel="prev" title="latex module" href="latex.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="modules.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="latex.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" accesskey="U">src</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="modern.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-lexicon">
+<span id="lexicon-module"></span><h1>lexicon module<a class="headerlink" href="#module-lexicon" title="Permalink to this heading">¶</a></h1>
+<p>Defines lexicon_lookup and lexicon_dict to store lexical entries.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="lexicon.eq_feat">
+<span class="sig-prename descclassname"><span class="pre">lexicon.</span></span><span class="sig-name descname"><span class="pre">eq_feat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lexicon.eq_feat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if two features are compatible, where only PLUS vs MINUS is considered incompatible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f1</strong> (<a class="reference internal" href="globals.htm#globals.Feature" title="globals.Feature"><em>Feature</em></a>) – First feature to compare</p></li>
+<li><p><strong>f2</strong> (<a class="reference internal" href="globals.htm#globals.Feature" title="globals.Feature"><em>Feature</em></a>) – Second feature to compare</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if features are compatible</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lexicon.eq_features">
+<span class="sig-prename descclassname"><span class="pre">lexicon.</span></span><span class="sig-name descname"><span class="pre">eq_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lexicon.eq_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if two list of features are compatible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features1</strong> (<em>Features</em>) – First Features to compare</p></li>
+<li><p><strong>features2</strong> (<em>Features</em>) – Second Features to compare</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if they are compatible</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lexicon.lexicon_feature_str_to_list">
+<span class="sig-prename descclassname"><span class="pre">lexicon.</span></span><span class="sig-name descname"><span class="pre">lexicon_feature_str_to_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lexicon.lexicon_feature_str_to_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a feature string (e.g., ‘—+-++–’) to a list of Features</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>feature_str</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lexicon.lexicon_init">
+<span class="sig-prename descclassname"><span class="pre">lexicon.</span></span><span class="sig-name descname"><span class="pre">lexicon_init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#lexicon.lexicon_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the lexicon with lexicon entries</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lexicon.lexicon_lookup">
+<span class="sig-prename descclassname"><span class="pre">lexicon.</span></span><span class="sig-name descname"><span class="pre">lexicon_lookup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lexicon.lexicon_lookup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Look up a lit in the lexicon and return a new N-node with appropriate features.</p>
+<p>Attempts several approaches before giving up:
+1. Direct lookup
+2. Remove trailing digit (e.g., “mother1” -&gt; “mother”)
+3. Remove “‘s” and set genitive feature (e.g., “Janet’s” -&gt; “Janet”)
+4. Remove “s” and set plural feature
+5. Remove “es” and set plural feature</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lit</strong> (<em>str</em>) – The literal string to look up</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new N-node with appropriate features</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>KeyError</strong> – If the lit cannot be handled by any approach</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="lexicon.lexicon_select">
+<span class="sig-prename descclassname"><span class="pre">lexicon.</span></span><span class="sig-name descname"><span class="pre">lexicon_select</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#lexicon.lexicon_select" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of words in lexicon_dict whose Features match feature_str.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>feature_str</strong> (<em>str</em>) – feature string or known lexicon word</p></li>
+<li><p><strong>(</strong><strong>e.g.</strong> – </p></li>
+<li><p><strong>'mom'</strong><strong>)</strong> (<em>'---+-++--' or</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list[str] of compatible words in lexicon_dict</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>answer</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="latex.htm"
+                          title="previous chapter">latex module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="modern.htm"
+                          title="next chapter">modern module</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>globals module &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="latex module" href="latex.htm" />
+    <link rel="prev" title="find_files module" href="find_files.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="modules.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="find_files.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" accesskey="U">src</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="latex.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-globals">
+<span id="globals-module"></span><h1>globals module<a class="headerlink" href="#module-globals" title="Permalink to this heading">¶</a></h1>
+<p>Global constants, enums, and data structures for syntax tree processing.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="globals.Feature">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">Feature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#globals.Feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Represents feature values for linguistic properties.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Feature.MINUS">
+<span class="sig-name descname"><span class="pre">MINUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#globals.Feature.MINUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node or word doesn’t have this feature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Feature.PLUS">
+<span class="sig-name descname"><span class="pre">PLUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.Feature.PLUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node or word has this feature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Feature.QUESTION">
+<span class="sig-name descname"><span class="pre">QUESTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#globals.Feature.QUESTION" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node or word might or might not have this feature.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="globals.FeatureIndex">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">FeatureIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#globals.FeatureIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Feature indices for linguistic properties.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.ANF">
+<span class="sig-name descname"><span class="pre">ANF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></em><a class="headerlink" href="#globals.FeatureIndex.ANF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Animate Feature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.FPF">
+<span class="sig-name descname"><span class="pre">FPF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#globals.FeatureIndex.FPF" title="Permalink to this definition">¶</a></dt>
+<dd><p>First Person Feature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.GEN">
+<span class="sig-name descname"><span class="pre">GEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#globals.FeatureIndex.GEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Genitive Feature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.GNF">
+<span class="sig-name descname"><span class="pre">GNF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#globals.FeatureIndex.GNF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gender Feature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.PLF">
+<span class="sig-name descname"><span class="pre">PLF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#globals.FeatureIndex.PLF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plural Feature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.PNF">
+<span class="sig-name descname"><span class="pre">PNF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.FeatureIndex.PNF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pronoun Feature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.RPF">
+<span class="sig-name descname"><span class="pre">RPF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></em><a class="headerlink" href="#globals.FeatureIndex.RPF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reflexive Feature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.SPF">
+<span class="sig-name descname"><span class="pre">SPF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#globals.FeatureIndex.SPF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Second Person Feature</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FeatureIndex.TPF">
+<span class="sig-name descname"><span class="pre">TPF</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#globals.FeatureIndex.TPF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Third Person Feature</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Features">
+<span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">Features</span></span><a class="headerlink" href="#globals.Features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type alias for a list of Feature enums representing linguistic properties.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="globals.FileType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">FileType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#globals.FileType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Controls the output format and detail level.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FileType.TEX">
+<span class="sig-name descname"><span class="pre">TEX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#globals.FileType.TEX" title="Permalink to this definition">¶</a></dt>
+<dd><p>LaTeX formatted output</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.FileType.TXT">
+<span class="sig-name descname"><span class="pre">TXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.FileType.TXT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plain text output</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.FileType.file_ext">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file_ext</span></span><a class="headerlink" href="#globals.FileType.file_ext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the file extension associated with the file type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="globals.FileType.from_ext">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_ext</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ext</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#globals.FileType.from_ext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps a file extension string to its corresponding FileType.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ext</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#globals.FileType" title="globals.FileType"><em>FileType</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="globals.HIDE_GEN">
+<span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">HIDE_GEN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#globals.HIDE_GEN" title="Permalink to this definition">¶</a></dt>
+<dd><p>GEN introduced by Chapter 12 in M.S. thesis</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="globals.Manager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">Manager</span></span><a class="headerlink" href="#globals.Manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A singleton class for managing output streams and file types.</p>
+<p>The Manager class centralizes state management for output streams
+and file types used in the application. It maintains a stack of
+states to allow nested context management with automatic state
+restoration. The class supports Python “with statement” to manage
+the active state context and provides class-level methods and
+properties for accessing and updating the current state.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.abstract_diagram">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">abstract_diagram</span></span><a class="headerlink" href="#globals.Manager.abstract_diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘abstract_diagram’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.chaining_diagram">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">chaining_diagram</span></span><a class="headerlink" href="#globals.Manager.chaining_diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘chaining_diagram’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.chaining_rho">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">chaining_rho</span></span><a class="headerlink" href="#globals.Manager.chaining_rho" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘chaining_rho’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.chaining_table">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">chaining_table</span></span><a class="headerlink" href="#globals.Manager.chaining_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘chaining_table’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.debug">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#globals.Manager.debug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘debug’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.features_table">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">features_table</span></span><a class="headerlink" href="#globals.Manager.features_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘features_table’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.file_type">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file_type</span></span><a class="headerlink" href="#globals.Manager.file_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘file_type’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.info">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#globals.Manager.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘info’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.init_table">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">init_table</span></span><a class="headerlink" href="#globals.Manager.init_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘init_table’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.interpretations_table">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interpretations_table</span></span><a class="headerlink" href="#globals.Manager.interpretations_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘interpretations_table’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.lexicon_table">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lexicon_table</span></span><a class="headerlink" href="#globals.Manager.lexicon_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘lexicon_table’.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Manager.manager">
+<span class="sig-name descname"><span class="pre">manager</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#globals.Manager" title="globals.Manager"><span class="pre">Manager</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;globals.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#globals.Manager.manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>The singleton instance of the class.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.minimum">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">minimum</span></span><a class="headerlink" href="#globals.Manager.minimum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘minimum’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.new_chain">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_chain</span></span><a class="headerlink" href="#globals.Manager.new_chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘new_chain’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.nodes_after_chaining">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nodes_after_chaining</span></span><a class="headerlink" href="#globals.Manager.nodes_after_chaining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘nodes_after_chaining’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.nodes_after_parse">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nodes_after_parse</span></span><a class="headerlink" href="#globals.Manager.nodes_after_parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘nodes_after_parse’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.nodes_table">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nodes_table</span></span><a class="headerlink" href="#globals.Manager.nodes_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘nodes_table’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="globals.Manager.set_state">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#globals.Manager.set_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class method to update the state of the singleton instance.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.state">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state</span></span><a class="headerlink" href="#globals.Manager.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property to return the state of the singleton instance.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.stream">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stream</span></span><a class="headerlink" href="#globals.Manager.stream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘stream’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.summary_table">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">summary_table</span></span><a class="headerlink" href="#globals.Manager.summary_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘summary_table’.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Manager.trace">
+<em class="property"><span class="pre">class</span><span class="w"> </span><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">trace</span></span><a class="headerlink" href="#globals.Manager.trace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class property for ‘trace’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="globals.Manager.write">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#globals.Manager.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes a message to the currently configured output stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>str</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="globals.N_FEATURES">
+<span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">N_FEATURES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">9</span></em><a class="headerlink" href="#globals.N_FEATURES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of Features</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="globals.Node">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><a class="headerlink" href="#globals.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base node class for syntax tree representation.</p>
+<p>Contains fields for tree structure (links), features, and node-specific properties.
+Different node types (C, S, N, E) use different subsets of these fields.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="globals.Node.ftr_str">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ftr_str</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#globals.Node.ftr_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="globals.Node.set_tree">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_tree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#globals.Node.set_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the global syntax tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>new_tree</strong> (<a class="reference internal" href="#globals.Node" title="globals.Node"><em>Node</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="globals.Node.tree">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#globals.Node.tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the global syntax tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><em>Optional</em>[<a class="reference internal" href="#globals.Node" title="globals.Node"><em>Node</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="globals.NodeId">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">NodeId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#globals.NodeId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Identifies the type of node in the syntax tree.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.NodeId.C_NODE">
+<span class="sig-name descname"><span class="pre">C_NODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.NodeId.C_NODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of Node which represents a C-node.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.NodeId.E_NODE">
+<span class="sig-name descname"><span class="pre">E_NODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#globals.NodeId.E_NODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of Node which represents an E-node.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.NodeId.N_NODE">
+<span class="sig-name descname"><span class="pre">N_NODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#globals.NodeId.N_NODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of Node which represents an N-node.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.NodeId.S_NODE">
+<span class="sig-name descname"><span class="pre">S_NODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#globals.NodeId.S_NODE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of Node which represents an S-node.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="globals.Summary">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">globals.</span></span><span class="sig-name descname"><span class="pre">Summary</span></span><a class="headerlink" href="#globals.Summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Static class to track various info counts in the project.</p>
+<p>Contains five integer counters that can be accessed and modified by any module:
+- meaningless: Counter for meaningless items
+- meaningful: Counter for meaningful items
+- ambiguous: Counter for ambiguous items
+- correct: Counter for correct items
+- total: Total number of items</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Summary.ambiguous">
+<span class="sig-name descname"><span class="pre">ambiguous</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.Summary.ambiguous" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Summary.correct">
+<span class="sig-name descname"><span class="pre">correct</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.Summary.correct" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Summary.meaningful">
+<span class="sig-name descname"><span class="pre">meaningful</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.Summary.meaningful" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Summary.meaningless">
+<span class="sig-name descname"><span class="pre">meaningless</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.Summary.meaningless" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="globals.Summary.reset">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#globals.Summary.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all counters to zero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="globals.Summary.total">
+<span class="sig-name descname"><span class="pre">total</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#globals.Summary.total" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="find_files.htm"
+                          title="previous chapter">find_files module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="latex.htm"
+                          title="next chapter">latex module</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

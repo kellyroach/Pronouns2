@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>table_proc module &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="tests package" href="tests.htm" />
+    <link rel="prev" title="table_interp module" href="table_interp.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="modules.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="table_interp.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" accesskey="U">src</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="tests.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-table_proc">
+<span id="table-proc-module"></span><h1>table_proc module<a class="headerlink" href="#module-table_proc" title="Permalink to this heading">¶</a></h1>
+<p>Elaborates given syntax trees with chained E-nodes, creating chaining diagrams.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.chaining">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">chaining</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.chaining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a chaining table by first initializing E-nodes
+under all N-nodes, then processing pronouns in reverse
+order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – List of N-nodes from the syntax tree</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.chaining_e_to_n">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">chaining_e_to_n</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.chaining_e_to_n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new chain if E-node e1 agrees in features with N-node n2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>e1</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Source E-node</p></li>
+<li><p><strong>n2</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Target N-node to potentially chain to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.chaining_n">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">chaining_n</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.chaining_n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Routes a pronominal N-node to either reflexive or
+non-reflexive chaining based on its RPF (Reflexive Pronoun
+Feature).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – List of all N-nodes</p></li>
+<li><p><strong>n1</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Pronominal N-node to process</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.chaining_n_to_n">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">chaining_n_to_n</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.chaining_n_to_n" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to establish chains between E-nodes under n1 and
+n2 if they satisfy sc(), agr(), and rnr() constraints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n1</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Source N-node (typically pronominal)</p></li>
+<li><p><strong>n2</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Target N-node (potential antecedent)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.init_table">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">init_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.init_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the chaining table by creating an E-node
+(subscript ‘A’) under each N-node, copying features and
+setting pred/succ links.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – List of N-nodes to initialize table for</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.new_chain">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">new_chain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.new_chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new E-node copy of n2, links it to e1 via
+chain_link, and inherits non-syntactic features from e1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>e1</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Source E-node to chain from</p></li>
+<li><p><strong>n2</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Target N-node to copy and chain to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.non_refl_chaining">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">non_refl_chaining</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.non_refl_chaining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to chain a non-reflexive pronoun to all preceding N-nodes except itself.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – List of all N-nodes</p></li>
+<li><p><strong>n1</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Non-reflexive pronominal node to process</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.refl_chaining">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">refl_chaining</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.refl_chaining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to chain a reflexive pronoun only to N-nodes
+that precede it within its simplex.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n1</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Reflexive pronominal node to process</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.simplex_pred">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">simplex_pred</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.simplex_pred" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the preceding N-node in the same simplex by
+following left_links until reaching an N-node or None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n1</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Node to find predecessor for</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Predecessor N-node in same simplex, or None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.table_proc_write_chaining_diagram">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">table_proc_write_chaining_diagram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.table_proc_write_chaining_diagram" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>globals.Node</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.table_proc_write_chaining_table">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">table_proc_write_chaining_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.table_proc_write_chaining_table" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>globals.Node</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="table_proc.table_proc_write_nodes_table">
+<span class="sig-prename descclassname"><span class="pre">table_proc.</span></span><span class="sig-name descname"><span class="pre">table_proc_write_nodes_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#table_proc.table_proc_write_nodes_table" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>globals.Node</em></a><em>]</em>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="table_interp.htm"
+                          title="previous chapter">table_interp module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tests.htm"
+                          title="next chapter">tests package</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

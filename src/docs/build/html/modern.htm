@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>modern module &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="node_proc module" href="node_proc.htm" />
+    <link rel="prev" title="lexicon module" href="lexicon.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="modules.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="lexicon.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" accesskey="U">src</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="node_proc.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-modern">
+<span id="modern-module"></span><h1>modern module<a class="headerlink" href="#module-modern" title="Permalink to this heading">¶</a></h1>
+<p>Middle layer functions which convert TXT values to LaTeX values.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="modern.modern_base_subscript">
+<span class="sig-prename descclassname"><span class="pre">modern.</span></span><span class="sig-name descname"><span class="pre">modern_base_subscript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modern.modern_base_subscript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split a token into [base, subscript] components where token == base + subscript.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – Input string to split</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[base, subscript] where token == base + subscript</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">modern_base_subscript</span><span class="p">(</span><span class="s2">&quot;PHI1A&quot;</span><span class="p">)</span>
+<span class="go">[&quot;PHI&quot;, &quot;1A&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_base_subscript</span><span class="p">(</span><span class="s2">&quot;interestA&quot;</span><span class="p">)</span>
+<span class="go">[&quot;interest&quot;, &quot;A&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_base_subscript</span><span class="p">(</span><span class="s2">&quot;gamblersD&quot;</span><span class="p">)</span>
+<span class="go">[&quot;gamblers&quot;, &quot;D&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_base_subscript</span><span class="p">(</span><span class="s2">&quot;12B&quot;</span><span class="p">)</span>
+<span class="go">[&quot;12&quot;, &quot;B&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_base_subscript</span><span class="p">(</span><span class="s2">&quot;x2&quot;</span><span class="p">)</span>
+<span class="go">[&quot;x&quot;, &quot;2&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_base_subscript</span><span class="p">(</span><span class="s2">&quot;test2A&quot;</span><span class="p">)</span>
+<span class="go">[&quot;test&quot;, &quot;2A&quot;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modern.modern_chain">
+<span class="sig-prename descclassname"><span class="pre">modern.</span></span><span class="sig-name descname"><span class="pre">modern_chain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">chain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modern.modern_chain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a chain of tokens to LaTeX, using symbol{94} as separator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>chain</strong> (<em>str</em>) – String of tokens joined by symbol{94}</p></li>
+<li><p><strong>bold</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>code</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX string with each token converted and rejoined
+bold (bool): Whether to apply   extbf style
+code (bool): Whether to apply   exttt style</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">modern_chain</span><span class="p">(</span><span class="s2">&quot;PHI1A\symbol</span><span class="si">{94}</span><span class="s2">interestB&quot;</span><span class="p">)</span>
+<span class="go">&#39;${\phi_{1a}}$\symbol{94}${\texttt{interest}_{b}}$&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_chain</span><span class="p">(</span><span class="s2">&quot;12B\symbol</span><span class="si">{94}</span><span class="s2">PHI2&quot;</span><span class="p">)</span>
+<span class="go">&#39;${\texttt{12}_{b}}$\symbol{94}${\phi_{2}}$&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modern.modern_interp">
+<span class="sig-prename descclassname"><span class="pre">modern.</span></span><span class="sig-name descname"><span class="pre">modern_interp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modern.modern_interp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an interpretation (multiple chains) to LaTeX, using qquad as separator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>interp</strong> (<em>str</em>) – String of chains joined by “~~~~”</p></li>
+<li><p><strong>bold</strong> (<em>bool</em>) – </p></li>
+<li><p><strong>code</strong> (<em>bool</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX string with each chain converted and rejoined by “qquad ”
+bold (bool): Whether to apply   extbf style
+code (bool): Whether to apply   exttt style</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">modern_interp</span><span class="p">(</span><span class="s2">&quot;PHI1A\symbol</span><span class="si">{94}</span><span class="s2">interestB&quot;</span><span class="p">)</span>
+<span class="go">&#39;${\phi_{\textrm{1a}}}$\symbol{94}${\textrm{interest}_{\textrm{b}}}$&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_interp</span><span class="p">(</span><span class="s2">&quot;gamblersA\qquad PHI1&quot;</span><span class="p">)</span>
+<span class="go">&#39;${\texttt{gamblers}_{a}}$\qquad ${\phi_{1}}$&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modern.modern_nodes_str">
+<span class="sig-prename descclassname"><span class="pre">modern.</span></span><span class="sig-name descname"><span class="pre">modern_nodes_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modern.modern_nodes_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert Node row string by replacing patterns with LaTeX equivalents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>str</em>) – Input string containing colon-prefixed labels and “lit:” long labels.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>String with patterns replaced by LaTeX using modern_token.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">modern_nodes_str</span><span class="p">(</span><span class="s2">&quot;x:12A, y:15, z:12B&quot;</span><span class="p">),</span>
+<span class="go">&#39;\texttt{x:${\textrm{12}_{\textrm{a}}}$, y:15, z:${\textrm{12}_{\textrm{b}}}$}&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_nodes_str</span><span class="p">(</span><span class="s2">&quot;(N, lit:PHI1 , ftr:[+??????--], up:3, dn:0,&quot;</span><span class="p">),</span>
+<span class="go">&#39;\texttt{(N, lit:${\phi_{\textrm{1}}}$, ftr:[+??????--], up:3, dn:0,}&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modern.modern_short_label">
+<span class="sig-prename descclassname"><span class="pre">modern.</span></span><span class="sig-name descname"><span class="pre">modern_short_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modern.modern_short_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a Node’s short label to LaTeX with optional styling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> (<a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a>) – Node whose short label to convert</p></li>
+<li><p><strong>bold</strong> (<em>bool</em>) – Whether to apply   extbf style</p></li>
+<li><p><strong>code</strong> (<em>bool</em>) – Whether to apply   exttt style to base</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX math string for node’s short label</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modern.modern_token">
+<span class="sig-prename descclassname"><span class="pre">modern.</span></span><span class="sig-name descname"><span class="pre">modern_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modern.modern_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert token to LaTeX math with optional bold and code styling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>token</strong> (<em>str</em>) – Input string to convert</p></li>
+<li><p><strong>bold</strong> (<em>bool</em>) – Whether to apply   extbf style to base and subscript</p></li>
+<li><p><strong>code</strong> (<em>bool</em>) – Whether to apply   exttt style to base</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LaTeX math string</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token</span><span class="p">(</span><span class="s2">&quot;gamblers&quot;</span><span class="p">)</span>
+<span class="go">&#39;gamblers&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token</span><span class="p">(</span><span class="s2">&quot;gamblersD&quot;</span><span class="p">)</span>
+<span class="go">&#39;${\textrm{gamblers}_{\textrm{d}}}$&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token</span><span class="p">(</span><span class="s2">&quot;gamblersD&quot;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;${\texttt{gamblers}_{\texttt{d}}}$&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token</span><span class="p">(</span><span class="s2">&quot;interest&quot;</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;\textbf{interest}&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token</span><span class="p">(</span><span class="s2">&quot;interestA&quot;</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;${\textbf{\textrm{interest}}_{\textbf{\textrm{a}}}}$&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token</span><span class="p">(</span><span class="s2">&quot;PHI&quot;</span><span class="p">)</span>
+<span class="go">&#39;$\phi$&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token</span><span class="p">(</span><span class="s2">&quot;PHI1A&quot;</span><span class="p">)</span>
+<span class="go">&#39;${\phi_{\textrm{1a}}}$&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token</span><span class="p">(</span><span class="s2">&quot;PHI1A&quot;</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="go">&#39;${\bm{\phi}_{\textbf{\texttt{1a}}}}$&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="modern.modern_token_width">
+<span class="sig-prename descclassname"><span class="pre">modern.</span></span><span class="sig-name descname"><span class="pre">modern_token_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#modern.modern_token_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the display width of a token when rendered in LaTeX.</p>
+<p>Width is calculated as base width plus subscript width divided by 1.2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>token</strong> (<em>str</em>) – Input string to measure</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Estimated display width when rendered</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token_width</span><span class="p">(</span><span class="s2">&quot;PHI1A&quot;</span><span class="p">)</span>  <span class="c1"># \phi width + (&quot;1A&quot; width / 1.2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token_width</span><span class="p">(</span><span class="s2">&quot;12B&quot;</span><span class="p">)</span>    <span class="c1"># &quot;12&quot; width + (&quot;B&quot; width / 1.2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">modern_token_width</span><span class="p">(</span><span class="s2">&quot;test2A&quot;</span><span class="p">)</span> <span class="c1"># &quot;test&quot; width + (&quot;2A&quot; width / 1.2)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="lexicon.htm"
+                          title="previous chapter">lexicon module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="node_proc.htm"
+                          title="next chapter">node_proc module</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>
