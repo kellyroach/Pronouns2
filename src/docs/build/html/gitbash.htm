@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Git Bash for Windows Users &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="Quick Start" href="quickstart.htm" />
+    <link rel="prev" title="Software Requirements" href="requirements.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="index.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="requirements.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="quickstart.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="git-bash-for-windows-users">
+<span id="gitbash"></span><h1>Git Bash for Windows Users<a class="headerlink" href="#git-bash-for-windows-users" title="Permalink to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><strong>Apple macOS</strong>: If you are using Apple macOS, you don’t need
+to read nor do any of the following.</p></li>
+<li><p><strong>Microsoft Windows</strong>: If you are using Microsoft Windows,
+there is a good chance you don’t have a <code class="docutils literal notranslate"><span class="pre">make</span></code> command already
+installed on your PC. The gist is we have you: install
+<a class="reference external" href="https://www.msys2.org">MSYS2</a>, install <code class="docutils literal notranslate"><span class="pre">make</span></code> in <a class="reference external" href="https://www.msys2.org">MSYS2</a>, add paths to <code class="docutils literal notranslate"><span class="pre">Environment</span>
+<span class="pre">Variables</span></code>, install <a class="reference external" href="https://gitforwindows.org/">Git Bash</a>, then use <a class="reference external" href="https://gitforwindows.org/">Git Bash</a> as a more
+empowered POSIX-like substitute for CMD.EXE and you can
+enjoy every aspect of Pronouns2.</p></li>
+</ul>
+<section id="understanding-the-terminology">
+<h2>Understanding the Terminology<a class="headerlink" href="#understanding-the-terminology" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Git for Windows</strong>: The complete software package that
+includes both Git and Unix tools for Windows</p></li>
+<li><p><strong>Git Bash</strong>: A terminal emulator (git-bash.exe) included with
+Git for Windows that provides a Unix-like command interface</p></li>
+<li><p><strong>git-cmd.exe</strong>: A Windows command prompt that adds Git to the
+PATH but uses Windows commands</p></li>
+<li><p><strong>GNU Bash</strong>: The actual shell program running inside <a class="reference external" href="https://gitforwindows.org/">Git Bash</a>
+(current version 5.2.37)</p></li>
+</ul>
+</section>
+<section id="why-git-bash">
+<h2>Why Git Bash?<a class="headerlink" href="#why-git-bash" title="Permalink to this heading">¶</a></h2>
+<p>We recommend <a class="reference external" href="https://gitforwindows.org/">Git Bash</a> because it:</p>
+<ul class="simple">
+<li><p>Provides a Unix-like environment that works well with Windows</p></li>
+<li><p>Includes Git and essential Unix tools in one installation</p></li>
+<li><p>Can be enhanced with additional tools through <a class="reference external" href="https://www.msys2.org">MSYS2</a></p></li>
+<li><p>Maintains compatibility with Windows commands and paths</p></li>
+</ul>
+<p>Other options like <a class="reference external" href="https://www.mingw-w64.org">MinGW</a>, <a class="reference external" href="https://cygwin.com">Cygwin</a>, or <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/">WSL</a> require more complex
+setup or provide more functionality than Pronouns2 needs.</p>
+</section>
+<section id="step-by-step-setup-guide">
+<h2>Step-by-Step Setup Guide<a class="headerlink" href="#step-by-step-setup-guide" title="Permalink to this heading">¶</a></h2>
+<section id="requirements">
+<h3>1. Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.msys2.org">MSYS2</a> requires 64 bit Windows 10 or newer</p></li>
+<li><p><a class="reference external" href="https://gitforwindows.org/">Git for Windows</a> requires Windows 8.1
+or later on i686 and x86_64 CPU architectures</p></li>
+<li><p><a class="reference external" href="https://gitforwindows.org/">Git for Windows</a> requires Windows 11
+on ARM64 CPU architecture</p></li>
+</ul>
+</section>
+<section id="install-msys2">
+<h3>2. Install MSYS2<a class="headerlink" href="#install-msys2" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Visit <a class="reference external" href="https://www.msys2.org">https://www.msys2.org</a>.</p></li>
+<li><p>Download the installer (e.g., <code class="docutils literal notranslate"><span class="pre">msys2-x86_64-20241208.exe</span></code>).</p></li>
+<li><p>Run the installer.</p></li>
+<li><dl class="simple">
+<dt>You may need to click through a Windows SmartScreen:</dt><dd><ul>
+<li><p>A popup says “Windows protected your PC / Microsoft Defender SmartScreen”.</p></li>
+<li><p>Click “More info” beneath the message.</p></li>
+<li><p>Click “Run anyway” button.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Use default installation options.</p></li>
+<li><p>Let it launch <a class="reference external" href="https://www.msys2.org">MSYS2</a> when finished.</p></li>
+</ul>
+</section>
+<section id="install-make-in-msys2">
+<h3>3. Install <code class="docutils literal notranslate"><span class="pre">make</span></code> in MSYS2<a class="headerlink" href="#install-make-in-msys2" title="Permalink to this heading">¶</a></h3>
+<ul>
+<li><p>In the <a class="reference external" href="https://www.msys2.org">MSYS2</a> console (UCRT64) that opens, run these commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pacman<span class="w"> </span>-Syu
+pacman<span class="w"> </span>-S<span class="w"> </span>mingw-w64-x86_64-make
+</pre></div>
+</div>
+</li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">Y</span></code> when prompted to proceed with installation.</p></li>
+</ul>
+</section>
+<section id="add-msys2-to-windows-path">
+<h3>4. Add MSYS2 to Windows PATH<a class="headerlink" href="#add-msys2-to-windows-path" title="Permalink to this heading">¶</a></h3>
+<ul>
+<li><p>Quick path: Windows key + Start typing <code class="docutils literal notranslate"><span class="pre">environment</span> <span class="pre">variables</span></code>.</p></li>
+<li><dl class="simple">
+<dt>Either:</dt><dd><ul class="simple">
+<li><p>Windows 10-11: Settings → System → About → Advanced system settings</p></li>
+<li><p>Windows 10: Control Panel → System and Security → System → Advanced system settings</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Environment</span> <span class="pre">Variables</span></code>.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">System</span> <span class="pre">variables</span></code>, find and edit <code class="docutils literal notranslate"><span class="pre">Path</span></code>.</p></li>
+<li><p>Add these two new paths:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>C:\msys64\mingw64\bin
+C:\msys64\usr\bin
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="install-git-bash">
+<h3>5. Install Git Bash<a class="headerlink" href="#install-git-bash" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Visit <a class="reference external" href="https://gitforwindows.org/">https://gitforwindows.org/</a>.</p></li>
+<li><p>Download the installer (e.g., <code class="docutils literal notranslate"><span class="pre">Git-2.47.1-64-bit.exe</span></code>).</p></li>
+<li><p>Close and reopen <a class="reference external" href="https://gitforwindows.org/">Git Bash</a> if it was already open.</p></li>
+<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">Pronouns2</span></code> using <code class="docutils literal notranslate"><span class="pre">cd</span></code> commands (e.g., <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/c/Pronouns2</span></code>).</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">Pronouns2</span></code> project <code class="docutils literal notranslate"><span class="pre">make</span></code> commands in <a class="reference external" href="https://gitforwindows.org/">Git Bash</a> as needed.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.htm">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Git Bash for Windows Users</a><ul>
+<li><a class="reference internal" href="#understanding-the-terminology">Understanding the Terminology</a></li>
+<li><a class="reference internal" href="#why-git-bash">Why Git Bash?</a></li>
+<li><a class="reference internal" href="#step-by-step-setup-guide">Step-by-Step Setup Guide</a><ul>
+<li><a class="reference internal" href="#requirements">1. Requirements</a></li>
+<li><a class="reference internal" href="#install-msys2">2. Install MSYS2</a></li>
+<li><a class="reference internal" href="#install-make-in-msys2">3. Install <code class="docutils literal notranslate"><span class="pre">make</span></code> in MSYS2</a></li>
+<li><a class="reference internal" href="#add-msys2-to-windows-path">4. Add MSYS2 to Windows PATH</a></li>
+<li><a class="reference internal" href="#install-git-bash">5. Install Git Bash</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="requirements.htm"
+                          title="previous chapter">Software Requirements</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="quickstart.htm"
+                          title="next chapter">Quick Start</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>
