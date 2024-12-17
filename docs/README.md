@@ -85,5 +85,5 @@ Required LaTeX packages (managed by [MikTeX](https://miktex.org)):
 ## HTML Documentation
 
 If you're looking for:
-- HTML documentation: [src/docs/build/html/index.html](src/docs/build/html/index.html)
+- HTML documentation: [src/docs/build/html/index.htm](src/docs/build/html/index.htm)
 - Information about generating HTML documentation: [src/docs/README.md](../src/docs/README.md).

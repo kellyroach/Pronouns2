@@ -21,7 +21,7 @@ for the project.
 
 ## Sphinx Generated Documentation
 
-- [HTML documentation](src/docs/build/html/index.html)
+- [HTML documentation](src/docs/build/html/index.htm)
 
 ## Python Source Code
 
