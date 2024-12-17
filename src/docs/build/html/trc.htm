@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>trc module &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="txt module" href="txt.htm" />
+    <link rel="prev" title="tex module" href="tex.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="modules.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="tex.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" accesskey="U">src</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="txt.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-trc">
+<span id="trc-module"></span><h1>trc module<a class="headerlink" href="#module-trc" title="Permalink to this heading">¶</a></h1>
+<p>Homebrew trace package produces output like output in 1980 M.S. thesis</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="trc.trc">
+<span class="sig-prename descclassname"><span class="pre">trc.</span></span><span class="sig-name descname"><span class="pre">trc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#trc.trc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables or disables function call tracing globally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>enable</strong> (<em>bool</em>) – If True, enables tracing; if False, disables it</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trc.trc_begin">
+<span class="sig-prename descclassname"><span class="pre">trc.</span></span><span class="sig-name descname"><span class="pre">trc_begin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trc.trc_begin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Begins trace output for LaTeX streams by opening formatting blocks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trc.trc_end">
+<span class="sig-prename descclassname"><span class="pre">trc.</span></span><span class="sig-name descname"><span class="pre">trc_end</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trc.trc_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends trace output for LaTeX streams by closing formatting blocks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trc.trc_enter">
+<span class="sig-prename descclassname"><span class="pre">trc.</span></span><span class="sig-name descname"><span class="pre">trc_enter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#trc.trc_enter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints a message with increased indentation when entering a function, if tracing is enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>str</em>) – Function entry message to print.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trc.trc_exit">
+<span class="sig-prename descclassname"><span class="pre">trc.</span></span><span class="sig-name descname"><span class="pre">trc_exit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#trc.trc_exit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints a message with decreased indentation when exiting a function, if tracing is enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>str</em>) – Function exit message to print.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trc.trc_reset">
+<span class="sig-prename descclassname"><span class="pre">trc.</span></span><span class="sig-name descname"><span class="pre">trc_reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#trc.trc_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the trc package.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trc.trc_write">
+<span class="sig-prename descclassname"><span class="pre">trc.</span></span><span class="sig-name descname"><span class="pre">trc_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#trc.trc_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints a message at current indentation level, if tracing is enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>str</em>) – Message to print at current indentation.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tex.htm"
+                          title="previous chapter">tex module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="txt.htm"
+                          title="next chapter">txt module</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

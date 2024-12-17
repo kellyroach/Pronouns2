@@ -1,0 +1,757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Usage &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="Make Targets" href="make.htm" />
+    <link rel="prev" title="Quick Start" href="quickstart.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="index.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="quickstart.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="make.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="usage">
+<span id="id1"></span><h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h1>
+<p>In most usage examples, run <code class="docutils literal notranslate"><span class="pre">python</span></code> in the <code class="docutils literal notranslate"><span class="pre">src</span></code>
+subdirectory, so that <code class="docutils literal notranslate"><span class="pre">python</span></code> will find <code class="docutils literal notranslate"><span class="pre">pronouns2.py</span></code>,
+which <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">pronouns2</span> <span class="pre">import</span> <span class="pre">*</span></code> needs.  If you are already
+in the <code class="docutils literal notranslate"><span class="pre">src</span></code> subdirectory, use <code class="docutils literal notranslate"><span class="pre">python</span></code> instead of
+<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">src</span> <span class="pre">&amp;&amp;</span> <span class="pre">python</span></code>.</p>
+<section id="run-minimum-demos">
+<h2>Run Minimum Demos<a class="headerlink" href="#run-minimum-demos" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; demo(&quot;10.1&quot;)
+(10.1) John wants to give June a present, but he isn&#39;t sure she’ll like it.
+[[&#39;JohnD^PHID^heA&#39;, &#39;JuneB^sheA&#39;, &#39;presentB^itA&#39;]]
+&gt;&gt;&gt; demo()
+(1.1) The boy who was fooling her kissed the girl who loved him.
+[[&#39;girlB^herA&#39;, &#39;boyB^himA&#39;]]
+...
+(1.91) After John Adams woke up, he was hungry.
+[[&#39;JohnB^heA&#39;]]
+(1.92) That Oscar was unpopular didn&#39;t disturb him.
+[[&#39;OscarB^himA&#39;]]
+(1.93) For your brother to refuse to pay taxes would get him into trouble.
+[[&#39;brotherD^PHIB^himA&#39;]]
+(1.94) Anna&#39;s complaining about Peter infuriated him.
+[[&#39;PeterB^himA&#39;]]
+(1.95) The possibility that Fred will be unpopular doesn’t bother him.
+[[&#39;FredB^himA&#39;]]
+...
+(10.1) John wants to give June a present, but he isn&#39;t sure she’ll like it.
+[[&#39;JohnD^PHID^heA&#39;, &#39;JuneB^sheA&#39;, &#39;presentB^itA&#39;]]
+...
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</section>
+<section id="create-minimum-docs">
+<h2>Create Minimum Docs<a class="headerlink" href="#create-minimum-docs" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; doc()
+&#39;.../docs/Demo.tex&#39;
+&gt;&gt;&gt; doc(file_type=FileType.TXT)
+&#39;.../docs/Demo.txt&#39;
+&gt;&gt;&gt; quit()
+$ cd ../docs
+$ make Demo.pdf
+...
+$ open Demo.pdf
+...
+$ open Demo.txt
+</pre></div>
+</div>
+<p>(Windows users should use <code class="docutils literal notranslate"><span class="pre">start</span></code> instead of <code class="docutils literal notranslate"><span class="pre">open</span></code>.)</p>
+</section>
+<section id="run-info-demo">
+<h2>Run Info Demo<a class="headerlink" href="#run-info-demo" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; demo(&quot;10.1&quot;, info=True)
+
+################################################################
+#
+#     (10.1) John wants to give June a present, but he isn&#39;t sure she’ll like it.
+#
+################################################################
+
+_____________________________FEATURES____________________________
+!         !     !     !     !     !     !     !     !     !     !
+!         ! PNF ! FPF ! SPF ! TPF ! PLF ! GNF ! ANF ! RPF ! GEN !
+!    John !  -  !  -  !  -  !  +  !  -  !  -  !  +  !  -  !  -  !
+!     PHI !  +  !  ?  !  ?  !  ?  !  ?  !  ?  !  ?  !  -  !  -  !
+!    June !  -  !  -  !  -  !  +  !  -  !  +  !  +  !  -  !  -  !
+! present !  -  !  -  !  -  !  +  !  -  !  ?  !  -  !  -  !  -  !
+!      he !  +  !  -  !  -  !  +  !  -  !  -  !  +  !  -  !  -  !
+!     she !  +  !  -  !  -  !  +  !  -  !  +  !  +  !  -  !  -  !
+!      it !  +  !  -  !  -  !  +  !  -  !  ?  !  -  !  -  !  -  !
+!_________!_____!_____!_____!_____!_____!_____!_____!_____!_____!
+
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3D,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:3B)    !
+!  3B ! (E, sub:B, ftr:[---+--+--], np:3, ch:9A, co:3C)   !
+!  3C ! (E, sub:C, ftr:[---+--+--], np:3, ch:5A, co:3D)   !
+!  3D ! (E, sub:D, ftr:[---+--+--], np:3, ch:5D, co:0)    !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5D,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:5C)  !
+!  5C ! (E, sub:C, ftr:[+--+-++--], np:5, ch:11A, co:5D)  !
+!  5D ! (E, sub:D, ftr:[+--+--+--], np:5, ch:9A, co:0)    !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+! JohnD^PHID ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+________________INTERPRETATIONS_________________
+!                                              !
+! JohnD^PHID^heA    JuneB^sheA    presentB^itA !
+!______________________________________________!
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</section>
+<section id="create-info-docs">
+<h2>Create Info Docs<a class="headerlink" href="#create-info-docs" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; doc(info=True)
+&#39;.../docs/Demo.tex&#39;
+&gt;&gt;&gt; doc(file_type=FileType.TXT, info=True)
+&#39;.../docs/Demo.txt&#39;
+&gt;&gt;&gt; quit()
+$ cd ../docs
+$ make Demo.pdf
+...
+$ open Demo.pdf
+...
+$ open Demo.txt
+</pre></div>
+</div>
+<p>This Demo.pdf should look like the originally checked in
+Demo.pdf, except for the creation date.</p>
+</section>
+<section id="run-info-detail-demo">
+<h2>Run Info+Detail Demo<a class="headerlink" href="#run-info-detail-demo" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; demo(&quot;10.1&quot;, info=True, debug=True)
+...
+</pre></div>
+</div>
+</section>
+<section id="create-info-detail-docs">
+<h2>Create Info+Detail Docs<a class="headerlink" href="#create-info-detail-docs" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; doc(info=True, debug=True)
+&#39;.../docs/Demo.tex&#39;
+&gt;&gt;&gt; doc(file_type=FileType.TXT, info=True, debug=True)
+&#39;.../docs/Demo.txt&#39;
+&gt;&gt;&gt; quit()
+$ cd ../docs
+$ make Demo.pdf
+...
+$ open Demo.pdf
+...
+$ open Demo.txt
+</pre></div>
+</div>
+<p>Adds intermediate tables and diagrams to the preceding Info Docs.</p>
+</section>
+<section id="run-info-detail-trace-demo">
+<h2>Run Info+Detail+Trace Demo<a class="headerlink" href="#run-info-detail-trace-demo" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; demo(&quot;10.1&quot;, info=True, debug=True, trace=True)
+...
+</pre></div>
+</div>
+</section>
+<section id="create-info-detail-trace-docs">
+<h2>Create Info+Detail+Trace Docs<a class="headerlink" href="#create-info-detail-trace-docs" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; doc(info=True, debug=True, trace=True)
+&#39;.../docs/Demo.tex&#39;
+&gt;&gt;&gt; doc(file_type=FileType.TXT, info=True, debug=True, trace=True)
+&#39;.../docs/Demo.txt&#39;
+&gt;&gt;&gt; quit()
+$ cd ../docs
+$ make Demo.pdf
+...
+$ open Demo.pdf
+...
+$ open Demo.txt
+</pre></div>
+</div>
+<p>Adds intermediate tables and diagrams to the preceding Info Docs.</p>
+</section>
+<section id="create-docs-for-single-example">
+<h2>Create Docs for Single Example<a class="headerlink" href="#create-docs-for-single-example" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; doc(&quot;10.1&quot;, info=True)
+&#39;.../docs/Demo.tex&#39;
+&gt;&gt;&gt; doc(&quot;10.1&quot;, file_type=FileType.TXT, info=True)
+&#39;.../docs/Demo.txt&#39;
+&gt;&gt;&gt; quit()
+$ cd ../docs
+$ make Demo.pdf
+...
+$ open Demo.pdf
+...
+$ open Demo.txt
+</pre></div>
+</div>
+</section>
+<section id="only-demo-chaining-tables">
+<h2>Only Demo Chaining Tables<a class="headerlink" href="#only-demo-chaining-tables" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; chaining_tables = {&#39;file_type&#39;: FileType.TXT,
+                       &#39;info&#39;: True,
+                       &#39;features_table&#39;: False,
+                       &#39;abstract_diagram&#39;: False,
+                       &#39;nodes_after_chaining&#39;: False,
+                       &#39;nodes_table&#39;: False,
+                       &#39;chaining_diagram&#39;: False,
+                       &#39;chaining_table&#39;: True,
+                       &#39;interpretations_table&#39;: False,
+                       &#39;summary_table&#39;: False,
+                       &#39;lexicon_table&#39;: False}
+&gt;&gt;&gt; demo(&quot;10.1&quot;, **chaining_tables)
+&gt;&gt;&gt; demo(**chaining_tables)
+...
+</pre></div>
+</div>
+</section>
+<section id="only-doc-chaining-diagrams">
+<h2>Only Doc Chaining Diagrams<a class="headerlink" href="#only-doc-chaining-diagrams" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src &amp;&amp; python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; chaining_diagrams = {&#39;file_type&#39;: FileType.TEX,
+                         &#39;info&#39;: True,
+                         &#39;features_table&#39;: False,
+                         &#39;abstract_diagram&#39;: False,
+                         &#39;nodes_after_chaining&#39;: False,
+                         &#39;nodes_table&#39;: False,
+                         &#39;chaining_diagram&#39;: True,
+                         &#39;chaining_table&#39;: False,
+                         &#39;interpretations_table&#39;: False,
+                         &#39;summary_table&#39;: False,
+                         &#39;lexicon_table&#39;: False}
+&gt;&gt;&gt; doc(&quot;10.1&quot;, file=&quot;../docs/Demo_10p1.tex&quot;, **chaining_diagrams
+&#39;.../docs/Demo_10p1.tex&#39;
+&gt;&gt;&gt; doc(**chaining_diagrams)
+&#39;.../docs/Demo.tex&#39;
+&gt;&gt;&gt; quit()
+$ cd ../docs
+$ make Demo_10p1.pdf
+...
+$ make Demo.pdf
+...
+$ open Demo_10p1.pdf
+...
+$ open Demo.pdf
+</pre></div>
+</div>
+</section>
+<section id="run-coverage-test">
+<h2>Run Coverage Test<a class="headerlink" href="#run-coverage-test" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make coverage
+...
+coverage run -m unittest discover -s tests -p &quot;test_*.py&quot;
+...
+----------------------------------------------------------------------
+Ran 140 tests in 14.261s
+
+OK
+coverage html
+Wrote HTML report to htmlcov/index.html
+...
+$ open src/htmlcov/index.html
+</pre></div>
+</div>
+<p>Make command <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">coverage</span></code> is also available when connected
+to either the repo’s root directory (<code class="docutils literal notranslate"><span class="pre">.</span></code>) or tests subdirectory
+(<code class="docutils literal notranslate"><span class="pre">src/tests</span></code>).  You will need to adjust <code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">src/htmlcov/index.html</span></code>
+in those two cases.</p>
+</section>
+<section id="create-pdfs-in-test-output-directory">
+<h2>Create PDFs in Test Output Directory<a class="headerlink" href="#create-pdfs-in-test-output-directory" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src/tests &amp;&amp; make coverage
+...
+$ make output-pdfs
+...
+$ cd output &amp;&amp; ls -1 *.pdf
+test_abstract_diagram.pdf
+...
+test_doc.pdf
+...
+test_varying_rho.pdf
+$ open test_doc.pdf
+$ open test_varying_rho.pdf
+</pre></div>
+</div>
+</section>
+<section id="rebuild-the-html-documentation">
+<h2>Rebuild the HTML Documentation<a class="headerlink" href="#rebuild-the-html-documentation" title="Permalink to this heading">¶</a></h2>
+<p>If you aren’t comfortable with Sphinx and RST, or you are
+worried you might lose anything precious in your copy of the
+repo, you can skip this section.  However, I think it is
+important to mention how I rebuild the HTML documentation to
+the unafraid.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd src/docs &amp;&amp; make all
+</pre></div>
+</div>
+</section>
+<section id="jupyter-notebook">
+<h2>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Permalink to this heading">¶</a></h2>
+<p>Jupyter notebook <code class="docutils literal notranslate"><span class="pre">spread.ipynb</span></code> is a freebie which isn’t
+essential to running the Pronouns2 Python code. However, it can
+provide insight into how our Spreading Algorithm
+(<a class="reference external" href="../../../../src/spread.py">spread.py</a>)
+helps to draw Pronouns2’s pretty TikZ chaining diagrams.</p>
+<ul>
+<li><p>Connect to <code class="docutils literal notranslate"><span class="pre">src</span></code> directory in Terminal.app</p></li>
+<li><p>Execute <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code></p></li>
+<li><p>In Jupyter notebook, running in your web browser, double-click
+<code class="docutils literal notranslate"><span class="pre">spread.ipynb</span></code> in the <strong>Files</strong> tab.</p></li>
+<li><p>Press <strong>Restart the kernel and run all the cells</strong> button</p>
+<img alt="Restart the kernel and run all the cells button" class="align-center" src="_images/run_all_cells.png" />
+<p>in opened <code class="docutils literal notranslate"><span class="pre">spread.ipynb</span></code> Jupyter notebook.</p>
+</li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">spread.ipynb</span></code> Jupyter notebook imports <code class="docutils literal notranslate"><span class="pre">pronouns2</span></code>:</p>
+<img alt="Jupyter notebook imports" class="align-center" src="_images/notebook_imports.png" />
+<p>and runs Python code in all the Jupyter notebook cells,
+creating many plots like:</p>
+<img alt="Example plot generated by spread.ipynb Python code" class="align-center" src="_images/plot_0p50.png" />
+<p>demonstrating the Spreading Algorithm. Our document
+<a class="reference external" href="../../../../docs/VaryingRho.pdf">VaryingRho.pdf</a>
+goes into greater
+detail about how this algorithm is used to tune the placement
+of arrowheads in Pronouns2’s TikZ chaining diagrams.</p>
+</li>
+</ul>
+</section>
+<section id="lexicon-py-exercises">
+<h2>lexicon.py Exercises<a class="headerlink" href="#lexicon-py-exercises" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; node = lexicon_lookup(&quot;Algernon&quot;)
+&gt;&gt;&gt; node
+&lt;globals.Node object at 0x1094f3a90&gt;
+&gt;&gt;&gt; txt_nodes([node])
+_________________________NODES_________________________
+!    !                                                !
+! 1  ! (N, lit:Algernon, ftr:[---+--+--], up:0, dn:0, !
+!    !  lt:0, rt:0, th:0, np:1, ch:0, co:0, ec:0,     !
+!    !  pr:0, su:0, nu:1)                             !
+!____!________________________________________________!
+&gt;&gt;&gt; node.ftr_str
+&#39;---+--+--&#39;
+&gt;&gt;&gt; lexicon_select(node.ftr_str)
+[&#39;Algernon&#39;, &#39;Bernie&#39;, &#39;Bill&#39;, &#39;Bob&#39;, &#39;Ernie&#39;, &#39;Fred&#39;, &#39;Harry&#39;,
+&#39;Jack&#39;, &#39;John&#39;, &#39;Oscar&#39;, &#39;Peter&#39;, &#39;asshole&#39;, &#39;blame&#39;, &#39;boy&#39;,
+&#39;brother&#39;, &#39;camel&#39;, &#39;cat&#39;, &#39;dad&#39;, &#39;embezzler&#39;, &#39;father&#39;, &#39;fish&#39;,
+&#39;gambler&#39;, &#39;grandfather&#39;, &#39;man&#39;, &#39;mosquito&#39;, &#39;neighbor&#39;, &#39;pig&#39;,
+&#39;pilot&#39;, &#39;sheep&#39;, &#39;son&#39;, &#39;student&#39;, &#39;toy&#39;, &#39;uncle&#39;]
+&gt;&gt;&gt; lexicon_select(lexicon_lookup(&quot;supper&quot;).ftr_str)
+[&#39;Las Vegas&#39;, &#39;Mig&#39;, &#39;blame&#39;, &#39;candy&#39;, &#39;complaining&#39;, &#39;flower&#39;,
+&#39;hat&#39;, &#39;home&#39;, &#39;house&#39;, &#39;interest&#39;, &#39;lawn&#39;, &#39;pen&#39;,
+&#39;possibility&#39;, &#39;present&#39;, &#39;problem&#39;, &#39;smokescreen&#39;, &#39;solution&#39;,
+&#39;supper&#39;, &#39;tax&#39;, &#39;toy&#39;, &#39;trouble&#39;]
+&gt;&gt;&gt; lexicon_select(&#39;mom&#39;)
+[&#39;Anna&#39;, &#39;Janet&#39;, &#39;Jill&#39;, &#39;June&#39;, &#39;Linda&#39;, &#39;Mary&#39;, &#39;Penelope&#39;,
+&#39;Sandy&#39;, &#39;Sue&#39;, &#39;asshole&#39;, &#39;aunt&#39;, &#39;blame&#39;, &#39;camel&#39;, &#39;cat&#39;,
+&#39;daughter&#39;, &#39;embezzler&#39;, &#39;fish&#39;, &#39;gambler&#39;, &#39;girl&#39;,
+&#39;grandmother&#39;, &#39;mosquito&#39;, &#39;mom&#39;, &#39;mother&#39;, &#39;neighbor&#39;, &#39;pig&#39;,
+&#39;pilot&#39;, &#39;sheep&#39;, &#39;sister&#39;, &#39;student&#39;, &#39;toy&#39;]
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</section>
+<section id="walkthrough">
+<h2>(10.1) Walkthrough<a class="headerlink" href="#walkthrough" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python
+&gt;&gt;&gt; from pronouns2 import *
+&gt;&gt;&gt; ex = example(&quot;10.1&quot;)
+&gt;&gt;&gt; ex
+[&quot;John wants to give June a present, but he isn&#39;t sure she’ll
+    like it.&quot;, [&#39;C&#39;, [&#39;S&#39;, &#39;John&#39;, [&#39;S&#39;, &#39;PHI&#39;, &#39;June&#39;, &#39;present&#39;]],
+    [&#39;S&#39;, &#39;he&#39;, [&#39;S&#39;, &#39;she&#39;, &#39;it&#39;]]]]
+&gt;&gt;&gt; sentence, csn = ex
+&gt;&gt;&gt; sentence
+&quot;John wants to give June a present, but he isn&#39;t sure she’ll like it.&quot;
+&gt;&gt;&gt; csn
+[&#39;C&#39;, [&#39;S&#39;, &#39;John&#39;, [&#39;S&#39;, &#39;PHI&#39;, &#39;June&#39;, &#39;present&#39;]], [&#39;S&#39;,
+    &#39;he&#39;, [&#39;S&#39;, &#39;she&#39;, &#39;it&#39;]]]
+&gt;&gt;&gt; Node.set_tree(parse(csn))
+&gt;&gt;&gt; nodes = tree_nodes(Node.tree())
+&gt;&gt;&gt; nodes
+[&lt;globals.Node object at 0x10f824250&gt;, &lt;globals.Node object at
+    0x10f93e940&gt;, &lt;globals.Node object at 0x10f93ea30&gt;,
+    &lt;globals.Node object at 0x10f93e910&gt;, &lt;globals.Node object at
+    0x10f93eac0&gt;, &lt;globals.Node object at 0x10f93efa0&gt;,
+    &lt;globals.Node object at 0x10f93ea60&gt;, &lt;globals.Node object at
+    0x10f93ed30&gt;, &lt;globals.Node object at 0x10f7a6a90&gt;,
+    &lt;globals.Node object at 0x10f7a6a60&gt;, &lt;globals.Node object at
+    0x110aaa6d0&gt;, &lt;globals.Node object at 0x110aaa100&gt;]
+&gt;&gt;&gt; txt_nodes(nodes)
+_________________________NODES_________________________
+!     !                                               !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)       !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)       !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,    !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:3)                            !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)       !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,     !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:5)                            !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,    !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:6)                            !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0, !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:7)                            !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)       !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,      !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:0, ec:0,  !
+!     !  pr:0, su:0, nu:9)                            !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)    !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,    !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:0, ec:0, !
+!     !  pr:0, su:0, nu:11)                           !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,     !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:0, ec:0,  !
+!     !  pr:0, su:0, nu:12)                           !
+!_____!_______________________________________________!
+&gt;&gt;&gt; nnodes = tree_n_nodes(Node.tree())
+&gt;&gt;&gt; txt_nodes(nnodes)
+_________________________NODES_________________________
+!     !                                               !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,    !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:3)                            !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,     !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:5)                            !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,    !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:6)                            !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0, !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:0, ec:0,    !
+!     !  pr:0, su:0, nu:7)                            !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,      !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:0, ec:0,  !
+!     !  pr:0, su:0, nu:9)                            !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,    !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:0, ec:0, !
+!     !  pr:0, su:0, nu:11)                           !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,     !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:0, ec:0,  !
+!     !  pr:0, su:0, nu:12)                           !
+!_____!_______________________________________________!
+&gt;&gt;&gt; txt_features(nnodes)
+_____________________________FEATURES____________________________
+!         !     !     !     !     !     !     !     !     !     !
+!         ! PNF ! FPF ! SPF ! TPF ! PLF ! GNF ! ANF ! RPF ! GEN !
+!    John !  -  !  -  !  -  !  +  !  -  !  -  !  +  !  -  !  -  !
+!     PHI !  +  !  ?  !  ?  !  ?  !  ?  !  ?  !  ?  !  -  !  -  !
+!    June !  -  !  -  !  -  !  +  !  -  !  +  !  +  !  -  !  -  !
+! present !  -  !  -  !  -  !  +  !  -  !  ?  !  -  !  -  !  -  !
+!      he !  +  !  -  !  -  !  +  !  -  !  -  !  +  !  -  !  -  !
+!     she !  +  !  -  !  -  !  +  !  -  !  +  !  +  !  -  !  -  !
+!      it !  +  !  -  !  -  !  +  !  -  !  ?  !  -  !  -  !  -  !
+!_________!_____!_____!_____!_____!_____!_____!_____!_____!_____!
+&gt;&gt;&gt; chaining(nnodes)
+&gt;&gt;&gt; nodes = tree_nodes(Node.tree())
+&gt;&gt;&gt; txt_nodes(nodes)
+___________________________NODES___________________________
+!     !                                                   !
+!  1  ! (C, up:0, dn:2, lt:0, rt:0, th:2, nu:1)           !
+!  2  ! (S, up:1, dn:3, lt:0, rt:8, th:3, nu:2)           !
+!  3  ! (N, lit:John, ftr:[---+--+--], up:2, dn:0,        !
+!     !  lt:0, rt:4, th:4, np:3, ch:0, co:3A, ec:3D,      !
+!     !  pr:0, su:5, nu:3)                                !
+!  3A ! (E, sub:A, ftr:[---+--+--], np:3, ch:0, co:3B)    !
+!  3B ! (E, sub:B, ftr:[---+--+--], np:3, ch:9A, co:3C)   !
+!  3C ! (E, sub:C, ftr:[---+--+--], np:3, ch:5A, co:3D)   !
+!  3D ! (E, sub:D, ftr:[---+--+--], np:3, ch:5D, co:0)    !
+!  4  ! (S, up:2, dn:5, lt:3, rt:0, th:5, nu:4)           !
+!  5  ! (N, lit:PHI, ftr:[+??????--], up:4, dn:0,         !
+!     !  lt:0, rt:6, th:6, np:5, ch:0, co:5A, ec:5D,      !
+!     !  pr:3, su:6, nu:5)                                !
+!  5A ! (E, sub:A, ftr:[+??????--], np:5, ch:0, co:5B)    !
+!  5B ! (E, sub:B, ftr:[+--+-?---], np:5, ch:12A, co:5C)  !
+!  5C ! (E, sub:C, ftr:[+--+-++--], np:5, ch:11A, co:5D)  !
+!  5D ! (E, sub:D, ftr:[+--+--+--], np:5, ch:9A, co:0)    !
+!  6  ! (N, lit:June, ftr:[---+-++--], up:4, dn:0,        !
+!     !  lt:5, rt:7, th:7, np:6, ch:0, co:6A, ec:6B,      !
+!     !  pr:5, su:7, nu:6)                                !
+!  6A ! (E, sub:A, ftr:[---+-++--], np:6, ch:0, co:6B)    !
+!  6B ! (E, sub:B, ftr:[---+-++--], np:6, ch:11A, co:0)   !
+!  7  ! (N, lit:present, ftr:[---+-?---], up:4, dn:0,     !
+!     !  lt:6, rt:0, th:8, np:7, ch:0, co:7A, ec:7B,      !
+!     !  pr:6, su:9, nu:7)                                !
+!  7A ! (E, sub:A, ftr:[---+-?---], np:7, ch:0, co:7B)    !
+!  7B ! (E, sub:B, ftr:[---+-?---], np:7, ch:12A, co:0)   !
+!  8  ! (S, up:1, dn:9, lt:2, rt:0, th:9, nu:8)           !
+!  9  ! (N, lit:he, ftr:[+--+--+--], up:8, dn:0,          !
+!     !  lt:0, rt:10, th:10, np:9, ch:0, co:9A, ec:9A,    !
+!     !  pr:7, su:11, nu:9)                               !
+!  9A ! (E, sub:A, ftr:[+--+--+--], np:9, ch:0, co:0)     !
+! 10  ! (S, up:8, dn:11, lt:9, rt:0, th:11, nu:10)        !
+! 11  ! (N, lit:she, ftr:[+--+-++--], up:10, dn:0,        !
+!     !  lt:0, rt:12, th:12, np:11, ch:0, co:11A, ec:11A, !
+!     !  pr:9, su:12, nu:11)                              !
+! 11A ! (E, sub:A, ftr:[+--+-++--], np:11, ch:0, co:0)    !
+! 12  ! (N, lit:it, ftr:[+--+-?---], up:10, dn:0,         !
+!     !  lt:11, rt:0, th:0, np:12, ch:0, co:12A, ec:12A,  !
+!     !  pr:11, su:0, nu:12)                              !
+! 12A ! (E, sub:A, ftr:[+--+-?---], np:12, ch:0, co:0)    !
+!_____!___________________________________________________!
+&gt;&gt;&gt; txt_chaining(nnodes)
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+! JohnD^PHID ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+&gt;&gt;&gt; interps = interpret(nnodes)
+&gt;&gt;&gt; interps
+[[[&lt;globals.Node object at 0x110aaa9d0&gt;, &lt;globals.Node object at
+    0x110aaa9a0&gt;, &lt;globals.Node object at 0x110aaa970&gt;],
+    [&lt;globals.Node object at 0x110aaa910&gt;, &lt;globals.Node object at
+    0x110aaa850&gt;], [&lt;globals.Node object at 0x110aaa880&gt;,
+    &lt;globals.Node object at 0x110aaa7f0&gt;]]]
+&gt;&gt;&gt; view_interps(interps)
+[[&#39;JohnD^PHID^heA&#39;, &#39;JuneB^sheA&#39;, &#39;presentB^itA&#39;]]
+&gt;&gt;&gt; view_interpretations(interps)
+[[&#39;JohnD^PHID^heA    JuneB^sheA    presentB^itA&#39;]]
+&gt;&gt;&gt; txt_interpretations(interps)
+________________INTERPRETATIONS_________________
+!                                              !
+! JohnD^PHID^heA    JuneB^sheA    presentB^itA !
+!______________________________________________!
+&gt;&gt;&gt;
+</pre></div>
+</div>
+</section>
+<section id="locate-and-view-pdf-documentation">
+<h2>Locate and View PDF Documentation<a class="headerlink" href="#locate-and-view-pdf-documentation" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd docs
+$ ls -1 *.pdf
+Demo.pdf
+Demo_10p1.pdf
+Pronouns2Modula2.pdf
+Pronouns2Python.pdf
+RelatedLiterature.pdf
+VaryingRho.pdf
+$ open Pronouns2Python.pdf
+$
+</pre></div>
+</div>
+</section>
+<section id="locate-and-view-html-documentation">
+<h2>Locate and View HTML Documentation<a class="headerlink" href="#locate-and-view-html-documentation" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ open src/docs/build/html/index.htm
+$ # OR
+$ cd src/docs/build/html
+$ ls -1 *.htm
+abstract.htm
+chaining.htm
+demo.htm
+...
+usage.htm
+varying_rho.htm
+view.htm
+$ open index.htm
+</pre></div>
+</div>
+<p>You might want to create an alias on your desktop or add the
+opened URL to your web browser’s favorites if you intend to
+visit the HTML documentation often.  I can help you get started
+with that.  Click the following link: <a class="reference internal" href="index.htm#pronouns2"><span class="std std-ref">Pronouns2</span></a>.</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.htm">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Usage</a><ul>
+<li><a class="reference internal" href="#run-minimum-demos">Run Minimum Demos</a></li>
+<li><a class="reference internal" href="#create-minimum-docs">Create Minimum Docs</a></li>
+<li><a class="reference internal" href="#run-info-demo">Run Info Demo</a></li>
+<li><a class="reference internal" href="#create-info-docs">Create Info Docs</a></li>
+<li><a class="reference internal" href="#run-info-detail-demo">Run Info+Detail Demo</a></li>
+<li><a class="reference internal" href="#create-info-detail-docs">Create Info+Detail Docs</a></li>
+<li><a class="reference internal" href="#run-info-detail-trace-demo">Run Info+Detail+Trace Demo</a></li>
+<li><a class="reference internal" href="#create-info-detail-trace-docs">Create Info+Detail+Trace Docs</a></li>
+<li><a class="reference internal" href="#create-docs-for-single-example">Create Docs for Single Example</a></li>
+<li><a class="reference internal" href="#only-demo-chaining-tables">Only Demo Chaining Tables</a></li>
+<li><a class="reference internal" href="#only-doc-chaining-diagrams">Only Doc Chaining Diagrams</a></li>
+<li><a class="reference internal" href="#run-coverage-test">Run Coverage Test</a></li>
+<li><a class="reference internal" href="#create-pdfs-in-test-output-directory">Create PDFs in Test Output Directory</a></li>
+<li><a class="reference internal" href="#rebuild-the-html-documentation">Rebuild the HTML Documentation</a></li>
+<li><a class="reference internal" href="#jupyter-notebook">Jupyter Notebook</a></li>
+<li><a class="reference internal" href="#lexicon-py-exercises">lexicon.py Exercises</a></li>
+<li><a class="reference internal" href="#walkthrough">(10.1) Walkthrough</a></li>
+<li><a class="reference internal" href="#locate-and-view-pdf-documentation">Locate and View PDF Documentation</a></li>
+<li><a class="reference internal" href="#locate-and-view-html-documentation">Locate and View HTML Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="quickstart.htm"
+                          title="previous chapter">Quick Start</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="make.htm"
+                          title="next chapter">Make Targets</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

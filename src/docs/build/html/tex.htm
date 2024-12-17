@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>tex module &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="trc module" href="trc.htm" />
+    <link rel="prev" title="tests.utils package" href="tests.utils.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="modules.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="tests.utils.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" accesskey="U">src</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="trc.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-tex">
+<span id="tex-module"></span><h1>tex module<a class="headerlink" href="#module-tex" title="Permalink to this heading">¶</a></h1>
+<p>TeX-related utility functions such as measuring string widths.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tex.TexMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tex.</span></span><span class="sig-name descname"><span class="pre">TexMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tex.TexMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tex.TexMode.CODE">
+<span class="sig-name descname"><span class="pre">CODE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'code'</span></em><a class="headerlink" href="#tex.TexMode.CODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tex.TexMode.MATH">
+<span class="sig-name descname"><span class="pre">MATH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'math'</span></em><a class="headerlink" href="#tex.TexMode.MATH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="tex.TexMode.TEXT">
+<span class="sig-name descname"><span class="pre">TEXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'text'</span></em><a class="headerlink" href="#tex.TexMode.TEXT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tex.tex_char_width">
+<span class="sig-prename descclassname"><span class="pre">tex.</span></span><span class="sig-name descname"><span class="pre">tex_char_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">char</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tex.tex_char_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the width of a single character in LaTeX units.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>char</strong> (<em>str</em>) – A single character</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The width of the character</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – If char is not a single character</p></li>
+<li><p><strong>KeyError</strong> – If char width is not known</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tex.tex_code">
+<span class="sig-prename descclassname"><span class="pre">tex.</span></span><span class="sig-name descname"><span class="pre">tex_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tex.tex_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts TXT-biased element to a TexMode.CODE TeX-safe string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> (<em>str</em>) – Input string to convert.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>TeX-compatible string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tex.tex_escape_file">
+<span class="sig-prename descclassname"><span class="pre">tex.</span></span><span class="sig-name descname"><span class="pre">tex_escape_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">TexMode.TEXT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tex.tex_escape_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies tex_escape_str to every line of the input file and writes to output file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_file</strong> (<em>str</em>) – Path to the input file to process.</p></li>
+<li><p><strong>output_file</strong> (<em>str</em>) – Path to write the processed output.</p></li>
+<li><p><strong>mode</strong> (<a class="reference internal" href="#tex.TexMode" title="tex.TexMode"><em>TexMode</em></a>) – Output mode (TexMode.TEXT, TexMode.CODE,</p></li>
+<li><p><strong>TexMode.TEXT.</strong> (<em>TexMode.MATH</em><em>)</em><em>. Defaults to</em>) – </p></li>
+<li><p><strong>use_symbol</strong> (<em>bool</em>) – Whether to prefer <cite>symbol</cite> syntax. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tex.tex_escape_str">
+<span class="sig-prename descclassname"><span class="pre">tex.</span></span><span class="sig-name descname"><span class="pre">tex_escape_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">TexMode.TEXT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_symbol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tex.tex_escape_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts TXT-biased element to a TeX-safe string based on mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element</strong> (<em>str</em>) – Input string to convert.</p></li>
+<li><p><strong>mode</strong> (<a class="reference internal" href="#tex.TexMode" title="tex.TexMode"><em>TexMode</em></a>) – Output mode (TexMode.TEXT, TexMode.CODE,</p></li>
+<li><p><strong>TexMode.TEXT.</strong> (<em>TexMode.MATH</em><em>)</em><em>. Defaults to</em>) – </p></li>
+<li><p><strong>use_symbol</strong> (<em>bool</em>) – Whether to prefer <cite>symbol</cite> syntax. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>TeX-compatible string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tex.tex_init">
+<span class="sig-prename descclassname"><span class="pre">tex.</span></span><span class="sig-name descname"><span class="pre">tex_init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#tex.tex_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the character width lookup table with predefined measurements.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tex.tex_str_width">
+<span class="sig-prename descclassname"><span class="pre">tex.</span></span><span class="sig-name descname"><span class="pre">tex_str_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tex.tex_str_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the total width of a string in LaTeX units by
+summing predefined character widths, used for spacing in
+TikZ-CD diagrams.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>str</em>) – Input string to measure</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Width of string in centimeters (approximately 0.035146 cm per point)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> – If input is not a string</p></li>
+<li><p><strong>ValueError</strong> – If string contains characters with unknown widths</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tests.utils.htm"
+                          title="previous chapter">tests.utils package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="trc.htm"
+                          title="next chapter">trc module</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>FAQ &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="src" href="modules.htm" />
+    <link rel="prev" title="Make Targets" href="make.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="index.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="make.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="modules.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="faq">
+<h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this heading">¶</a></h1>
+<p><strong>Frequently Asked Questions (FAQ)</strong>.  Our ANSWER’s to some of the
+best QUESTION’s about each of Pronoun2’s Python modules.</p>
+<section id="globals-py">
+<h2>globals.py<a class="headerlink" href="#globals-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Is there a specific linguistic framework or theory
+this <a class="reference external" href="../../../../src/globals.py">globals.py</a>’s syntax tree
+data structures are based on?  The <code class="docutils literal notranslate"><span class="pre">Node</span></code> class has many
+different types of links (<code class="docutils literal notranslate"><span class="pre">up</span></code>, <code class="docutils literal notranslate"><span class="pre">down</span></code>, <code class="docutils literal notranslate"><span class="pre">left</span></code>, <code class="docutils literal notranslate"><span class="pre">right</span></code>,
+<code class="docutils literal notranslate"><span class="pre">thread</span></code>, <code class="docutils literal notranslate"><span class="pre">np</span></code>, <code class="docutils literal notranslate"><span class="pre">chain</span></code>, <code class="docutils literal notranslate"><span class="pre">col</span></code>, etc.) - are these used
+for different purposes depending on the node type (<code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">S</span></code>,
+<code class="docutils literal notranslate"><span class="pre">N</span></code>, <code class="docutils literal notranslate"><span class="pre">E</span></code>)?  The <code class="docutils literal notranslate"><span class="pre">Features</span></code> list seems focused on pronoun
+and agreement features - is this primarily for handling pronoun
+binding and agreement in syntax?</p>
+<p><strong>ANSWER:</strong> The linguistic framework is in my 1980 M.S. thesis
+<a class="reference external" href="https://authors.library.caltech.edu/records/mf427-dra49">Pronouns</a>.
+accepted by my school, Caltech, in 1980.  There are 36
+References in my M.S. thesis’ bibliography and I’m building
+quite a bit on what other researchers then or earlier had
+written about pronouns and anaphora in journals like Linguistic
+Inquiry and scholarly books.  <code class="docutils literal notranslate"><span class="pre">C</span></code> = conjoined sentence, <code class="docutils literal notranslate"><span class="pre">S</span></code>
+= sentence, <code class="docutils literal notranslate"><span class="pre">N</span></code> = noun phrase, <code class="docutils literal notranslate"><span class="pre">E</span></code> = is an elaborated copy
+of an N-node.  You are right, the <code class="docutils literal notranslate"><span class="pre">Features</span></code> list helps
+constrain pronoun resolution possibilities.</p>
+</section>
+<section id="abstract-py">
+<h2>abstract.py<a class="headerlink" href="#abstract-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> I notice
+<a class="reference external" href="../../../../src/abstract.py">abstract.py</a> deals with creating
+abstract syntax tree diagrams using LaTeX/TikZ. Are these
+TikZ diagrams specifically for visualizing the <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">S</span></code>,
+<code class="docutils literal notranslate"><span class="pre">N</span></code>, and <code class="docutils literal notranslate"><span class="pre">E</span></code> nodes we saw in
+<a class="reference external" href="../../../../src/globals.py">globals.py</a>?  Do you use these
+diagrams alongside the actual syntax tree implementation, or are
+they mainly for documentation/visualization purposes?  Would it
+be helpful to mention in other function documentation when they
+interact with these diagram generation capabilities?</p>
+<p><strong>ANSWER:</strong> These particular TikZ diagrams only contain
+<code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">S</span></code>, <code class="docutils literal notranslate"><span class="pre">N</span></code> nodes, abstract representations of parse
+trees of English sentences.  Mainly some visualization and
+understanding of the parse trees for human viewers.</p>
+</section>
+<section id="chaining-py">
+<h2>chaining.py<a class="headerlink" href="#chaining-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Are <a class="reference external" href="../../../../src/chaining.py">chaining.py</a>’s
+chain diagrams showing relationships between different instances
+of the N-nodes in a parse tree?</p>
+<p><strong>ANSWER:</strong> The chaining diagram hangs E-nodes in columns
+beneath the N-nodes of a parse tree of an English sentence.
+There are <code class="docutils literal notranslate"><span class="pre">chain_link</span></code>’s amongst E-nodes between anaphors and
+their antecedents (or referents).  The N-nodes and E-nodes can
+be representing head nouns, pronouns, and deletion sites.  A
+list of all E-nodes encountered by following <code class="docutils literal notranslate"><span class="pre">chain_link</span></code>’s is
+referred to as a “chain”.</p>
+</section>
+<section id="demo-py">
+<h2>demo.py<a class="headerlink" href="#demo-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> In <a class="reference external" href="../../../../src/demo.py">demo.py</a>, what’s
+the relationship between <code class="docutils literal notranslate"><span class="pre">Manager.info</span></code> and <code class="docutils literal notranslate"><span class="pre">Manager.debug</span></code>
+flags, and how do they control what gets included in the output?
+I see lots of if-statements checking these flags in different
+combinations.</p>
+<p><strong>ANSWER:</strong> Python module
+<a class="reference external" href="../../../../src/globals.py">globals.py</a> defines <code class="docutils literal notranslate"><span class="pre">class</span>
+<span class="pre">Manager</span></code>.  <code class="docutils literal notranslate"><span class="pre">Manager</span></code> is a singleton class for managing
+output streams and file types.  There are two types of
+<code class="docutils literal notranslate"><span class="pre">Manager</span></code> flags:</p>
+<ul class="simple">
+<li><p>Level: <code class="docutils literal notranslate"><span class="pre">Manager.info</span></code>, <code class="docutils literal notranslate"><span class="pre">Manager.debug</span></code>, <code class="docutils literal notranslate"><span class="pre">Manager.trace</span></code></p></li>
+<li><p>Function: <code class="docutils literal notranslate"><span class="pre">Manager.abstract_diagram</span></code>, <code class="docutils literal notranslate"><span class="pre">Manager.features_table</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Manager.abstract_diagram</span></code>, <code class="docutils literal notranslate"><span class="pre">Manager.init_table</span></code>, <code class="docutils literal notranslate"><span class="pre">Manager.new_chain</span></code>,
+etc.</p></li>
+</ul>
+<p>Every <code class="docutils literal notranslate"><span class="pre">Manager</span></code> flag in a branch of the following tree must be
+<code class="docutils literal notranslate"><span class="pre">True</span></code> before the output functions guarded by those flags are
+allowed to <code class="docutils literal notranslate"><span class="pre">Manager.write</span></code> anything:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>.
+├── info
+│   ├── abstract_diagram
+│   ├── features_table
+│   ├── abstract_diagram
+│   ├── nodes_after_chaining
+│   │   └── nodes
+│   ├── chaining_diagram
+│   ├── chaining_table
+│   ├── interpretations_table
+│   ├── summary_table
+│   └── lexicon_table
+├── debug
+│   ├── nodes_after_parse
+│   │   └── nodes
+│   ├── init_table
+│   │   ├── nodes
+│   │   ├── chaining_diagram
+│   │   └── chaining_table
+│   └── new_chain
+│       ├── nodes
+│       ├── chaining_diagram
+│       └── chaining_table
+└── trace
+    └── message
+</pre></div>
+</div>
+<p>For example, set of flags
+{<code class="docutils literal notranslate"><span class="pre">Manager.debug</span></code>, <code class="docutils literal notranslate"><span class="pre">Manager.new_chain</span></code>, <code class="docutils literal notranslate"><span class="pre">Manager.chaining_diagram</span></code>}
+guards any intermediate calls to function <code class="docutils literal notranslate"><span class="pre">chaining_diagram</span></code> while
+being called from <a class="reference external" href="../../../../src/table_proc.py">table_proc.py</a>’s
+function <code class="docutils literal notranslate"><span class="pre">new_chain</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Manager.info</span></code> guards high-level function calls.
+<code class="docutils literal notranslate"><span class="pre">Manager.debug</span></code> guards intermediate-level function calls which
+can be useful either for detailed appreciation of how the
+Python code is performing its analysis or for debugging.
+<code class="docutils literal notranslate"><span class="pre">Manager.trace</span></code> enables <a class="reference external" href="../../../../src/trc.py">trc.py</a>
+entry and exit tracing of functions in
+<a class="reference external" href="../../../../src/secondary_uty.py">secondary_uty.py</a> and
+<a class="reference external" href="../../../../src/table_proc.py">table_proc.py</a> .  The
+<code class="docutils literal notranslate"><span class="pre">message</span></code> is not a <code class="docutils literal notranslate"><span class="pre">Manager</span></code> flag, but the <code class="docutils literal notranslate"><span class="pre">str</span></code> message.
+Function <code class="docutils literal notranslate"><span class="pre">trc_write</span></code> doesn’t print empty <code class="docutils literal notranslate"><span class="pre">message</span></code>s.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Manager</span></code> supports Python’s <code class="docutils literal notranslate"><span class="pre">with</span></code> statement by maintaining
+a <code class="docutils literal notranslate"><span class="pre">stack</span></code> of states, allowing nested state management with
+automatic state restoration.  <code class="docutils literal notranslate"><span class="pre">Manager</span></code> also provides
+class-level methods and properties for accessing and updating
+its <code class="docutils literal notranslate"><span class="pre">state</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Manager</span></code> flags usage are exemplified by unit tests and test
+outputs such as:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="../../../../src/tests/test_doc.py">test_doc.py</a></p></li>
+<li><p><a class="reference external" href="../../../../src/tests/expected/test_doc_debug_trace.pdf">test_doc_debug_trace.pdf</a></p></li>
+</ul>
+<p>analyzing 109 sentence examples in the same meticulous detail
+as do Chapters 8-10 Table Processor I-III of
+<a class="reference external" href="../../../../docs/Pronouns2Python.pdf">Pronouns, Second Edition</a>
+for sentence (10.1).</p>
+</section>
+<section id="doc-py">
+<h2>doc.py<a class="headerlink" href="#doc-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Why does <a class="reference external" href="../../../../src/doc.py">doc.py</a>’s
+<code class="docutils literal notranslate"><span class="pre">doc()</span></code> function return a full file path string instead of
+writing directly to <code class="docutils literal notranslate"><span class="pre">../docs/Demo.tex</span></code> or
+<code class="docutils literal notranslate"><span class="pre">../docs/Demo.txt</span></code>? I see it’s creating all these analysis
+outputs but I want to know where they actually went.</p>
+<p><strong>ANSWER:</strong> The analysis outputs go to the file identified by
+<code class="docutils literal notranslate"><span class="pre">doc</span></code>’s return value.  Since doc’s input argument <code class="docutils literal notranslate"><span class="pre">file</span></code>
+merely defaults to <code class="docutils literal notranslate"><span class="pre">str</span> <span class="pre">=</span> <span class="pre">&quot;../docs/Demo&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">doc()</span></code>’s file
+isn’t required to be <code class="docutils literal notranslate"><span class="pre">../docs/Demo.tex</span></code> or
+<code class="docutils literal notranslate"><span class="pre">../docs/Demo.txt</span></code> .  The user can override this default by
+supplying a <code class="docutils literal notranslate"><span class="pre">file</span></code> argument.</p>
+<p>According to <a class="reference external" href="../../../../src/doc.py">doc.py</a>’s <code class="docutils literal notranslate"><span class="pre">doc()</span></code>’s
+code, the <code class="docutils literal notranslate"><span class="pre">file_type</span></code> (<code class="docutils literal notranslate"><span class="pre">FileType.TXT</span></code> or <code class="docutils literal notranslate"><span class="pre">FileType.TEX</span></code>
+corresponding to <code class="docutils literal notranslate"><span class="pre">&quot;.txt&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;.tex&quot;</span></code>), is either supplied
+in the <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> passed to <code class="docutils literal notranslate"><span class="pre">doc</span></code>
+(e.g. <code class="docutils literal notranslate"><span class="pre">doc(file_type=FileType.TXT)</span></code>) or defaults to
+<code class="docutils literal notranslate"><span class="pre">FileType.TEX</span></code>. <code class="docutils literal notranslate"><span class="pre">FileType.TEX</span></code> is usually the best choice
+because PDF output is prettier.</p>
+<p>Function <code class="docutils literal notranslate"><span class="pre">doc</span></code> writes analysis outputs to a file, but this
+file isn’t the best documentation, just analytic details of how
+all the interpretations of 109 different example sentences were
+derived.  The document which explains this type of analysis is
+<a class="reference external" href="../../../../docs/Pronouns2Python.pdf">docs/Pronouns2Python.pdf</a>
+AKA <code class="docutils literal notranslate"><span class="pre">Pronouns,</span> <span class="pre">Second</span> <span class="pre">Edition</span> <span class="pre">(Python</span> <span class="pre">Version)</span></code> which is a
+2024 LaTeX-formatted version of the <a class="reference external" href="https://www.kellyroach.com">Kelly Roach</a>’s original 1980
+Caltech M.S. thesis,
+<a class="reference external" href="https://authors.library.caltech.edu/records/mf427-dra49">Pronouns</a>.</p>
+</section>
+<section id="examples-py">
+<h2>examples.py<a class="headerlink" href="#examples-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> I notice some
+<a class="reference external" href="../../../../src/examples.py">examples.py</a>’s examples are
+prefixed with <code class="docutils literal notranslate"><span class="pre">*</span></code> (like <code class="docutils literal notranslate"><span class="pre">&quot;*John</span> <span class="pre">killed</span> <span class="pre">herself&quot;</span></code>) - are these
+meant to indicate ungrammatical sentences?</p>
+<p><strong>ANSWER:</strong> Correct.  S.O.P. for linguists.  Also, <code class="docutils literal notranslate"><span class="pre">?</span></code> is a
+questionable sentence, and there are some other notations which
+my 1980 M.S. thesis
+<a class="reference external" href="https://authors.library.caltech.edu/records/mf427-dra49">Pronouns</a>
+mentions in its <code class="docutils literal notranslate"><span class="pre">Chapter</span> <span class="pre">1,</span> <span class="pre">Fundamentals</span></code>.</p>
+</section>
+<section id="latex-py">
+<h2>latex.py<a class="headerlink" href="#latex-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> In <a class="reference external" href="../../../../src/latex.py">latex.py</a>’s LaTeX
+output, do <a class="reference external" href="../../../../src/latex.py">latex.py</a>’s tables
+appear in a specific order to help readers understand how the
+system derives its interpretations step by step?</p>
+<p><strong>ANSWER:</strong> A close examination of
+<a class="reference external" href="../../../../src/demo.py">demo.py</a>’s function <code class="docutils literal notranslate"><span class="pre">demo_example</span></code> and
+functions <code class="docutils literal notranslate"><span class="pre">demo_example</span></code> calls in <a class="reference external" href="../../../../src/demo.py">demo.py</a>
+will reveal that output functions <code class="docutils literal notranslate"><span class="pre">abstract_diagram</span></code>,
+<code class="docutils literal notranslate"><span class="pre">xxx_features</span></code>, <code class="docutils literal notranslate"><span class="pre">xxx_nodes</span></code>, <code class="docutils literal notranslate"><span class="pre">chaining_diagram</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">xxx_interpretations</span></code>, where in all cases <code class="docutils literal notranslate"><span class="pre">xxx</span></code> is either
+<code class="docutils literal notranslate"><span class="pre">txt</span></code> or <code class="docutils literal notranslate"><span class="pre">latex</span></code>, are called in a very specific sequence.
+This sequence can be fairly said to correspond to the same
+sequence required by <code class="docutils literal notranslate"><span class="pre">demo_example</span></code> to derive “interpretations” of an
+English sentence example.  Our <code class="docutils literal notranslate"><span class="pre">demo_example</span></code> is documenting what it
+does via these output routines as <code class="docutils literal notranslate"><span class="pre">demo_example</span></code> does its processing.</p>
+</section>
+<section id="lexicon-py">
+<h2>lexicon.py<a class="headerlink" href="#lexicon-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Can you explain what <a class="reference external" href="../../../../src/lexicon.py">lexicon.py</a>’s
+function <code class="docutils literal notranslate"><span class="pre">lexicon_select</span></code> does?</p>
+<p><strong>ANSWER:</strong> Function <code class="docutils literal notranslate"><span class="pre">lexicon_select</span></code> is documented as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">lexicon_select</span><span class="p">(</span><span class="n">feature_str</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Returns list of words in lexicon_dict whose Features match feature_str.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        feature_str (str): feature string or known lexicon word</span>
+<span class="sd">        (e.g., &#39;---+-++--&#39; or &#39;mom&#39;)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        answer: list[str] of compatible words in lexicon_dict</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lexicon_select</span><span class="p">(</span><span class="s1">&#39;+--+??+--&#39;</span><span class="p">)</span>
+<span class="go">[&#39;PHI&#39;, &#39;all&#39;, &#39;another&#39;, &#39;any&#39;, &#39;each&#39;, &#39;he&#39;, &#39;her&#39;, &#39;him&#39;,</span>
+<span class="go">&#39;none&#39;, &#39;one&#39;, &#39;oneself&#39;, &#39;other&#39;, &#39;she&#39;, &#39;some&#39;, &#39;somebody&#39;,</span>
+<span class="go">&#39;that&#39;, &#39;them&#39;, &#39;these&#39;, &#39;they&#39;, &#39;this&#39;, &#39;those&#39;, &#39;what&#39;,</span>
+<span class="go">&#39;which&#39;, &#39;who&#39;, &#39;whom&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lexicon_select</span><span class="p">(</span><span class="s1">&#39;mom&#39;</span><span class="p">)</span>
+<span class="go">[&#39;Anna&#39;, &#39;Janet&#39;, &#39;Jill&#39;, &#39;June&#39;, &#39;Linda&#39;, &#39;Mary&#39;, &#39;Penelope&#39;,</span>
+<span class="go">&#39;Sandy&#39;, &#39;Sue&#39;, &#39;asshole&#39;, &#39;aunt&#39;, &#39;blame&#39;, &#39;camel&#39;, &#39;cat&#39;,</span>
+<span class="go">&#39;daughter&#39;, &#39;embezzler&#39;, &#39;fish&#39;, &#39;gambler&#39;, &#39;girl&#39;,</span>
+<span class="go">&#39;grandmother&#39;, &#39;mosquito&#39;, &#39;mom&#39;, &#39;mother&#39;, &#39;neighbor&#39;, &#39;pig&#39;,</span>
+<span class="go">&#39;pilot&#39;, &#39;sheep&#39;, &#39;sister&#39;, &#39;student&#39;, &#39;toy&#39;]</span>
+<span class="gp">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="modern-py">
+<h2>modern.py<a class="headerlink" href="#modern-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> How does <a class="reference external" href="../../../../src/modern.py">modern.py</a>
+bridge the gap between raw textual input and LaTeX-ready output?</p>
+<p><strong>ANSWER:</strong> <a class="reference external" href="../../../../src/modern.py">modern.py</a> serves as a
+middle layer in the project’s LaTeX output generation code,
+translating raw TXT-style strings (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;PHI&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;4A&quot;</span></code>) into
+LaTeX-friendly representations (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;\\phi&quot;</span></code> and
+<code class="docutils literal notranslate"><span class="pre">&quot;${\\texttt{4}_{\\texttt{a}}}$&quot;</span></code>). The
+<a class="reference external" href="../../../../src/modern.py">modern.py</a> middle layer allows
+LaTeX and TikZ outputs generated by
+<a class="reference external" href="../../../../src/abstract.py">abstract.py</a>,
+<a class="reference external" href="../../../../src/chaining.py">chaining.py</a>,
+<a class="reference external" href="../../../../src/latex.py">latex.py</a> code to receive
+consistent attractive formatting by
+<a class="reference external" href="../../../../src/doc.py">doc.py</a>’s LaTeX document generation
+code.</p>
+</section>
+<section id="node-proc-py">
+<h2>node_proc.py<a class="headerlink" href="#node-proc-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Since
+<a class="reference external" href="../../../../src/node_proc.py">node_proc.py</a>’s E-nodes are
+elaborated copies of N-nodes, does <code class="docutils literal notranslate"><span class="pre">new_e_node()</span></code> copy any of
+the original N-node’s features when creating the E-node?</p>
+<p><strong>ANSWER:</strong> We’ll see init_table and new_chain functions in
+<a class="reference external" href="../../../../src/table_proc.py">table_proc.py</a> later on which
+call <code class="docutils literal notranslate"><span class="pre">new_e_node</span></code> creating E-node’s such as <code class="docutils literal notranslate"><span class="pre">n</span></code>.  Every
+E-node n has an <code class="docutils literal notranslate"><span class="pre">np_link</span></code> back to the N-node from which <code class="docutils literal notranslate"><span class="pre">n</span></code>
+gets most of its information.  E-node’s hang in columns below
+N-node’s via <code class="docutils literal notranslate"><span class="pre">col_link</span></code>’s.  There can be more than one E-node
+in a column hanging below an N-node.  However, not all the
+information that an E-node represents can be discovered by
+inspecting its <code class="docutils literal notranslate"><span class="pre">np_link</span></code> N-node.  The E-node’s <code class="docutils literal notranslate"><span class="pre">ftr</span></code> field
+may be more filled out with fewer QUESTION marks because the
+E-node may <code class="docutils literal notranslate"><span class="pre">chain_link</span></code> to and inherit additional feature
+information from another E-node.  For example, a deletion site
+(<code class="docutils literal notranslate"><span class="pre">&quot;PHI&quot;</span></code>) has lots of <code class="docutils literal notranslate"><span class="pre">QUESTION</span></code> marks as an N-node, but
+gets many features filled in as an E-node because the deletion
+site <code class="docutils literal notranslate"><span class="pre">chain_link</span></code>’s to another E-node (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;John&quot;</span></code>) with
+many features which are known to be <code class="docutils literal notranslate"><span class="pre">PLUS</span></code> or <code class="docutils literal notranslate"><span class="pre">MINUS</span></code>
+(<code class="docutils literal notranslate"><span class="pre">&quot;John&quot;</span></code> is <code class="docutils literal notranslate"><span class="pre">TPF</span></code>, not <code class="docutils literal notranslate"><span class="pre">PLF</span></code>, is <code class="docutils literal notranslate"><span class="pre">ANF</span></code>, etc.).</p>
+</section>
+<section id="parser-py">
+<h2>parser.py<a class="headerlink" href="#parser-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Do the thread_links created during
+<a class="reference external" href="../../../../src/parser.py">parser.py</a>’s parsing help with
+later traversal of the tree when establishing chains between
+nodes?</p>
+<p><strong>ANSWER:</strong> I don’t see thread_link being used in any important way
+by my Python implementation.  It is hard to guess if it was ever
+really important in my Modula-2 implementation I created in
+1980, 44 years ago.  The <code class="docutils literal notranslate"><span class="pre">thread_link</span></code> is documented in my
+M.S. thesis
+<a class="reference external" href="https://authors.library.caltech.edu/records/mf427-dra49">Pronouns</a>
+as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">thread_link</span> <span class="n">field</span> <span class="n">of</span> <span class="n">a</span> <span class="n">C</span><span class="o">-</span><span class="n">node</span><span class="p">,</span> <span class="n">S</span><span class="o">-</span><span class="n">node</span><span class="p">,</span> <span class="ow">or</span> <span class="n">N</span><span class="o">-</span><span class="n">node</span> <span class="n">links</span> <span class="n">to</span>
+<span class="n">the</span> <span class="n">first</span> <span class="n">node</span> <span class="n">traversed</span> <span class="n">after</span> <span class="n">the</span> <span class="n">C</span><span class="o">-</span><span class="n">node</span><span class="p">,</span> <span class="n">S</span><span class="o">-</span><span class="n">node</span><span class="p">,</span> <span class="ow">or</span> <span class="n">N</span><span class="o">-</span><span class="n">node</span> <span class="ow">in</span>
+<span class="n">a</span> <span class="n">preorder</span> <span class="n">traversal</span> <span class="n">of</span> <span class="n">the</span> <span class="n">C</span><span class="o">-</span><span class="n">S</span><span class="o">-</span><span class="n">N</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">it</span> <span class="n">occurs</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>We might charitably say we honestly described the implementation
+as a P.O.C. prototype and if the <code class="docutils literal notranslate"><span class="pre">thread_link</span></code> isn’t useful yet,
+it might be useful later on if we continued development further
+into the future.  “Be Prepared” as the Boy Scouts of America
+say.  It costs <a class="reference external" href="../../../../src/parser.py">parser.py</a>’s
+<code class="docutils literal notranslate"><span class="pre">parse</span></code> next to nothing to create the <code class="docutils literal notranslate"><span class="pre">Node</span></code> <code class="docutils literal notranslate"><span class="pre">thread_link</span></code>’s.</p>
+</section>
+<section id="primary-uty-py">
+<h2>primary_uty.py<a class="headerlink" href="#primary-uty-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Since <a class="reference external" href="../../../../src/primary_uty.py">primary_uty.py</a>’s
+functions handle both N-nodes and E-nodes by using <code class="docutils literal notranslate"><span class="pre">np_link</span></code> to
+get back to the original N-node, are these relationships
+primarily about syntactic structure rather than specific word
+instances?</p>
+<p><strong>ANSWER:</strong> Your perception is correct.  The
+<a class="reference external" href="../../../../src/primary_uty.py">primary_uty.py</a>
+functions are relationships primarily about syntactic structure
+rather than specific word instances.  You will see something
+else in <a class="reference external" href="../../../../src/secondary_uty.py">secondary_uty.py</a> .</p>
+</section>
+<section id="id33">
+<h2>secondary_uty.py<a class="headerlink" href="#id33" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Are
+<a class="reference external" href="../../../../src/secondary_uty.py">secondary_uty.py</a>’s
+secondary utilities what ultimately determine whether a
+potential pronoun-antecedent binding is valid, after the primary
+structural relationships have been established?</p>
+<p><strong>ANSWER:</strong> Functions in
+<a class="reference external" href="../../../../src/table_proc.py">table_proc.py</a> call functions
+in <a class="reference external" href="../../../../src/secondary_uty.py">secondary_uty.py</a> and
+layer on some additional logic that help determine whether a
+potential pronoun-antecedent binding is valid.  I will also
+point out that “a potential pronoun-antecedent binding is valid”
+might not hold up in the context of a complete sentence in which
+all such bindings must be put together in a complete
+interpretation.  Remember,
+<a class="reference external" href="../../../../src/table_interp.py">table_interp.py</a>’s
+<code class="docutils literal notranslate"><span class="pre">interpret</span></code> needs to return interpretations which partitions the
+nouns found in a sentence.  Not every chain discovered by the
+chaining algorithm which gets put into the chaining table
+necessarily survives and get used by <code class="docutils literal notranslate"><span class="pre">interpret</span></code> in a sentence
+interpretation.</p>
+</section>
+<section id="spread-py">
+<h2>spread.py<a class="headerlink" href="#spread-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Can you explain the Spreading Algorithm defined by
+<a class="reference external" href="../../../../src/spread.py">spread.py</a>’s function <code class="docutils literal notranslate"><span class="pre">spread</span></code>?  How
+is this algorithm used in your project?</p>
+<p><strong>ANSWER:</strong> The Spreading Algorithm takes a list of angles on
+the unit circle and a spreading factor <code class="docutils literal notranslate"><span class="pre">rho</span> <span class="pre">∈</span> <span class="pre">[0,1]</span></code>, and
+outputs a new list of angles that are more evenly distributed
+while preserving their relative order. For <code class="docutils literal notranslate"><span class="pre">rho</span> <span class="pre">&lt;</span> <span class="pre">1</span></code>, the algorithm:</p>
+<ol class="arabic">
+<li><p>Unrolls the unit circle onto the real line, mapping the
+angles to positions in <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">2π]</span></code></p></li>
+<li><p>Computes <code class="docutils literal notranslate"><span class="pre">delta</span> <span class="pre">=</span> <span class="pre">2π*rho/((1-rho)*n)</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the
+number of angles</p></li>
+<li><p>For each mapped position:</p>
+<ul class="simple">
+<li><p>Inserts <code class="docutils literal notranslate"><span class="pre">(1-α)*delta</span></code> padding before the position</p></li>
+<li><p>Inserts <code class="docutils literal notranslate"><span class="pre">α*delta</span></code> padding after the position</p></li>
+</ul>
+<p>where <code class="docutils literal notranslate"><span class="pre">α</span></code> is determined by the “average angle’s” relative
+position between its two nearest neighbors</p>
+</li>
+<li><p>Scales this expanded line (now length <code class="docutils literal notranslate"><span class="pre">2π</span> <span class="pre">+</span> <span class="pre">n*delta</span></code>) back to
+length <code class="docutils literal notranslate"><span class="pre">2π</span></code></p></li>
+<li><p>Rolls the line back into a circle, yielding the spread-out angles</p></li>
+</ol>
+<p>The Spreading Algorithm ensures the “average angle” (angle of the average
+of the points on the unit circle) remains fixed. When <code class="docutils literal notranslate"><span class="pre">rho=0</span></code>,
+angles remain unchanged; as <code class="docutils literal notranslate"><span class="pre">rho</span></code> approaches <code class="docutils literal notranslate"><span class="pre">1</span></code>, angles approach
+even spacing; and <code class="docutils literal notranslate"><span class="pre">rho</span> <span class="pre">=</span> <span class="pre">1</span></code> corresponds to the limit, where angles
+reaching even spacing.</p>
+<p>The Spreading Algorithm helps position arrows around nodes in
+<a class="reference external" href="../../../../src/chaining.py">chaining.py</a>’s Tikz diagrams,
+preventing arrows from overlapping while maintaining their
+general directional relationships.</p>
+</section>
+<section id="spread-ipynb">
+<h2>spread.ipynb<a class="headerlink" href="#spread-ipynb" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Is there an interactive way to explore how the
+Spreading Algorithm works in Pronouns2?</p>
+<p><strong>ANSWER:</strong> Jupyter notebook <cite>spread.ipynb</cite> is a freebie which
+isn’t essential to running the Pronouns2 Python code.  However,
+it can provide insight into how our Spreading Algorithm
+<a class="reference external" href="../../../../src/spread.py">spread.py</a> helps to draw
+Pronouns2’s pretty Tikz chaining diagrams.</p>
+<p>Our document <a class="reference external" href="../../../../docs/VaryingRho.pdf">VaryingRho.pdf</a>
+goes into greater detail about how this algorithm is used to
+tune the placement of arrowheads in Pronouns2’s Tikz chaining
+diagrams.</p>
+<p>For details about how to run and use Jupyter notebook <cite>spread.ipynb</cite>,
+see the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory’s <code class="docutils literal notranslate"><span class="pre">README.md</span></code> .</p>
+</section>
+<section id="id40">
+<h2>table_interp.py<a class="headerlink" href="#id40" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Looking at both the code and docstring, am I correct
+that each “interpretation” in
+<a class="reference external" href="../../../../src/table_interp.py">table_interp.py</a> represents one
+possible way that all pronouns in the sentence could be bound to
+their antecedents?</p>
+<p><strong>ANSWER:</strong> Correct. An interpretation can be viewed as a partition
+of the set of head nouns, pronouns, deletion sites into
+equivalence classes.  The equivalence classes happen also to be
+adorned with a bit of <code class="docutils literal notranslate"><span class="pre">chain_link</span></code> information amounting to a
+total ordering on each equivalence class in an interpretation,
+called a chain.</p>
+</section>
+<section id="id42">
+<h2>table_proc.py<a class="headerlink" href="#id42" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> I notice <a class="reference external" href="../../../../src/table_proc.py">table_proc.py</a>’s <code class="docutils literal notranslate"><span class="pre">init_table</span></code> creates only
+initial <code class="docutils literal notranslate"><span class="pre">&quot;A&quot;</span></code> E-nodes, while new_chain increments subscripts for
+additional E-nodes (<code class="docutils literal notranslate"><span class="pre">&quot;B&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;C&quot;</span></code>, etc.) - does this help track
+the sequence in which binding possibilities were discovered?</p>
+<p><strong>ANSWER:</strong> In a column of E-nodes beneath an N-node, the entire
+column connected by <code class="docutils literal notranslate"><span class="pre">col_link</span></code>’s, the E-nodes in that column
+successively receive subscripts <code class="docutils literal notranslate"><span class="pre">&quot;A&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;B&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;C&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;D&quot;</span></code>, etc.  In the <code class="docutils literal notranslate"><span class="pre">demo_example</span></code> output for a given input English
+sentence, it is easy to understand labels, such as <code class="docutils literal notranslate"><span class="pre">&quot;JohnD&quot;</span></code>,
+as referring back to specific E-nodes created during the
+analysis of the input English sentence.  The labels, such as
+<code class="docutils literal notranslate"><span class="pre">&quot;JohnD&quot;</span></code> appear later in the <code class="docutils literal notranslate"><span class="pre">chaining_diagram</span></code> output, the
+<code class="docutils literal notranslate"><span class="pre">&quot;Chaining&quot;</span></code> table, and the <code class="docutils literal notranslate"><span class="pre">&quot;Interpretations&quot;</span></code> table
+outputted by <code class="docutils literal notranslate"><span class="pre">demo_example</span></code> when <code class="docutils literal notranslate"><span class="pre">file_type</span></code> is equal to
+<code class="docutils literal notranslate"><span class="pre">FileType.TXT</span></code> or <code class="docutils literal notranslate"><span class="pre">FileType.TEX</span></code>.  Here is a portion of <code class="docutils literal notranslate"><span class="pre">demo_example</span></code>
+<code class="docutils literal notranslate"><span class="pre">FileType.TXT</span></code> output for an example input English sentence:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(10.1) John wants to give June a present, but he isn&#39;t sure she’ll like it.
+
+_________________________________CHAINING________________________________
+!            !           !            !              !     !      !     !
+! John       ! PHI       ! June       ! present      ! he  ! she  ! it  !
+! JohnA      ! PHIA      ! JuneA      ! presentA     ! heA ! sheA ! itA !
+! JohnB^heA  ! PHIB^itA  ! JuneB^sheA ! presentB^itA !     !      !     !
+! JohnC^PHIA ! PHIC^sheA !            !              !     !      !     !
+! JohnD^PHID ! PHID^heA  !            !              !     !      !     !
+!____________!___________!____________!______________!_____!______!_____!
+
+________________INTERPRETATIONS_________________
+!                                              !
+! JohnD^PHID^heA    JuneB^sheA    presentB^itA !
+!______________________________________________!
+</pre></div>
+</div>
+<p>Chains <code class="docutils literal notranslate"><span class="pre">JohnB^heA</span></code>, <code class="docutils literal notranslate"><span class="pre">JohnC^PHIA</span></code>, <code class="docutils literal notranslate"><span class="pre">PHIB^itA</span></code>,
+<code class="docutils literal notranslate"><span class="pre">PHIC^sheA</span></code> have all been discarded by the <code class="docutils literal notranslate"><span class="pre">interpret</span></code>
+function which couldn’t fit these chains into any legitimate
+interpretation of the sentence (10.1).</p>
+</section>
+<section id="tex-py">
+<h2>tex.py<a class="headerlink" href="#tex-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Since <a class="reference external" href="../../../../src/tex.py">tex.py</a>’s
+function <code class="docutils literal notranslate"><span class="pre">tex_string_width</span></code> is used for TikZ diagram spacing,
+does it need to be particularly precise because the diagrams
+show chains with arrows and need to avoid visual overlaps?</p>
+<p><strong>ANSWER:</strong> Some of our TikZ diagrams are drawing line segments
+between adjacent nouns on the same horizontal line.  These
+Tikz diagrams can use the best affordable <code class="docutils literal notranslate"><span class="pre">tex_string_width</span></code>
+function I can create to get these horizontal line segments to
+start and end close to the TikZ nodes representing noun
+strings, but not too close and not overlap the TikZ nodes
+representing noun strings.  Function <code class="docutils literal notranslate"><span class="pre">tex_string_width</span></code> does a
+good enough approximation of what LaTeX will calculate when
+LaTeX converts our Tikz source code into actual Tikz PDF
+diagrams.</p>
+</section>
+<section id="id45">
+<h2>trc.py<a class="headerlink" href="#id45" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Python module <a class="reference external" href="../../../../src/trc.py">trc.py</a>
+defines trace functions, but I see many trace call sites are
+commented out in the code - was this helpful during development
+but now mainly kept for future debugging if needed?</p>
+<p><strong>ANSWER:</strong> Yes, <a class="reference external" href="../../../../src/trc.py">trc.py</a> function
+calls are useful for debugging Python code while developing
+Python code.  If a Python module is stable, I can simply comment
+out the trace function calls in that Python module while
+possibly leaving trace function calls still turned on for
+unstable Python modules that I am debugging.  Or, if I discover
+a bug, I may want the option of rapidly uncommenting existing
+previously well chosen and thought out trace function calls in a
+Python module suspected of containing the root cause of that
+bug.</p>
+</section>
+<section id="txt-py">
+<h2>txt.py<a class="headerlink" href="#txt-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> The <a class="reference external" href="../../../../src/txt.py">txt.py</a> output
+functions seem to handle table formatting with ASCII characters
+(like <code class="docutils literal notranslate"><span class="pre">!</span></code> for borders) - was this chosen to make the output
+readable in any terminal/console environment?</p>
+<p><strong>ANSWER:</strong> The <code class="docutils literal notranslate"><span class="pre">_</span></code> and <code class="docutils literal notranslate"><span class="pre">!</span></code> characters in TXT versions of our
+tables are visually recognizable as table borders to the human eye
+because the repeating horizontal and vertical patterns of these
+characters in our TXT-friendly Python REPL and also in <code class="docutils literal notranslate"><span class="pre">Demo.txt</span></code>
+files.  The borders are much more beautiful to the human eye in
+the <code class="docutils literal notranslate"><span class="pre">Demo.pdf</span></code> created from <code class="docutils literal notranslate"><span class="pre">Demo.tex</span></code> when LaTeX versions of
+our tables are created, replacing <code class="docutils literal notranslate"><span class="pre">_</span></code> and <code class="docutils literal notranslate"><span class="pre">!</span></code> with <code class="docutils literal notranslate"><span class="pre">\hrule</span></code>’s and
+<code class="docutils literal notranslate"><span class="pre">\vrule</span></code>’s or whatever LaTeX tabular’s are doing under the hood.
+However, LaTeX source code isn’t friendly reading in a Python
+REPL.</p>
+</section>
+<section id="varying-rho-py">
+<h2>varying_rho.py<a class="headerlink" href="#varying-rho-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> What is the purpose of having
+<a class="reference external" href="../../../../src/varying_rho.py">varying_rho.py</a> inside your
+project?  Function <code class="docutils literal notranslate"><span class="pre">varying_rho_doc</span></code> isn’t being called by
+anything else in your project.</p>
+<p><strong>ANSWER:</strong> The bit of code in
+<a class="reference external" href="../../../../src/varying_rho.py">varying_rho.py</a>, function
+<code class="docutils literal notranslate"><span class="pre">varying_rho_doc</span></code> included, can be used to recreate the chaining
+diagrams in <a class="reference external" href="../../../../docs/VaryingRho.pdf">docs/VaryingRho.pdf</a> .
+<a class="reference external" href="../../../../docs/VaryingRho.pdf">docs/VaryingRho.pdf</a>
+illustrates how varying the input rho passed to the Spreading
+Algorithm varies the position of arrows around nodes in
+<a class="reference external" href="../../../../src/chaining.py">chaining.py</a>’s Tikz diagrams
+applied to example sentence (10.1).  Ultimately, we settled on
+using <code class="docutils literal notranslate"><span class="pre">rho=0.5</span></code> which is a nice compromise between direct flight
+arrows and completely spread out arrows.  The
+<a class="reference external" href="../../../../src/varying_rho.py">varying_rho.py</a> code plays no
+role in pronoun resolution, today in 2024, nor did any similar
+Modula-2 code exist back in 1980.  It’s here purely to demo the
+Spreading Algorithm in <a class="reference external" href="../../../../src/spread.py">spread.py</a>,
+which itself only exists in the project to make modern day 2024
+LaTeX Tikz chaining diagrams look prettier.  Code
+<a class="reference external" href="../../../../src/spread.py">spread.py</a>, nor anything like it,
+existed back in 1980 either.</p>
+</section>
+<section id="view-py">
+<h2>view.py<a class="headerlink" href="#view-py" title="Permalink to this heading">¶</a></h2>
+<p><strong>QUESTION:</strong> Are the <a class="reference external" href="../../../../src/view.py">view.py</a>
+functions the core string conversion layer that both
+<a class="reference external" href="../../../../src/latex.py">latex.py</a> and
+<a class="reference external" href="../../../../src/txt.py">txt.py</a> build upon for their
+different output formats?</p>
+<p><strong>ANSWER:</strong> Yes, the <a class="reference external" href="../../../../src/view.py">view.py</a>
+functions are a core string conversion layer that both
+<a class="reference external" href="../../../../src/latex.py">latex.py</a> and
+<a class="reference external" href="../../../../src/txt.py">txt.py</a> build upon for their
+different output formats.  Two things are being accomplished:</p>
+<p>First, the <a class="reference external" href="../../../../src/view.py">view.py</a> functions map
+implementation-specific <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">Feature</span></code> data structure
+information into a much more neutral and beautiful space of
+Python lists of strings and Python lists of lists of strings
+which can be considered to be beautiful vectors and matrices of
+strings.  The <a class="reference external" href="../../../../src/txt.py">txt.py</a> and
+<a class="reference external" href="../../../../src/latex.py">latex.py</a> functions, on the other
+hand, receive beautiful vectors and matrices of strings and
+produce necessary but much obscurer TXT and LaTeX output.  The
+<a class="reference external" href="../../../../src/view.py">view.py</a> code doesn’t have to be
+complicated by awareness of the obscure TXT and LaTeX outputs.
+The <a class="reference external" href="../../../../src/txt.py">txt.py</a> and
+<a class="reference external" href="../../../../src/latex.py">latex.py</a> code doesn’t have to be
+complicated by awareness of the equally obscure
+implementation-specific <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">Feature</span></code> data structures.
+In each case, TXT and TEX modes, there are pipelines of workers
+specialized to their own tasks that don’t need to be educated to
+handle the arcane knowledge which the other workers must know
+and use.  This pipeline coding approach is a useful coding model
+which all good AI chatbots and humans should learn themselves if
+they want to write excellent code instead of spaghetti code.</p>
+<p>Second, <a class="reference external" href="../../../../src/txt.py">txt.py</a> and
+<a class="reference external" href="../../../../src/latex.py">latex.py</a> benefit by sharing use of
+<a class="reference external" href="../../../../src/view.py">view.py</a> .  There is less
+duplication if <a class="reference external" href="../../../../src/view.py">view.py</a> can do this
+job of converting <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">Feature</span></code> information for both
+<a class="reference external" href="../../../../src/txt.py">txt.py</a> and
+<a class="reference external" href="../../../../src/latex.py">latex.py</a> because
+<a class="reference external" href="../../../../src/view.py">view.py</a> factors out the common
+complexity into a single Python module reducing that complexity
+to very simple inputs it hands off to
+<a class="reference external" href="../../../../src/txt.py">txt.py</a> and
+<a class="reference external" href="../../../../src/latex.py">latex.py</a> .</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.htm">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">FAQ</a><ul>
+<li><a class="reference internal" href="#globals-py">globals.py</a></li>
+<li><a class="reference internal" href="#abstract-py">abstract.py</a></li>
+<li><a class="reference internal" href="#chaining-py">chaining.py</a></li>
+<li><a class="reference internal" href="#demo-py">demo.py</a></li>
+<li><a class="reference internal" href="#doc-py">doc.py</a></li>
+<li><a class="reference internal" href="#examples-py">examples.py</a></li>
+<li><a class="reference internal" href="#latex-py">latex.py</a></li>
+<li><a class="reference internal" href="#lexicon-py">lexicon.py</a></li>
+<li><a class="reference internal" href="#modern-py">modern.py</a></li>
+<li><a class="reference internal" href="#node-proc-py">node_proc.py</a></li>
+<li><a class="reference internal" href="#parser-py">parser.py</a></li>
+<li><a class="reference internal" href="#primary-uty-py">primary_uty.py</a></li>
+<li><a class="reference internal" href="#id33">secondary_uty.py</a></li>
+<li><a class="reference internal" href="#spread-py">spread.py</a></li>
+<li><a class="reference internal" href="#spread-ipynb">spread.ipynb</a></li>
+<li><a class="reference internal" href="#id40">table_interp.py</a></li>
+<li><a class="reference internal" href="#id42">table_proc.py</a></li>
+<li><a class="reference internal" href="#tex-py">tex.py</a></li>
+<li><a class="reference internal" href="#id45">trc.py</a></li>
+<li><a class="reference internal" href="#txt-py">txt.py</a></li>
+<li><a class="reference internal" href="#varying-rho-py">varying_rho.py</a></li>
+<li><a class="reference internal" href="#view-py">view.py</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="make.htm"
+                          title="previous chapter">Make Targets</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="modules.htm"
+                          title="next chapter">src</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

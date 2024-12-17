@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>tests.utils package &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="tex module" href="tex.htm" />
+    <link rel="prev" title="tests package" href="tests.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="tests.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="tests.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" >src</a> &gt;</li>
+          <li class="nav-item nav-item-2"><a href="tests.htm" accesskey="U">tests package</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="tex.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tests-utils-package">
+<h1>tests.utils package<a class="headerlink" href="#tests-utils-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-tests.utils.assertions">
+<span id="tests-utils-assertions-module"></span><h2>tests.utils.assertions module<a class="headerlink" href="#module-tests.utils.assertions" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tests.utils.assertions.FloatAssertionMixin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tests.utils.assertions.</span></span><span class="sig-name descname"><span class="pre">FloatAssertionMixin</span></span><a class="headerlink" href="#tests.utils.assertions.FloatAssertionMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Mixin class providing additional float-related assertions for unittest.TestCase</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.utils.assertions.FloatAssertionMixin.assertListAlmostEqual">
+<span class="sig-name descname"><span class="pre">assertListAlmostEqual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">places</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.utils.assertions.FloatAssertionMixin.assertListAlmostEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that two lists of floats are almost equal within specified precision.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>first</strong> – First list of floats to compare</p></li>
+<li><p><strong>second</strong> – Second list of floats to compare</p></li>
+<li><p><strong>places</strong> – Number of decimal places to compare (default 7 if delta is None)</p></li>
+<li><p><strong>msg</strong> – Custom error message to show on failure</p></li>
+<li><p><strong>delta</strong> – Maximum difference allowed between values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – If lists differ in length or if any elements aren’t almost equal</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tests.utils.assertions.FloatAssertionMixin.assertNotListAlmostEqual">
+<span class="sig-name descname"><span class="pre">assertNotListAlmostEqual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">places</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.utils.assertions.FloatAssertionMixin.assertNotListAlmostEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that two lists of floats are NOT almost equal within specified precision.
+Lists are considered not almost equal if they have different lengths or if any
+corresponding elements are not almost equal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>first</strong> – First list of floats to compare</p></li>
+<li><p><strong>second</strong> – Second list of floats to compare</p></li>
+<li><p><strong>places</strong> – Number of decimal places to compare (default 7 if delta is None)</p></li>
+<li><p><strong>msg</strong> – Custom error message to show on failure</p></li>
+<li><p><strong>delta</strong> – Maximum difference allowed between values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – If lists are almost equal</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-tests.utils.run_test_doc">
+<span id="tests-utils-run-test-doc-module"></span><h2>tests.utils.run_test_doc module<a class="headerlink" href="#module-tests.utils.run_test_doc" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tests.utils.run_test_doc.run_test_doc">
+<span class="sig-prename descclassname"><span class="pre">tests.utils.run_test_doc.</span></span><span class="sig-name descname"><span class="pre">run_test_doc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numbers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'test_doc'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#tests.utils.run_test_doc.run_test_doc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shared subroutine for testing function doc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>numbers</strong> (<em>optional</em>) – None, str, or list[str] of keys in example_dict</p></li>
+<li><p><strong>file</strong> (<em>str</em><em>, </em><em>optional</em>) – File name. Defaults to “test_doc”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-tests.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tests.utils" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.htm">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">tests.utils package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-tests.utils.assertions">tests.utils.assertions module</a></li>
+<li><a class="reference internal" href="#module-tests.utils.run_test_doc">tests.utils.run_test_doc module</a></li>
+<li><a class="reference internal" href="#module-tests.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="tests.htm"
+                          title="previous chapter">tests package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="tex.htm"
+                          title="next chapter">tex module</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

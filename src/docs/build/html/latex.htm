@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>latex module &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="lexicon module" href="lexicon.htm" />
+    <link rel="prev" title="globals module" href="globals.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="modules.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="globals.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li>
+          <li class="nav-item nav-item-1"><a href="modules.htm" accesskey="U">src</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="lexicon.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-latex">
+<span id="latex-module"></span><h1>latex module<a class="headerlink" href="#module-latex" title="Permalink to this heading">¶</a></h1>
+<p>LaTeX output functions for FileType.LATEX Manager.stream.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_chaining">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_chaining</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nnodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_chaining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a LaTeX tabular showing the binding chains
+between N-nodes and their associated E-nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nnodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – List of N-nodes to display chains for</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_chaining_write">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_chaining_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_chaining_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX Chaining tabular showing chains from rows of data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rows</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – List of rows, each representing features of a node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_features">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Features'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a LaTeX tabular displaying the feature matrix
+(PNF, FPF, etc.) for each node in the syntax tree.  The
+output is split into chunks of 40 data rows each (plus
+header row) to improve LaTeX processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – List of nodes to display features for</p></li>
+<li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – Title for the feature matrix. Defaults to “Features”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_features_rows">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_features_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Features'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_features_rows" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rows</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>title</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_features_write">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_features_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_features_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX tabular showing features from rows of data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rows</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>str</em><em>]</em><em>]</em>) – List of rows, each representing features of a node.</p></li>
+<li><p><strong>title</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_interpretations">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_interpretations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_interpretations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a LaTeX tabular displaying all valid pronoun
+binding interpretations found for the sentence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>interps</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em><em>]</em><em>]</em>) – List of valid interpretations to display</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_interpretations_write">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_interpretations_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_interpretations_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX Interpretations tabular showing rows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rows</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of rows, each row representing an interpretation.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_lexicon">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_lexicon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_lexicon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a LaTeX tabular displaying the feature matrix
+(PNF, FPF, etc.) for each entry in lexicon_dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_nodes">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a LaTeX tabular displaying all nodes in the
+syntax tree with their identifiers and properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>nodes</strong> (<em>list</em><em>[</em><a class="reference internal" href="globals.htm#globals.Node" title="globals.Node"><em>Node</em></a><em>]</em>) – List of nodes to display</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_nodes_write">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_nodes_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_nodes_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates LaTeX source code from the provided rows of node data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rows</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of rows, each a list of two strings.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_summary">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_summary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a LaTeX table displaying demo Summary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="latex.latex_summary_write">
+<span class="sig-prename descclassname"><span class="pre">latex.</span></span><span class="sig-name descname"><span class="pre">latex_summary_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#latex.latex_summary_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate LaTeX Summary tabular showing rows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rows</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of rows, each row presenting a demo statistic.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="globals.htm"
+                          title="previous chapter">globals module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="lexicon.htm"
+                          title="next chapter">lexicon module</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>

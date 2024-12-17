@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Make Targets &#8212; Pronouns2  documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.htm',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.htm" />
+    <link rel="search" title="Search" href="search.htm" />
+    <link rel="next" title="FAQ" href="faq.htm" />
+    <link rel="prev" title="Usage" href="usage.htm" /> 
+  </head>
+  <body role="document" onload="MM_preloadImages('_static/Images/arrow01c.gif">
+    <form method="get" action="search.htm" style="margin:0px">
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+      <table width="100%" border="0" cellspacing="0" cellpadding="4">
+        <tr>
+          <td rowspan="2" bgcolor="#539933"><img src="_static/Images/PlanetQuantumWhite50.png" width="50" height="50"/></td>
+          <td colspan="4" bgcolor="#CCEECC"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="25%" align="center" bgcolor="#99CC99">&nbsp;<a href="Index.htm">Home</a>&nbsp;</td>
+                <td align="right" width="74%"><input name="q" type="text" title="Enter words to search for and click 'Search'"
+                    style="width:250px"/></td>
+                <td align="center" width="1%"></td>
+                <td align="center" width="0%"><input type="submit" value="Search"/></td>
+              </tr>
+            </table></td>
+          <td rowspan="2" width="30" bgcolor="#539933"><a
+          href="index.htm"
+          onmouseout="MM_swapImgRestore()"
+          onmouseover="MM_swapImage('Up','','_static/Images/arrow01c.gif',1)"><img
+          src="_static/Images/arrow02c.gif" alt="Up" name="Up" width="30" height="40" border="0"/></a></td>
+        </tr>
+        <tr>
+          <td width="40" bgcolor="#539933"><a
+              href="usage.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Previous','','_static/Images/arrow01d.gif',1)"><img
+                  src="_static/Images/arrow02d.gif"
+                  alt="Previous"
+                  name="Previous"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+          <td width="100%" bgcolor="#539933"><font color="#FFFFFF">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="index.htm">Pronouns2</a> &gt;</li> 
+      </ul>
+    </div></font></td>
+          <td width="40" bgcolor="#539933"><a
+              href="faq.htm"
+              onmouseout="MM_swapImgRestore()"
+              onmouseover="MM_swapImage('Next','','_static/Images/arrow01e.gif',1)"><img
+                  src="_static/Images/arrow02e.gif"
+                  alt="Next"
+                  name="Next"
+                  width="40"
+                  height="30"
+                  border="0"/></a></td>
+        </tr>
+      </table>
+    </form>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="make-targets">
+<h1>Make Targets<a class="headerlink" href="#make-targets" title="Permalink to this heading">¶</a></h1>
+<p>Command <code class="docutils literal notranslate"><span class="pre">make</span></code> automates the building of target files by reading
+instructions from <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>s.</p>
+<section id="root-directory">
+<h2>Root Directory<a class="headerlink" href="#root-directory" title="Permalink to this heading">¶</a></h2>
+<p>The top directory of the Pronouns2 project repo.</p>
+<p>The following make targets are available:</p>
+<section id="root-directory-commands">
+<h3>Root Directory Commands<a class="headerlink" href="#root-directory-commands" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code>              - Print this help</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code>           - Install Python dependencies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">update</span></code>            - Update Python dependencies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">view</span></code>              - Build everything; view test coverage, HTML doc, and Demo.pdf</p></li>
+</ul>
+</section>
+<section id="build-commands-broadcast-to-subdirectories">
+<h3>Build Commands Broadcast to Subdirectories<a class="headerlink" href="#build-commands-broadcast-to-subdirectories" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">all</span></code>               - Build everything (documentation and run tests)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">demos</span></code>             - Generate Demo.min, Demo.txt, and Demo.tex</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code>              - Run Python unit tests</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">coverage</span></code>          - Run tests with coverage report</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>              - Build HTML documentation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">xxx.pdf</span></code>           - Generate specific PDF in docs directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>             - Clean intermediate files in all subdirectories</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">distclean</span></code>         - Remove all non-shipping generated files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">maintainer-clean</span></code>  - Remove all generated files for a pristine state</p></li>
+</ul>
+</section>
+</section>
+<section id="docs-directory">
+<h2>docs Directory<a class="headerlink" href="#docs-directory" title="Permalink to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">docs</span></code> directory contains LaTeX and related LaTeX support
+files for the Pronouns2 project.</p>
+<p>The following make targets are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code>              - Print this help</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">view</span></code>              - Build everything; view Demo.pdf</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">all</span></code>               - Process all LaTeX files in directory (except Pronouns2Macros.tex)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">xxx</span></code>               - Process specific file (e.g., ‘make Pronouns2Python’)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">xxx.pdf</span></code>           - Same as above, will process xxx.tex</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>             - Remove intermediate LaTeX files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">distclean</span></code>         - Remove all generated files except shipping PDFs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">maintainer-clean</span></code>  - Remove all generated files, including shipping PDFs</p></li>
+</ul>
+</section>
+<section id="src-directory">
+<h2>src Directory<a class="headerlink" href="#src-directory" title="Permalink to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">src</span></code> directory contains the Python source code and tests
+for the project.</p>
+<p>The following make targets are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code>              - Print this help</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">all</span></code>               - Run tests and generate analysis files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">view</span></code>              - Build everything; view test coverage</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">demos</span></code>             - Generate <code class="docutils literal notranslate"><span class="pre">../docs/Demo.txt</span></code> and <code class="docutils literal notranslate"><span class="pre">../docs/Demo.tex</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">demo-txt</span></code>          - Generate <code class="docutils literal notranslate"><span class="pre">../docs/Demo.txt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">demo-tex</span></code>          - Generate <code class="docutils literal notranslate"><span class="pre">../docs/Demo.tex</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code>              - Run unit tests</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">coverage</span></code>          - Run tests with coverage and generate <code class="docutils literal notranslate"><span class="pre">htmlcov/index.html</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>             - Remove intermediate files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">distclean</span></code>         - Remove all non-distributed files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">maintainer-clean</span></code>  - Remove all generated files for a pristine state</p></li>
+</ul>
+</section>
+<section id="src-docs-directory">
+<h2>src/docs Directory<a class="headerlink" href="#src-docs-directory" title="Permalink to this heading">¶</a></h2>
+<p>The following make targets are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code>              - Print this help</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">view</span></code>              - Build everything; view HTML doc</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">all</span></code>               - Clean everything and rebuild HTML documentation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">apidoc</span></code>            - Generate API documentation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">linkcheck</span></code>         - Check external links for integrity</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code>              - Generate HTML documentation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>             - Remove intermediate build files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">distclean</span></code>         - Remove non-shipping files, including the build directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">maintainer-clean</span></code>  - Remove all generated files, including shipped HTML files</p></li>
+</ul>
+</section>
+<section id="src-tests-directory">
+<h2>src/tests Directory<a class="headerlink" href="#src-tests-directory" title="Permalink to this heading">¶</a></h2>
+<p>The following make targets are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code>              - Print this help</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">all</span></code>               - Make coverage and output-pdfs targets</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">view</span></code>              - Make all. View HTML coverage report</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">test</span></code>              - Run Python unit tests</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">coverage</span></code>          - Run tests and generate HTML coverage report</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">expected-pdfs</span></code>     - Process all LaTeX files in ./expected</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">output-pdfs</span></code>       - Process all LaTeX files in ./output</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>             - Remove intermediate LaTeX files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">distclean</span></code>         - Remove all generated files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">maintainer-clean</span></code>  - Remove all generated files</p></li>
+</ul>
+</section>
+<section id="src-tests-output-directory">
+<h2>src/tests/output Directory<a class="headerlink" href="#src-tests-output-directory" title="Permalink to this heading">¶</a></h2>
+<p>The following make targets are available:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">help</span></code>              - Print this help</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">all</span></code>               - Process all LaTeX files in directory</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">xxx</span></code>               - Process specific file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">xxx.pdf</span></code>           - Same as above, will process xxx.tex</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>             - Remove intermediate LaTeX files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">distclean</span></code>         - Remove all generated files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">maintainer-clean</span></code>  - Remove all generated files</p></li>
+</ul>
+</section>
+<section id="src-tests-expected-directory">
+<h2>src/tests/expected Directory<a class="headerlink" href="#src-tests-expected-directory" title="Permalink to this heading">¶</a></h2>
+<p>Exactly like <code class="docutils literal notranslate"><span class="pre">src/tests/output</span></code>.</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.htm">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Make Targets</a><ul>
+<li><a class="reference internal" href="#root-directory">Root Directory</a><ul>
+<li><a class="reference internal" href="#root-directory-commands">Root Directory Commands</a></li>
+<li><a class="reference internal" href="#build-commands-broadcast-to-subdirectories">Build Commands Broadcast to Subdirectories</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#docs-directory">docs Directory</a></li>
+<li><a class="reference internal" href="#src-directory">src Directory</a></li>
+<li><a class="reference internal" href="#src-docs-directory">src/docs Directory</a></li>
+<li><a class="reference internal" href="#src-tests-directory">src/tests Directory</a></li>
+<li><a class="reference internal" href="#src-tests-output-directory">src/tests/output Directory</a></li>
+<li><a class="reference internal" href="#src-tests-expected-directory">src/tests/expected Directory</a></li>
+</ul>
+</li>
+</ul>
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="usage.htm"
+                          title="previous chapter">Usage</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="faq.htm"
+                          title="next chapter">FAQ</a></p>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#CCEECC">
+      <tr>
+        <td width="50%">&#169;2024 Kelly Roach</td>
+        <td width="40%" align="right"><a id="email" href="mailto:kellybrianroach@outlook.com">Kelly Roach</a></td>
+      </tr>
+    </table>
+  </body>
+</html>
