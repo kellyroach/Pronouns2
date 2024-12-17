@@ -51,7 +51,7 @@ For a complete rebuild of the HTML documentation, simply run:
 make all
 ```
 
-The generated HTML documentation will be available in `build/html/index.html`.
+The generated HTML documentation will be available in `build/html/index.htm`.
 
 ## For Developers
 

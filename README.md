@@ -40,7 +40,7 @@ sentences and documenting these analyses as described in
 
 - [Kelly Roach](https://www.kellyroach.com)'s Original 1980 Caltech M.S. Thesis: [Pronouns](https://authors.library.caltech.edu/records/mf427-dra49)
 - [PDF documentation](docs/Pronouns2Python.pdf)
-- [HTML documentation](src/docs/build/html/index.html)
+- [HTML documentation](src/docs/build/html/index.htm)
 - [Kelly Roach's Pronouns Webpage](https://www.planetquantum.com/Pronouns/Index.htm)
 
 ## Software Requirements
