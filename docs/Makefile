@@ -22,7 +22,7 @@ endif
 
 # File lists
 TEX_FILES = $(filter-out Pronouns2Macros.tex,$(wildcard *.tex))
-SHIPPING_PDFS = Pronouns2Modula2.pdf Pronouns2Python.pdf RelatedLiterature.pdf VaryingRho.pdf
+SHIPPING_PDFS = Demo.pdf Pronouns2Modula2.pdf Pronouns2Python.pdf RelatedLiterature.pdf VaryingRho.pdf
 
 .PHONY: all help clean distclean maintainer-clean
 
